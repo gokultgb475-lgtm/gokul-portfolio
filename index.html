@@ -3,7 +3,20 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Gokul Priyan — Full Stack Developer Portfolio</title>
+<title>Gokul Priyan | Full Stack Developer</title>
+<meta name="description" content="Portfolio of Gokul Priyan, a Full Stack Developer from Madurai specializing in Python, JS, and Cloud."/>
+<meta name="author" content="Gokul Priyan"/>
+<meta name="theme-color" content="#ff6b35"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Gokul Priyan | Full Stack Developer"/>
+<meta property="og:description" content="Portfolio of Gokul Priyan, a Full Stack Developer from Madurai specializing in Python, JS, and Cloud."/>
+<meta property="og:image" content="assets/gokul-profile.jpeg"/>
+<meta property="og:image:alt" content="Portrait of Gokul Priyan, Full Stack Developer"/>
+<meta property="og:site_name" content="Gokul Priyan Portfolio"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Gokul Priyan | Full Stack Developer"/>
+<meta name="twitter:description" content="Portfolio of Gokul Priyan, a Full Stack Developer from Madurai specializing in Python, JS, and Cloud."/>
+<meta name="twitter:image" content="assets/gokul-profile.jpeg"/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
 /* ══════════════════════════════════
@@ -123,10 +136,15 @@ section{width:100%;position:relative}
   background:rgba(255,107,53,.08);border:1px solid rgba(255,107,53,.2);
   color:var(--orange);font-family:var(--mono);font-size:12px;
   padding:6px 14px;border-radius:4px;margin-bottom:28px;
-  animation:fadeUp .8s ease both;
+  box-shadow:0 0 0 rgba(255,107,53,0);
+  animation:fadeUp .8s ease both,heroTagPulse 2.8s ease-in-out 1s infinite;
 }
 .hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--orange);animation:blink 1.4s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+@keyframes heroTagPulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(255,107,53,0),0 0 0 rgba(255,107,53,0)}
+  50%{box-shadow:0 0 0 10px rgba(255,107,53,0),0 0 28px rgba(255,107,53,.18)}
+}
 .hero-name{
   font-family:var(--font);font-size:clamp(44px,6vw,80px);font-weight:800;
   line-height:1.05;letter-spacing:-2px;
@@ -226,7 +244,7 @@ section{width:100%;position:relative}
   padding:1px;
   border-radius:14px;
   background:linear-gradient(135deg,rgba(249,115,22,.35),rgba(234,88,12,.1),transparent 60%);
-  box-shadow:0 22px 56px rgba(0,0,0,.42),0 0 36px rgba(249,115,22,.08);
+  box-shadow:0 22px 56px rgba(0,0,0,.42),0 0 48px rgba(249,115,22,.14),0 0 90px rgba(249,115,22,.08);
   animation:termFloat 4s ease-in-out infinite;
 }
 @keyframes termFloat{
@@ -241,7 +259,7 @@ section{width:100%;position:relative}
   flex-direction:column;
   background:#0d1117;border:1px solid rgba(249,115,22,.2);
   border-radius:13px;overflow:hidden;
-  box-shadow:0 0 0 1px rgba(0,0,0,.8),0 30px 80px rgba(0,0,0,.7),0 0 60px rgba(249,115,22,.07);
+  box-shadow:0 0 0 1px rgba(0,0,0,.8),0 30px 80px rgba(0,0,0,.7),0 0 72px rgba(249,115,22,.12);
 }
 .t-bar{
   display:flex;align-items:center;gap:10px;
@@ -848,7 +866,7 @@ footer a{color:var(--orange);text-decoration:none}
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Contact Me
         </a>
-        <a href="./gokulpriyanP%20resume.pdf" download class="btn-secondary">
+        <a href="./assets/gokulpriyanP-resume.pdf" download="Gokul-Priyan-Resume.pdf" class="btn-secondary">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
           Download Resume
         </a>
@@ -951,7 +969,7 @@ footer a{color:var(--orange);text-decoration:none}
       <div class="info-grid">
         <div class="info-item"><label>College</label><span>TNGPTC, Madurai</span></div>
         <div class="info-item"><label>Programme</label><span>Diploma in CSE</span></div>
-        <div class="info-item"><label>Reg. Number</label><span>20234111</span></div>
+        <div class="info-item"><label>Interests</label><span>Full Stack, AI, Cloud Computing</span></div>
         <div class="info-item"><label>Graduation</label><span>2026</span></div>
         <div class="info-item"><label>Location</label><span>Madurai, Tamil Nadu, India</span></div>
         <div class="info-item"><label>HSC Score</label><span>86% — 2023</span></div>
@@ -983,7 +1001,7 @@ footer a{color:var(--orange);text-decoration:none}
           <div>📧 gokultgb475@gmail.com</div>
           <div>📞 +91 94893 92449</div>
           <div>🐙 <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" style="color:var(--orange);text-decoration:none">github.com/gokultgb475-lgtm</a></div>
-          <div>🌐 <a href="https://fish-corporation-live.onrender.com" style="color:var(--orange);text-decoration:none">fish-corporation-live.onrender.com</a></div>
+          <div>🌐 <a href="https://fish-corporation-live.onrender.com" target="_blank" rel="noopener noreferrer" style="color:var(--orange);text-decoration:none">fish-corporation-live.onrender.com</a></div>
         </div>
       </div>
     </div>
@@ -1026,6 +1044,13 @@ footer a{color:var(--orange);text-decoration:none}
       <div class="skill-tags"><span class="skill-tag">Git</span><span class="skill-tag">GitHub</span><span class="skill-tag">Branching</span><span class="skill-tag">Commits</span></div>
       <div class="skill-bar-wrap"><div class="skill-bar-label"><span>Proficiency</span><span>78%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div></div>
     </div>
+    <div class="skill-card reveal reveal-delay-2" role="button" tabindex="0" aria-haspopup="dialog" data-skill-title="Cloud & Deployment" data-skill-detail="Experienced in deploying web apps to Render, Vercel, and managing Linux-based environments.">
+      <span class="skill-icon">☁️</span>
+      <div class="skill-name">Cloud &amp; Deployment</div>
+      <div style="font-size:13px;color:var(--text2);line-height:1.6">Experienced in deploying web apps to Render, Vercel, and managing Linux-based environments.</div>
+      <div class="skill-tags"><span class="skill-tag">Vercel</span><span class="skill-tag">Render</span><span class="skill-tag">DNS</span><span class="skill-tag">Linux</span></div>
+      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>Proficiency</span><span>75%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div></div>
+    </div>
     <div class="skill-card reveal reveal-delay-2" role="button" tabindex="0" aria-haspopup="dialog" data-skill-title="Frontend Workflow" data-skill-detail="I use modern frontend workflow practices to build polished interfaces and smooth user journeys.">
       <span class="skill-icon">🔧</span>
       <div class="skill-name">Frontend Workflow</div>
@@ -1060,7 +1085,7 @@ footer a{color:var(--orange);text-decoration:none}
         <div class="proj-desc">AI-based agriculture assistant for crop suggestions and insights, designed to support smarter farming decisions through a practical web interface.</div>
         <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">AI</span><span class="proj-tag">Web</span><span class="proj-tag">Agriculture</span></div>
         <div class="proj-links">
-          <a href="#contact" class="proj-link primary">Live Demo</a>
+          <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="proj-link primary">View Code</a>
           <a href="https://github.com/gokultgb475-lgtm/Farmer-Ai" target="_blank" rel="noopener noreferrer" class="proj-link icon" aria-label="Farmer AI GitHub repository">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.66.5 12.02c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.26.79-.58 0-.28-.01-1.04-.02-2.05-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.78 2.69 1.26 3.35.97.1-.75.4-1.26.72-1.55-2.55-.29-5.24-1.28-5.24-5.71 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.45.11-3.03 0 0 .98-.31 3.2 1.18a11.04 11.04 0 0 1 5.82 0c2.22-1.49 3.19-1.18 3.19-1.18.64 1.58.24 2.74.12 3.03.74.81 1.19 1.83 1.19 3.09 0 4.44-2.69 5.42-5.25 5.71.41.36.77 1.07.77 2.16 0 1.56-.01 2.81-.01 3.19 0 .32.21.69.8.57A11.53 11.53 0 0 0 23.5 12C23.5 5.66 18.35.5 12 .5Z"/></svg>
           </a>
@@ -1094,7 +1119,7 @@ footer a{color:var(--orange);text-decoration:none}
         <div class="proj-desc">Attendance tracking solution built to reduce manual record work and improve consistency for day-to-day academic administration.</div>
         <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Backend</span><span class="proj-tag">Database</span><span class="proj-tag">Academic</span><span class="proj-tag">Teamwork</span></div>
         <div class="proj-links">
-          <a href="#contact" class="proj-link primary">Live Demo</a>
+          <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="proj-link primary">View Code</a>
           <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="proj-link icon" aria-label="Student Attendance System GitHub link">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.66.5 12.02c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.26.79-.58 0-.28-.01-1.04-.02-2.05-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.78 2.69 1.26 3.35.97.1-.75.4-1.26.72-1.55-2.55-.29-5.24-1.28-5.24-5.71 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.45.11-3.03 0 0 .98-.31 3.2 1.18a11.04 11.04 0 0 1 5.82 0c2.22-1.49 3.19-1.18 3.19-1.18.64 1.58.24 2.74.12 3.03.74.81 1.19 1.83 1.19 3.09 0 4.44-2.69 5.42-5.25 5.71.41.36.77 1.07.77 2.16 0 1.56-.01 2.81-.01 3.19 0 .32.21.69.8.57A11.53 11.53 0 0 0 23.5 12C23.5 5.66 18.35.5 12 .5Z"/></svg>
           </a>
@@ -1126,9 +1151,9 @@ footer a{color:var(--orange);text-decoration:none}
       <span class="cc-icon">🐙</span>
       <div><span class="cc-label">GitHub</span><span class="cc-val">github.com/gokultgb475-lgtm</span></div>
     </a>
-    <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" class="contact-card">
+    <a href="https://www.linkedin.com/in/gokulpriyan-p-a5b535394/" target="_blank" rel="noopener noreferrer" class="contact-card">
       <span class="cc-icon">💼</span>
-      <div><span class="cc-label">LinkedIn</span><span class="cc-val">linkedin.com/in/your-linkedin</span></div>
+      <div><span class="cc-label">LinkedIn</span><span class="cc-val">linkedin.com/in/gokulpriyan-p-a5b535394</span></div>
     </a>
     <div class="contact-card">
       <span class="cc-icon">📍</span>
@@ -1147,7 +1172,7 @@ footer a{color:var(--orange);text-decoration:none}
 <footer>
   <span>© 2025 <a href="#home">Gokul Priyan</a> — All rights reserved</span>
   <span style="font-family:var(--mono)">Built with 💻 &amp; ☕ in Madurai</span>
-  <span>Reg: 20234111</span>
+  <span>Full Stack • AI • Cloud</span>
 </footer>
 
 </div><!-- /page -->
