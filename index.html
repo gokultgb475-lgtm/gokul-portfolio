@@ -97,7 +97,7 @@ nav.scrolled{padding:12px var(--section-pad-x);background:rgba(3,5,8,.85)}
 ══════════════════════════════════ */
 .page{position:relative;z-index:1;overflow-x:clip}
 section{width:100%;position:relative}
-#home,#about,#skills,#projects,#contact{min-height:100vh;min-height:100svh}
+#home,#about,#skills,#certifications,#projects,#contact{min-height:100vh;min-height:100svh}
 
 /* ══════════════════════════════════
    SECTION 1 — HERO (3D SCENE)
@@ -153,6 +153,27 @@ section{width:100%;position:relative}
 .hero-name span{
   background:linear-gradient(135deg,var(--orange) 0%,var(--orange2) 50%,#ffcc70 100%);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero-status{
+  display:inline-flex;align-items:center;gap:10px;
+  margin:18px 0 0;
+  padding:8px 14px;
+  border-radius:999px;
+  border:1px solid rgba(34,197,94,.25);
+  background:rgba(34,197,94,.08);
+  color:#d1fae5;
+  font-family:var(--mono);font-size:11px;letter-spacing:.4px;
+  animation:fadeUp .8s .15s ease both;
+}
+.hero-status-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:#22c55e;
+  box-shadow:0 0 0 0 rgba(34,197,94,.55);
+  animation:statusPulse 1.8s ease-in-out infinite;
+}
+@keyframes statusPulse{
+  0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(34,197,94,.55)}
+  50%{transform:scale(1.08);box-shadow:0 0 0 10px rgba(34,197,94,0)}
 }
 .hero-title{
   font-family:var(--mono);font-size:15px;color:var(--text2);
@@ -525,10 +546,94 @@ section{width:100%;position:relative}
 .skill-name{font-family:var(--font);font-size:18px;font-weight:700;margin-bottom:8px}
 .skill-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
 .skill-tag{font-family:var(--mono);font-size:10px;color:var(--text3);background:var(--surface2);border:1px solid var(--border);padding:3px 8px;border-radius:3px}
-.skill-bar-wrap{margin-top:14px}
-.skill-bar-label{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:5px}
-.skill-bar{height:3px;background:var(--surface2);border-radius:2px;overflow:hidden}
-.skill-bar-fill{height:100%;background:linear-gradient(90deg,var(--orange),var(--orange2));border-radius:2px;transition:width 1.2s cubic-bezier(.4,0,.2,1);width:0}
+.skill-level-badge{
+  background:transparent;
+  padding:4px 14px;
+  border-radius:20px;
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  display:inline-block;
+  margin-top:10px;
+  transition:all .3s ease;
+  font-family:var(--mono);
+}
+.skill-level-badge.intermediate{
+  background:transparent;
+  border:1.5px solid #38bdf8;
+  color:#38bdf8;
+  box-shadow:0 0 8px rgba(56,189,248,.2);
+}
+.skill-level-badge.intermediate:hover{
+  background:rgba(56,189,248,.1);
+  box-shadow:0 0 16px rgba(56,189,248,.5);
+}
+.skill-level-badge.advanced{
+  background:transparent;
+  border:1.5px solid #22c55e;
+  color:#22c55e;
+  box-shadow:0 0 8px rgba(34,197,94,.2);
+}
+.skill-level-badge.advanced:hover{
+  background:rgba(34,197,94,.1);
+  box-shadow:0 0 16px rgba(34,197,94,.5);
+}
+.skill-level-badge.beginner{
+  background:transparent;
+  border:1.5px solid #f97316;
+  color:#f97316;
+  box-shadow:0 0 8px rgba(249,115,22,.2);
+}
+.skill-level-badge.beginner:hover{
+  background:rgba(249,115,22,.1);
+  box-shadow:0 0 16px rgba(249,115,22,.5);
+}
+
+/* ══════════════════════════════════
+   CERTIFICATIONS SECTION
+══════════════════════════════════ */
+#certifications{
+  width:min(var(--content-max),100%);
+  margin:0 auto;
+  padding:var(--section-pad-y) var(--section-pad-x);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.cert-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));
+  gap:24px;margin-top:60px;
+}
+.cert-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:18px;padding:28px;
+  position:relative;overflow:hidden;
+  transition:transform .3s,border-color .3s,box-shadow .3s;
+}
+.cert-card::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,107,53,.05),transparent 65%);
+  opacity:0;transition:opacity .3s;
+}
+.cert-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(255,107,53,.3);
+  box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 40px var(--orange-glow);
+}
+.cert-card:hover::after{opacity:1}
+.cert-year{
+  display:inline-flex;align-items:center;justify-content:center;
+  margin-bottom:18px;padding:6px 12px;border-radius:999px;
+  background:rgba(255,107,53,.08);border:1px solid rgba(255,107,53,.2);
+  color:var(--orange);font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;
+}
+.cert-title{
+  font-family:var(--font);font-size:22px;font-weight:700;line-height:1.25;margin-bottom:10px;
+}
+.cert-issuer{
+  font-size:14px;color:var(--text2);line-height:1.8;
+}
 
 /* Skill modal */
 #skill-modal{
@@ -611,6 +716,7 @@ section{width:100%;position:relative}
   align-items:center;
   gap:12px;
 }
+.proj-links.single{grid-template-columns:minmax(0,1fr)}
 .proj-link{
   min-width:0;
   display:inline-flex;
@@ -637,6 +743,14 @@ section{width:100%;position:relative}
 .proj-link.primary:hover{
   transform:translateY(-2px);
   box-shadow:0 14px 34px rgba(255,107,53,.18);
+}
+.proj-link.is-disabled{
+  opacity:.82;
+  cursor:not-allowed;
+}
+.proj-link.is-disabled:hover{
+  transform:none;
+  box-shadow:none;
 }
 .proj-link.icon{
   width:48px;
@@ -706,6 +820,27 @@ footer{
   position:relative;z-index:1;
 }
 footer a{color:var(--orange);text-decoration:none}
+
+.back-to-top{
+  position:fixed;right:26px;bottom:26px;z-index:850;
+  width:52px;height:52px;border:none;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(10,13,20,.92);color:var(--text);
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 18px 40px rgba(0,0,0,.45),0 0 30px rgba(255,107,53,.1);
+  font-size:22px;line-height:1;
+  opacity:0;transform:translateY(16px);
+  pointer-events:none;cursor:none;
+  transition:opacity .25s ease,transform .25s ease,border-color .25s ease,color .25s ease;
+}
+.back-to-top.visible{
+  opacity:1;transform:translateY(0);
+  pointer-events:auto;
+}
+.back-to-top:hover{
+  border-color:rgba(255,107,53,.45);
+  color:var(--orange);
+}
 
 /* ══════════════════════════════════
    SCROLL REVEAL
@@ -785,7 +920,7 @@ footer a{color:var(--orange);text-decoration:none}
   .about-shell{flex-direction:column}
   .about-right{width:100%;flex:1 1 auto}
   .info-grid{grid-template-columns:1fr}
-  #skills,#projects,#contact{padding:96px var(--section-pad-x)}
+  #skills,#certifications,#projects,#contact{padding:96px var(--section-pad-x)}
   .contact-card{width:min(100%,420px)}
   footer{padding:20px var(--section-pad-x);flex-direction:column;gap:8px;text-align:center}
 }
@@ -804,8 +939,9 @@ footer a{color:var(--orange);text-decoration:none}
   .t-tabs{overflow-x:auto;scrollbar-width:none}
   .t-tabs::-webkit-scrollbar{display:none}
   .t-statusbar{flex-wrap:wrap;gap:8px}
-  .projects-grid,.skills-grid{margin-top:40px}
+  .projects-grid,.skills-grid,.cert-grid{margin-top:40px}
   .proj-links{grid-template-columns:minmax(0,1fr) 48px}
+  .back-to-top{right:18px;bottom:18px;width:48px;height:48px}
 }
 </style>
 </head>
@@ -828,6 +964,7 @@ footer a{color:var(--orange);text-decoration:none}
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#certifications">Certifications</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -850,6 +987,10 @@ footer a{color:var(--orange);text-decoration:none}
       <h1 class="hero-name">
         Gokul<br/><span>Priyan</span>
       </h1>
+      <div class="hero-status">
+        <span class="hero-status-dot" aria-hidden="true"></span>
+        <span>Open to Internships &amp; Freelance</span>
+      </div>
       <p class="hero-title">
         <span id="typed-role">Full Stack Developer | Cloud Enthusiast | Problem Solver</span>
         <span class="typing-cursor">|</span>
@@ -866,7 +1007,7 @@ footer a{color:var(--orange);text-decoration:none}
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Contact Me
         </a>
-        <a href="./assets/gokulpriyanP-resume.pdf" download="Gokul-Priyan-Resume.pdf" class="btn-secondary">
+        <a href="./assets/gokulpriyanP-resume.pdf" download="Gokul-Priyan-Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
           Download Resume
         </a>
@@ -876,7 +1017,7 @@ footer a{color:var(--orange);text-decoration:none}
       </div>
       <div class="hero-stats">
         <div class="stat-item">
-          <div class="stat-num">4+</div>
+          <div class="stat-num">3</div>
           <div class="stat-label">Projects</div>
         </div>
         <div class="stat-item">
@@ -951,7 +1092,7 @@ footer a{color:var(--orange);text-decoration:none}
         <div class="about-block">
           <span class="about-kicker">What I have done</span>
           <p class="about-desc">
-            I sold the Fish Corporation website to a real client, built practical web and AI-based projects, and completed entrepreneurship training at Thiagarajar College of Engineering - Technology Business Incubator (TCE TBI).
+            Delivered and sold a business website to a real client in the fisheries sector, built practical web and AI-based projects, and completed entrepreneurship training at Thiagarajar College of Engineering - Technology Business Incubator (TCE TBI).
           </p>
         </div>
         <div class="about-block">
@@ -962,7 +1103,7 @@ footer a{color:var(--orange);text-decoration:none}
         </div>
       </div>
       <div class="achievement-list">
-        <div class="achievement-item">Sold the Fish Corporation website to a real business client.</div>
+        <div class="achievement-item">Delivered and sold a business website to a real client in the fisheries sector.</div>
         <div class="achievement-item">Built real-world web and AI-focused projects beyond academics.</div>
         <div class="achievement-item">Completed entrepreneurship training and product exposure at TBI.</div>
       </div>
@@ -1021,49 +1162,69 @@ footer a{color:var(--orange);text-decoration:none}
       <div class="skill-name">HTML / CSS / JS</div>
       <div style="font-size:13px;color:var(--text2);line-height:1.6">Building responsive, accessible interfaces and front-end interactions for modern web experiences.</div>
       <div class="skill-tags"><span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Responsive</span></div>
-      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>Proficiency</span><span>80%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div></div>
+      <div class="skill-level-badge intermediate">Intermediate</div>
     </div>
     <div class="skill-card reveal reveal-delay-2" role="button" tabindex="0" aria-haspopup="dialog" data-skill-title="Python" data-skill-detail="Used for backend, automation and AI-based logic.">
       <span class="skill-icon">🐍</span>
       <div class="skill-name">Python</div>
       <div style="font-size:13px;color:var(--text2);line-height:1.6">Used for backend workflows, automation, data handling, and practical AI-based project logic.</div>
       <div class="skill-tags"><span class="skill-tag">Python 3</span><span class="skill-tag">Automation</span><span class="skill-tag">AI Logic</span><span class="skill-tag">Jupyter</span></div>
-      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>Proficiency</span><span>75%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div></div>
+      <div class="skill-level-badge intermediate">Intermediate</div>
     </div>
     <div class="skill-card reveal reveal-delay-3" role="button" tabindex="0" aria-haspopup="dialog" data-skill-title="Linux" data-skill-detail="Daily usage for development and system operations.">
       <span class="skill-icon">🐧</span>
       <div class="skill-name">Linux</div>
       <div style="font-size:13px;color:var(--text2);line-height:1.6">Daily Linux usage for development, terminal workflows, file systems, and system operations.</div>
       <div class="skill-tags"><span class="skill-tag">Bash</span><span class="skill-tag">Git</span><span class="skill-tag">SSH</span><span class="skill-tag">Permissions</span></div>
-      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>Proficiency</span><span>85%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div></div>
+      <div class="skill-level-badge advanced">Advanced</div>
     </div>
     <div class="skill-card reveal reveal-delay-1" role="button" tabindex="0" aria-haspopup="dialog" data-skill-title="Git & GitHub" data-skill-detail="Used for version control, branching, and collaboration across projects.">
       <span class="skill-icon">🐙</span>
       <div class="skill-name">Git &amp; GitHub</div>
       <div style="font-size:13px;color:var(--text2);line-height:1.6">Version control, clean collaboration, and project tracking for faster and safer development.</div>
       <div class="skill-tags"><span class="skill-tag">Git</span><span class="skill-tag">GitHub</span><span class="skill-tag">Branching</span><span class="skill-tag">Commits</span></div>
-      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>Proficiency</span><span>78%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div></div>
+      <div class="skill-level-badge intermediate">Intermediate</div>
     </div>
     <div class="skill-card reveal reveal-delay-2" role="button" tabindex="0" aria-haspopup="dialog" data-skill-title="Cloud & Deployment" data-skill-detail="Experienced in deploying web apps to Render, Vercel, and managing Linux-based environments.">
       <span class="skill-icon">☁️</span>
       <div class="skill-name">Cloud &amp; Deployment</div>
       <div style="font-size:13px;color:var(--text2);line-height:1.6">Experienced in deploying web apps to Render, Vercel, and managing Linux-based environments.</div>
       <div class="skill-tags"><span class="skill-tag">Vercel</span><span class="skill-tag">Render</span><span class="skill-tag">DNS</span><span class="skill-tag">Linux</span></div>
-      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>Proficiency</span><span>75%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div></div>
+      <div class="skill-level-badge intermediate">Intermediate</div>
     </div>
     <div class="skill-card reveal reveal-delay-2" role="button" tabindex="0" aria-haspopup="dialog" data-skill-title="Frontend Workflow" data-skill-detail="I use modern frontend workflow practices to build polished interfaces and smooth user journeys.">
       <span class="skill-icon">🔧</span>
       <div class="skill-name">Frontend Workflow</div>
       <div style="font-size:13px;color:var(--text2);line-height:1.6">Focused on readable UI structure, animation polish, debugging, and faster iteration during development.</div>
       <div class="skill-tags"><span class="skill-tag">VS Code</span><span class="skill-tag">UI</span><span class="skill-tag">Debugging</span><span class="skill-tag">Workflow</span></div>
-      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>Proficiency</span><span>80%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div></div>
+      <div class="skill-level-badge intermediate">Intermediate</div>
     </div>
     <div class="skill-card reveal reveal-delay-3" role="button" tabindex="0" aria-haspopup="dialog" data-skill-title="Entrepreneurship" data-skill-detail="Entrepreneurship training helped me think about product value, pitching, and real-world user needs.">
       <span class="skill-icon">💡</span>
       <div class="skill-name">Entrepreneurship</div>
       <div style="font-size:13px;color:var(--text2);line-height:1.6">Startup thinking, product value, and practical business exposure from TBI entrepreneurship training.</div>
       <div class="skill-tags"><span class="skill-tag">Startups</span><span class="skill-tag">Pitching</span><span class="skill-tag">Innovation</span></div>
-      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>Proficiency</span><span>70%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="70"></div></div></div>
+      <div class="skill-level-badge beginner">Beginner</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CERTIFICATIONS ─── -->
+<section id="certifications">
+  <div class="reveal">
+    <span class="section-label">// 03 — Certifications</span>
+    <h2 class="section-title">Certifications &amp; <span>Training</span></h2>
+  </div>
+  <div class="cert-grid">
+    <div class="cert-card reveal reveal-delay-1">
+      <div class="cert-year">2025</div>
+      <h3 class="cert-title">Entrepreneurship &amp; Startup Training</h3>
+      <p class="cert-issuer">TCE TBI &ndash; Thiagarajar College of Engineering</p>
+    </div>
+    <div class="cert-card reveal reveal-delay-2">
+      <div class="cert-year">2024&ndash;2025</div>
+      <h3 class="cert-title">Full Stack Web Development</h3>
+      <p class="cert-issuer">Self-Learning &ndash; Projects &amp; Practice</p>
     </div>
   </div>
 </section>
@@ -1071,7 +1232,7 @@ footer a{color:var(--orange);text-decoration:none}
 <!-- ─── PROJECTS ─── -->
 <section id="projects">
   <div class="reveal">
-    <span class="section-label">// 03 — Projects</span>
+    <span class="section-label">// 04 — Projects</span>
     <h2 class="section-title">Things I've <span>built</span></h2>
   </div>
   <div class="projects-grid">
@@ -1082,14 +1243,8 @@ footer a{color:var(--orange);text-decoration:none}
       </div>
       <div class="proj-body">
         <div class="proj-name">Farmer AI</div>
-        <div class="proj-desc">AI-based agriculture assistant for crop suggestions and insights, designed to support smarter farming decisions through a practical web interface.</div>
+        <div class="proj-desc">A Python-based AI web app that suggests crops based on soil type and season inputs, helping small-scale farmers make smarter agricultural decisions.</div>
         <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">AI</span><span class="proj-tag">Web</span><span class="proj-tag">Agriculture</span></div>
-        <div class="proj-links">
-          <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="proj-link primary">View Code</a>
-          <a href="https://github.com/gokultgb475-lgtm/Farmer-Ai" target="_blank" rel="noopener noreferrer" class="proj-link icon" aria-label="Farmer AI GitHub repository">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.66.5 12.02c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.26.79-.58 0-.28-.01-1.04-.02-2.05-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.78 2.69 1.26 3.35.97.1-.75.4-1.26.72-1.55-2.55-.29-5.24-1.28-5.24-5.71 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.45.11-3.03 0 0 .98-.31 3.2 1.18a11.04 11.04 0 0 1 5.82 0c2.22-1.49 3.19-1.18 3.19-1.18.64 1.58.24 2.74.12 3.03.74.81 1.19 1.83 1.19 3.09 0 4.44-2.69 5.42-5.25 5.71.41.36.77 1.07.77 2.16 0 1.56-.01 2.81-.01 3.19 0 .32.21.69.8.57A11.53 11.53 0 0 0 23.5 12C23.5 5.66 18.35.5 12 .5Z"/></svg>
-          </a>
-        </div>
       </div>
     </div>
     <div class="proj-card reveal reveal-delay-1">
@@ -1099,7 +1254,7 @@ footer a{color:var(--orange);text-decoration:none}
       </div>
       <div class="proj-body">
         <div class="proj-name">Fish Corporation Website</div>
-        <div class="proj-desc">Responsive business website delivered and sold to a real client, helping strengthen their online presence with a clean professional interface.</div>
+        <div class="proj-desc">Delivered and sold a fully responsive business website to a real client in the fisheries sector, improving their online presence with a clean, professional interface.</div>
         <div class="proj-tags"><span class="proj-tag">HTML</span><span class="proj-tag">CSS</span><span class="proj-tag">JavaScript</span><span class="proj-tag">Client Work</span><span class="proj-tag">Linux</span></div>
         <div class="proj-links">
           <a href="https://fish-corporation-live.onrender.com" target="_blank" rel="noopener noreferrer" class="proj-link primary">Live Demo</a>
@@ -1116,13 +1271,10 @@ footer a{color:var(--orange);text-decoration:none}
       </div>
       <div class="proj-body">
         <div class="proj-name">Student Attendance System</div>
-        <div class="proj-desc">Attendance tracking solution built to reduce manual record work and improve consistency for day-to-day academic administration.</div>
+        <div class="proj-desc">A Python backend solution built to automate attendance tracking and reduce manual record work for academic administration, improving consistency and saving time.</div>
         <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Backend</span><span class="proj-tag">Database</span><span class="proj-tag">Academic</span><span class="proj-tag">Teamwork</span></div>
-        <div class="proj-links">
-          <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="proj-link primary">View Code</a>
-          <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="proj-link icon" aria-label="Student Attendance System GitHub link">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.66.5 12.02c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.26.79-.58 0-.28-.01-1.04-.02-2.05-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.78 2.69 1.26 3.35.97.1-.75.4-1.26.72-1.55-2.55-.29-5.24-1.28-5.24-5.71 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.45.11-3.03 0 0 .98-.31 3.2 1.18a11.04 11.04 0 0 1 5.82 0c2.22-1.49 3.19-1.18 3.19-1.18.64 1.58.24 2.74.12 3.03.74.81 1.19 1.83 1.19 3.09 0 4.44-2.69 5.42-5.25 5.71.41.36.77 1.07.77 2.16 0 1.56-.01 2.81-.01 3.19 0 .32.21.69.8.57A11.53 11.53 0 0 0 23.5 12C23.5 5.66 18.35.5 12 .5Z"/></svg>
-          </a>
+        <div class="proj-links single">
+          <a href="#" class="proj-link primary is-disabled" title="Coming Soon" aria-disabled="true">View Code</a>
         </div>
       </div>
     </div>
@@ -1133,7 +1285,7 @@ footer a{color:var(--orange);text-decoration:none}
 <section id="contact">
   <div class="contact-glow"></div>
   <div class="reveal">
-    <span class="section-label">// 04 — Contact</span>
+    <span class="section-label">// 05 — Contact</span>
     <h2 class="contact-title">Let's build<br/><span style="color:var(--orange)">something.</span></h2>
     <p class="contact-sub">If you're hiring, collaborating, or looking for someone who can build with clarity and consistency, let's connect.</p>
     <div class="contact-availability">Available for internships and freelance work</div>
@@ -1170,12 +1322,14 @@ footer a{color:var(--orange);text-decoration:none}
 
 <!-- ─── FOOTER ─── -->
 <footer>
-  <span>© 2025 <a href="#home">Gokul Priyan</a> — All rights reserved</span>
+  <span>© 2026 <a href="#home">Gokul Priyan</a> — All rights reserved</span>
   <span style="font-family:var(--mono)">Built with 💻 &amp; ☕ in Madurai</span>
   <span>Full Stack • AI • Cloud</span>
 </footer>
 
 </div><!-- /page -->
+
+<button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
 <div id="skill-modal" aria-hidden="true">
   <div class="skill-modal-card" role="dialog" aria-modal="true" aria-labelledby="skill-modal-title">
@@ -1444,18 +1598,6 @@ const obs=new IntersectionObserver((entries)=>{
 },{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-/* ── SKILL BAR ANIMATION ── */
-const barObs=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.querySelectorAll('.skill-bar-fill').forEach(bar=>{
-        bar.style.width=bar.dataset.width+'%';
-      });
-    }
-  });
-},{threshold:.3});
-document.querySelectorAll('.skill-card').forEach(el=>barObs.observe(el));
-
 /* ── SKILL MODAL ── */
 const skillModal=document.getElementById('skill-modal');
 const skillModalTitle=document.getElementById('skill-modal-title');
@@ -1500,6 +1642,21 @@ if(skillModal){
 
 document.addEventListener('keydown',e=>{
   if(e.key==='Escape' && skillModal && skillModal.classList.contains('open')) closeSkillModal();
+});
+
+/* ── BACK TO TOP ── */
+const backToTop=document.getElementById('backToTop');
+if(backToTop){
+  const syncBackToTop=()=>{
+    backToTop.classList.toggle('visible',window.scrollY>300);
+  };
+  window.addEventListener('scroll',syncBackToTop,{passive:true});
+  backToTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  syncBackToTop();
+}
+
+document.querySelectorAll('a[aria-disabled="true"]').forEach(link=>{
+  link.addEventListener('click',e=>e.preventDefault());
 });
 
 /* ── SECTION NUMBER ANIMATION ── */
