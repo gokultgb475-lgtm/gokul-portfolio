@@ -3,1050 +3,53 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Gokul Priyan - Full Stack Developer</title>
+<title>Gokul Priyan — Full Stack Developer</title>
 <meta name="description" content="Portfolio of Gokul Priyan, a Full Stack Developer from Madurai specializing in web development, AI, and cloud-ready products."/>
 <meta name="author" content="Gokul Priyan"/>
-<meta name="theme-color" content="#00e5cc"/>
+<meta name="theme-color" content="#7c3aed"/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="Gokul Priyan - Full Stack Developer"/>
+<meta property="og:title" content="Gokul Priyan — Full Stack Developer"/>
 <meta property="og:description" content="Portfolio of Gokul Priyan, a Full Stack Developer from Madurai specializing in web development, AI, and cloud-ready products."/>
 <meta property="og:image" content="assets/gokul-profile.jpeg"/>
 <meta property="og:image:alt" content="Portrait of Gokul Priyan, Full Stack Developer"/>
 <meta property="og:site_name" content="Gokul Priyan Portfolio"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Gokul Priyan - Full Stack Developer"/>
+<meta name="twitter:title" content="Gokul Priyan — Full Stack Developer"/>
 <meta name="twitter:description" content="Portfolio of Gokul Priyan, a Full Stack Developer from Madurai specializing in web development, AI, and cloud-ready products."/>
 <meta name="twitter:image" content="assets/gokul-profile.jpeg"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;1,200;1,300&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-:root{
-  --bg:#050508;
-  --bg2:#09090f;
-  --teal:#00e5cc;
-  --teal-dim:rgba(0,229,204,0.18);
-  --teal-glow:rgba(0,229,204,0.08);
-  --purple:#8b5cf6;
-  --white:#f4f1ec;
-  --white80:rgba(244,241,236,0.82);
-  --white60:rgba(244,241,236,0.6);
-  --white30:rgba(244,241,236,0.3);
-  --white10:rgba(244,241,236,0.1);
-  --glass:rgba(255,255,255,0.04);
-  --glass2:rgba(255,255,255,0.07);
-  --border:rgba(255,255,255,0.08);
-  --border-teal:rgba(0,229,204,0.25);
-  --D:'Bebas Neue',sans-serif;
-  --S:'Crimson Pro',Georgia,serif;
-  --M:'IBM Plex Mono',monospace;
-  --ease:cubic-bezier(0.16,1,0.3,1);
-  --ease2:cubic-bezier(0.77,0,0.175,1);
-}
-
-html{scroll-behavior:smooth;}
-body{
-  background:
-    radial-gradient(circle at top, rgba(0,229,204,0.12), transparent 34%),
-    radial-gradient(circle at 80% 18%, rgba(139,92,246,0.14), transparent 26%),
-    linear-gradient(180deg,#06070b 0%,#050508 55%,#09090f 100%);
-  color:var(--white);
-  font-family:var(--M);
-  overflow-x:hidden;
-  cursor:default;
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-}
-a[href],button,[type="button"],[type="submit"]{cursor:pointer;}
-::selection{background:var(--teal);color:#000;}
-section{position:relative;z-index:10;}
-
-/* Loader */
-#loader{
-  position:fixed;inset:0;z-index:99999;
-  background:var(--bg);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  transition:clip-path 1.4s var(--ease2),opacity .6s;
-}
-#loader.out{clip-path:polygon(0 0,100% 0,100% 0,0 0);opacity:0;pointer-events:none;}
-.ld-logo{margin-bottom:36px;}
-.ld-name{
-  font-family:var(--D);
-  font-size:clamp(4rem,12vw,10rem);
-  letter-spacing:.1em;
-  line-height:.85;
-  text-align:center;
-  overflow:hidden;
-}
-.ld-name-l1,.ld-name-l2{display:block;transform:translateY(110%);animation:up .9s var(--ease) forwards;}
-.ld-name-l1{color:var(--white);animation-delay:.05s;}
-.ld-name-l2{color:var(--teal);animation-delay:.18s;}
-@keyframes up{to{transform:translateY(0);}}
-.ld-bar-wrap{
-  width:260px;height:1px;background:var(--border);
-  margin-top:40px;position:relative;overflow:hidden;
-}
-.ld-bar-fill{
-  position:absolute;inset:0 100% 0 0;
-  background:var(--teal);
-  box-shadow:0 0 16px var(--teal);
-  transition:right .06s linear;
-}
-.ld-pct{font-size:.6rem;letter-spacing:.2em;color:var(--white30);margin-top:12px;}
-
-/* Background */
-#glbg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.28;}
-#grain{
-  position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.018;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23f)'/%3E%3C/svg%3E");
-  background-size:180px;
-  animation:gr .35s steps(1) infinite;
-}
-@keyframes gr{
-  0%{transform:translate(0,0);}
-  25%{transform:translate(-3px,3px);}
-  50%{transform:translate(3px,-2px);}
-  75%{transform:translate(-2px,-3px);}
-  100%{transform:translate(2px,2px);}
-}
-
-/* Nav */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:600;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 52px;height:68px;
-  border-bottom:1px solid transparent;
-  transition:all .5s var(--ease);
-}
-nav.solid{background:rgba(5,5,8,.88);backdrop-filter:blur(32px);border-color:var(--border);}
-.logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none;}
-.logo-mark{width:36px;height:36px;flex-shrink:0;}
-.logo-mark svg{width:36px;height:36px;}
-.logo-text-wrap{display:flex;flex-direction:column;line-height:1;}
-.logo-name{
-  font-family:var(--D);
-  font-size:1rem;
-  letter-spacing:.14em;
-  color:var(--white);
-}
-.logo-sub{
-  font-family:var(--M);
-  font-size:.48rem;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-  color:var(--teal);
-  margin-top:1px;
-}
-.nav-links{
-  display:flex;gap:30px;list-style:none;
-  position:absolute;left:50%;transform:translateX(-50%);
-}
-.nav-links a{
-  font-family:var(--M);
-  font-size:.58rem;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--white60);
-  text-decoration:none;
-  transition:color .25s;
-  position:relative;
-}
-.nav-links a::after{
-  content:'';
-  position:absolute;left:0;bottom:-4px;
-  width:0;height:1px;background:var(--teal);
-  transition:width .3s var(--ease);
-  box-shadow:0 0 6px var(--teal);
-}
-.nav-links a:hover{color:var(--white);}
-.nav-links a:hover::after{width:100%;}
-.nav-right{display:flex;align-items:center;gap:8px;}
-.nav-avail{
-  width:6px;height:6px;background:#4ade80;border-radius:50%;
-  box-shadow:0 0 8px #4ade80;
-  animation:blink 2s ease infinite;
-}
-@keyframes blink{0%,100%{opacity:1;}50%{opacity:.25;}}
-.nav-avail-txt{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--white30);}
-
-/* Shared */
-.rv{opacity:0;transform:translateY(32px);transition:opacity .9s var(--ease),transform .9s var(--ease);}
-.rv.on{opacity:1;transform:none;}
-.glass-card{
-  background:linear-gradient(180deg,rgba(8,18,18,.8),rgba(12,28,27,.7));
-  backdrop-filter:blur(18px) saturate(1.15);
-  -webkit-backdrop-filter:blur(18px) saturate(1.15);
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:16px;
-  box-shadow:0 16px 48px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.08);
-}
-.sec-eyebrow{
-  display:flex;align-items:center;gap:10px;margin-bottom:14px;
-  font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);
-}
-.sec-eyebrow::before{
-  content:'';
-  width:20px;height:1px;
-  background:var(--teal);
-  box-shadow:0 0 6px var(--teal);
-}
-.sec-title{
-  font-family:var(--D);
-  font-size:clamp(3rem,7vw,8rem);
-  line-height:.88;
-  letter-spacing:-.01em;
-  text-transform:uppercase;
-  color:var(--white);
-  margin-bottom:46px;
-}
-.sec-title em{
-  color:transparent;
-  -webkit-text-stroke:2px rgba(0,229,204,.4);
-  font-style:normal;
-}
-
-/* Hero */
-#home{
-  min-height:100vh;
-  display:flex;flex-direction:column;justify-content:center;
-  padding:68px 52px 0;
-  overflow:hidden;
-}
-.hero-top{padding:60px 0 0;position:relative;}
-.h-tag{
-  display:inline-flex;align-items:center;gap:10px;
-  margin-bottom:28px;
-  opacity:0;
-  animation:fade .8s var(--ease) .6s forwards;
-}
-@keyframes fade{to{opacity:1;}}
-.h-tag-line{width:28px;height:1px;background:var(--teal);box-shadow:0 0 8px var(--teal);}
-.h-tag-txt{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);}
-.h-name{
-  font-family:var(--D);
-  font-size:clamp(5rem,14vw,18rem);
-  line-height:.82;
-  letter-spacing:-.01em;
-  color:var(--white);
-  overflow:hidden;
-}
-.h-n1,.h-n2{display:block;transform:translateY(110%);animation:up 1.1s var(--ease) forwards;}
-.h-n1{animation-delay:.1s;}
-.h-n2{
-  animation-delay:.22s;
-  color:transparent;
-  -webkit-text-stroke:2px rgba(0,229,204,.45);
-}
-.h-label{
-  position:absolute;right:0;top:50%;transform:translateY(-50%);
-  display:flex;flex-direction:column;align-items:flex-end;gap:7px;
-  opacity:0;
-  animation:fade .9s var(--ease) .9s forwards;
-}
-.hl-bar{
-  width:36px;height:1px;
-  background:linear-gradient(to left,var(--teal),transparent);
-  box-shadow:0 0 8px var(--teal);
-}
-.hl-txt{font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);}
-.hero-grid{
-  display:grid;grid-template-columns:1fr 1fr 1fr;
-  border-top:1px solid var(--border);
-  margin-top:28px;
-}
-.hg-cell{
-  padding:28px 36px;
-  border-right:1px solid var(--border);
-  display:flex;flex-direction:column;gap:16px;
-  min-height:220px;
-  justify-content:space-between;
-}
-.hg-cell:first-child{padding-left:0;}
-.hg-cell:last-child{padding-right:0;border-right:none;}
-.hg-lbl{font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;color:var(--white30);}
-.hg-desc{
-  font-family:var(--S);
-  font-size:1rem;
-  font-weight:300;
-  font-style:italic;
-  color:var(--white60);
-  line-height:1.8;
-}
-.hg-desc strong{color:var(--white);font-style:normal;font-weight:400;}
-.hg-nums{display:flex;gap:28px;}
-.hgn{display:flex;flex-direction:column;}
-.hgn-val{
-  font-family:var(--D);
-  font-size:3.8rem;
-  letter-spacing:-.02em;
-  line-height:1;
-  color:var(--white);
-}
-.hgn-val em{color:var(--teal);font-style:normal;}
-.hgn-lbl{font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;color:var(--white30);margin-top:3px;}
-.hg-role-title{
-  font-family:var(--D);
-  font-size:1.6rem;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-  color:var(--white);
-  line-height:1;
-}
-.hg-typed{
-  font-size:.65rem;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  color:var(--teal);
-  min-height:18px;
-}
-.hg-btns{display:flex;flex-direction:column;gap:9px;}
-.btn-main,.btn-sec{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:12px 18px;
-  font-size:.62rem;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  text-decoration:none;
-  transition:all .3s var(--ease);
-  position:relative;
-  overflow:hidden;
-}
-.btn-main{
-  background:var(--teal);
-  color:#000;
-  border:none;
-  box-shadow:0 4px 20px rgba(0,229,204,.25);
-}
-.btn-main::before,.f-send::before{
-  content:'';
-  position:absolute;inset:0;
-  background:rgba(255,255,255,.15);
-  transform:translateX(-101%);
-  transition:transform .4s var(--ease2);
-}
-.btn-main:hover::before,.f-send:hover::before{transform:translateX(0);}
-.btn-main span,.f-send span{position:relative;z-index:1;}
-.btn-sec{
-  background:transparent;
-  border:1px solid var(--border);
-  color:var(--white60);
-}
-.btn-sec:hover{border-color:var(--teal);color:var(--teal);}
-.scroll-cue{
-  position:absolute;left:52px;bottom:32px;
-  display:flex;align-items:center;gap:10px;
-  opacity:0;
-  animation:fade 1s var(--ease) 1.3s forwards;
-}
-.sc-bar{width:40px;height:1px;background:linear-gradient(to right,var(--teal),transparent);}
-.sc-txt{font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:var(--white30);}
-
-/* About */
-#about{padding:92px 52px 0;}
-.about-grid{
-  display:grid;grid-template-columns:minmax(0,1.08fr) minmax(320px,430px);
-  gap:28px 26px;
-  align-items:start;
-}
-.ab-para{
-  font-family:var(--S);
-  font-size:1.08rem;
-  font-weight:400;
-  color:rgba(244,241,236,.9);
-  line-height:1.9;
-  margin-bottom:20px;
-}
-.ab-para strong{color:var(--white);font-weight:400;}
-.achievement-strip{
-  display:flex;flex-wrap:wrap;gap:10px;
-  margin:26px 0 34px;
-}
-.ach-pill{
-  padding:10px 14px;
-  background:rgba(0,229,204,.1);
-  border:1px solid rgba(0,229,204,.22);
-  border-radius:999px;
-  color:rgba(244,241,236,.92);
-  font-size:.6rem;
-  letter-spacing:.06em;
-  line-height:1.6;
-  transition:transform .35s var(--ease),border-color .35s var(--ease);
-}
-.ach-pill:hover{transform:translateY(-2px);border-color:rgba(0,229,204,.3);}
-.glass-pull{
-  margin-top:8px;
-  padding:28px 32px;
-  background:rgba(14,43,40,.88);
-  border:1px solid rgba(0,229,204,.22);
-  border-left:2px solid var(--teal);
-  backdrop-filter:blur(10px);
-  border-radius:0 8px 8px 0;
-  box-shadow:0 12px 30px rgba(0,0,0,.22);
-}
-.glass-pull-text{
-  font-family:var(--S);
-  font-size:1.35rem;
-  font-weight:400;
-  font-style:italic;
-  color:var(--white);
-  line-height:1.65;
-}
-.glass-pull-text em{color:var(--teal);font-style:normal;}
-.about-side{display:contents;}
-.profile-card{
-  grid-column:2;
-  padding:30px;
-  transition:transform .4s var(--ease),border-color .4s var(--ease),box-shadow .4s var(--ease);
-}
-.profile-card:hover{
-  transform:translateY(-4px);
-  border-color:rgba(0,229,204,.22);
-  box-shadow:0 20px 60px rgba(0,0,0,.45),0 0 30px rgba(0,229,204,.05),inset 0 1px 0 rgba(255,255,255,.09);
-}
-.profile-ring{
-  width:128px;height:128px;
-  border-radius:50%;
-  margin:0 auto 18px;
-  padding:4px;
-  background:linear-gradient(135deg,var(--teal),rgba(139,92,246,.8));
-  box-shadow:0 0 36px rgba(0,229,204,.2);
-}
-.profile-ring img{
-  width:100%;height:100%;
-  display:block;
-  object-fit:cover;
-  object-position:center 18%;
-  border-radius:50%;
-  border:2px solid rgba(5,5,8,.92);
-}
-.profile-name{
-  font-family:var(--D);
-  font-size:2rem;
-  letter-spacing:.06em;
-  text-align:center;
-  color:var(--white);
-}
-.profile-role{
-  text-align:center;
-  color:var(--teal);
-  font-size:.58rem;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-  margin-top:4px;
-}
-.profile-divider{
-  height:1px;
-  background:var(--border);
-  margin:20px 0;
-}
-.skill-pill-row{display:flex;flex-wrap:wrap;gap:7px;}
-.skill-pill{
-  padding:5px 10px;
-  border-radius:999px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.11);
-  color:rgba(244,241,236,.82);
-  font-size:.52rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-.profile-lines{display:flex;flex-direction:column;gap:10px;}
-.detail-line,.detail-line a{
-  color:rgba(244,241,236,.78);
-  font-size:.72rem;
-  line-height:1.6;
-  text-decoration:none;
-}
-.detail-line a:hover{color:var(--teal);}
-.info-panel{
-  grid-column:1 / -1;
-  padding:28px 32px;
-}
-.info-head{
-  display:flex;align-items:center;gap:10px;
-  margin-bottom:14px;
-  color:var(--teal);
-  font-size:.54rem;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-}
-.info-head::before{
-  content:'';
-  width:16px;height:1px;
-  background:var(--teal);
-}
-.info-tbl{display:flex;flex-direction:column;margin-bottom:26px;}
-.itr{
-  display:flex;justify-content:space-between;align-items:center;
-  gap:16px;
-  padding:13px 0;
-  border-bottom:1px solid var(--border);
-}
-.itr:first-child{border-top:1px solid var(--border);}
-.itr-k{font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,241,236,.48);}
-.itr-v{text-align:right;font-size:.82rem;color:rgba(244,241,236,.95);}
-.tl-list{display:flex;flex-direction:column;}
-.tl-row{display:flex;gap:16px;padding:17px 0;border-bottom:1px solid var(--border);}
-.tl-dot{
-  width:8px;height:8px;border-radius:50%;
-  background:var(--teal);
-  box-shadow:0 0 10px var(--teal);
-  flex-shrink:0;
-  margin-top:5px;
-}
-.tl-yr{font-size:.56rem;letter-spacing:.1em;color:var(--teal);margin-bottom:4px;}
-.tl-tt{font-size:.92rem;font-weight:500;color:rgba(244,241,236,.97);margin-bottom:4px;}
-.tl-sb{font-size:.7rem;color:rgba(244,241,236,.62);line-height:1.55;}
-
-/* Skills */
-#skills{padding:110px 52px 0;}
-.sk-head{
-  display:flex;align-items:flex-end;justify-content:space-between;
-  gap:24px;
-  margin-bottom:52px;
-}
-.sk-sub{
-  font-family:var(--S);
-  font-size:.95rem;
-  font-weight:400;
-  font-style:italic;
-  color:rgba(244,241,236,.82);
-  max-width:360px;
-  text-align:right;
-  line-height:1.7;
-}
-.sk-grid{
-  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:16px;
-}
-.sk-card{
-  background:rgba(12,22,22,.7);
-  backdrop-filter:blur(24px) saturate(1.4);
-  -webkit-backdrop-filter:blur(24px) saturate(1.4);
-  border:1px solid rgba(255,255,255,.11);
-  border-radius:16px;
-  padding:32px 28px;
-  position:relative;
-  overflow:hidden;
-  transition:all .45s var(--ease);
-  box-shadow:0 4px 24px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.06);
-}
-.sk-card::before{
-  content:'';
-  position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent,var(--teal),transparent);
-  transform:scaleX(0);
-  transition:transform .5s var(--ease);
-  box-shadow:0 0 12px var(--teal);
-}
-.sk-card::after{
-  content:'';
-  position:absolute;inset:0;border-radius:16px;
-  background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(0,229,204,.07),transparent 65%);
-  opacity:0;
-  transition:opacity .35s;
-}
-.sk-card:hover{
-  background:rgba(255,255,255,.07);
-  border-color:rgba(0,229,204,.22);
-  transform:translateY(-5px);
-  box-shadow:0 20px 60px rgba(0,0,0,.45),0 0 30px rgba(0,229,204,.06),inset 0 1px 0 rgba(255,255,255,.1);
-}
-.sk-card:hover::before{transform:scaleX(1);}
-.sk-card:hover::after{opacity:1;}
-.sc-ghost{
-  position:absolute;right:18px;bottom:12px;
-  font-family:var(--D);
-  font-size:5.5rem;
-  letter-spacing:-.04em;
-  color:transparent;
-  -webkit-text-stroke:1px rgba(255,255,255,.05);
-  line-height:1;
-  pointer-events:none;
-  transition:-webkit-text-stroke .4s;
-}
-.sk-card:hover .sc-ghost{-webkit-text-stroke:1px rgba(0,229,204,.12);}
-.sc-row1{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:18px;}
-.sc-emoji{font-size:1.9rem;}
-.sc-badge{
-  font-size:.5rem;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  padding:4px 11px;
-  border-radius:20px;
-  font-weight:500;
-  border:1px solid;
-}
-.ba{border-color:rgba(74,222,128,.35);color:#4ade80;background:rgba(74,222,128,.06);}
-.bi{border-color:rgba(0,229,204,.3);color:var(--teal);background:rgba(0,229,204,.05);}
-.bb{border-color:rgba(255,255,255,.12);color:var(--white60);background:rgba(255,255,255,.03);}
-.sc-name{
-  font-family:var(--D);
-  font-size:1.55rem;
-  letter-spacing:.04em;
-  text-transform:uppercase;
-  color:var(--white);
-  margin-bottom:9px;
-  line-height:1;
-}
-.sc-desc{
-  font-family:var(--S);
-  font-size:.88rem;
-  font-weight:400;
-  font-style:italic;
-  color:rgba(244,241,236,.8);
-  line-height:1.75;
-  margin-bottom:16px;
-}
-.sc-tags{display:flex;flex-wrap:wrap;gap:5px;}
-.sc-tag{
-  padding:3px 9px;
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.09);
-  border-radius:4px;
-  font-size:.5rem;
-  letter-spacing:.06em;
-  color:var(--white30);
-  transition:all .3s;
-}
-.sk-card:hover .sc-tag{border-color:rgba(0,229,204,.18);color:var(--white60);}
-
-/* Certifications */
-#certifications{padding:110px 52px 0;}
-.cert-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
-.cert-card{
-  padding:34px 30px;
-  position:relative;
-  overflow:hidden;
-  transition:all .45s var(--ease);
-}
-.cert-card::before{
-  content:'';
-  position:absolute;left:0;top:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent,var(--teal),transparent);
-  transform:scaleX(0);
-  transition:transform .45s var(--ease);
-  box-shadow:0 0 10px var(--teal);
-}
-.cert-card:hover{
-  transform:translateY(-5px);
-  border-color:rgba(0,229,204,.2);
-  box-shadow:0 20px 60px rgba(0,0,0,.45),0 0 30px rgba(0,229,204,.05),inset 0 1px 0 rgba(255,255,255,.1);
-}
-.cert-card:hover::before{transform:scaleX(1);}
-.cert-year{
-  display:inline-flex;align-items:center;justify-content:center;
-  margin-bottom:18px;
-  padding:6px 12px;
-  border-radius:999px;
-  background:rgba(0,229,204,.08);
-  border:1px solid rgba(0,229,204,.2);
-  color:var(--teal);
-  font-size:.58rem;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-.cert-title{
-  font-family:var(--D);
-  font-size:2rem;
-  letter-spacing:.04em;
-  text-transform:uppercase;
-  line-height:1;
-  margin-bottom:10px;
-}
-.cert-issuer{
-  font-family:var(--S);
-  font-size:.94rem;
-  font-weight:400;
-  font-style:italic;
-  color:rgba(244,241,236,.82);
-  line-height:1.8;
-}
-
-/* Projects */
-#projects{padding:110px 52px 0;}
-.pj-head{
-  display:flex;align-items:flex-end;justify-content:space-between;
-  margin-bottom:40px;
-}
-.pj-list{display:flex;flex-direction:column;gap:14px;}
-.pj-card{
-  display:grid;grid-template-columns:90px 1fr 220px;
-  align-items:center;gap:40px;
-  padding:36px 40px;
-  background:rgba(12,22,22,.72);
-  backdrop-filter:blur(20px);
-  -webkit-backdrop-filter:blur(20px);
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:14px;
-  position:relative;
-  overflow:hidden;
-  transition:all .45s var(--ease);
-  box-shadow:0 4px 20px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.05);
-}
-.pj-card::before{
-  content:'';
-  position:absolute;left:0;top:0;bottom:0;width:2px;
-  background:linear-gradient(to bottom,var(--teal),rgba(139,92,246,.6));
-  transform:scaleY(0);
-  transform-origin:top;
-  transition:transform .5s var(--ease);
-  box-shadow:0 0 16px var(--teal);
-}
-.pj-card:hover{
-  background:rgba(255,255,255,.06);
-  border-color:rgba(0,229,204,.18);
-  transform:translateX(6px);
-  box-shadow:0 20px 60px rgba(0,0,0,.4),0 0 30px rgba(0,229,204,.05),inset 0 1px 0 rgba(255,255,255,.09);
-}
-.pj-card:hover::before{transform:scaleY(1);}
-.pj-num{
-  font-family:var(--D);
-  font-size:4.5rem;
-  letter-spacing:-.04em;
-  color:transparent;
-  -webkit-text-stroke:1px rgba(255,255,255,.1);
-  line-height:1;
-  transition:all .4s;
-}
-.pj-card:hover .pj-num{color:rgba(0,229,204,.12);-webkit-text-stroke:1px rgba(0,229,204,.25);}
-.pj-cat{font-size:.5rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:7px;}
-.pj-name{
-  font-family:var(--D);
-  font-size:2.4rem;
-  letter-spacing:-.01em;
-  text-transform:uppercase;
-  color:var(--white);
-  margin-bottom:10px;
-  line-height:1;
-}
-.pj-desc{
-  font-family:var(--S);
-  font-size:.88rem;
-  font-weight:400;
-  font-style:italic;
-  color:rgba(244,241,236,.84);
-  line-height:1.75;
-  max-width:560px;
-  margin-bottom:14px;
-}
-.pj-stack{display:flex;flex-wrap:wrap;gap:4px;}
-.pj-tag{
-  padding:2px 8px;
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:3px;
-  font-size:.5rem;
-  letter-spacing:.06em;
-  color:var(--white30);
-  transition:all .3s;
-}
-.pj-card:hover .pj-tag{border-color:rgba(0,229,204,.18);color:var(--white60);}
-.pj-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
-.pj-btn{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:9px 18px;
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:6px;
-  font-size:.58rem;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  color:var(--white60);
-  text-decoration:none;
-  transition:all .3s var(--ease);
-  white-space:nowrap;
-  backdrop-filter:blur(8px);
-}
-.pj-btn:hover,.pj-card:hover .pj-btn{
-  border-color:rgba(0,229,204,.3);
-  color:var(--teal);
-  background:rgba(0,229,204,.06);
-}
-.pj-btn.live{background:var(--teal);border-color:var(--teal);color:#000;}
-.pj-btn.live:hover{background:rgba(0,255,221,.85);}
-.pj-status{font-size:.5rem;letter-spacing:.1em;color:var(--white30);text-align:right;}
-.pj-status.sold{color:var(--teal);}
-
-/* Contact */
-#contact{padding:110px 52px 0;}
-.ct-title{
-  font-family:var(--D);
-  font-size:clamp(4rem,11vw,13rem);
-  line-height:.82;
-  letter-spacing:-.03em;
-  text-transform:uppercase;
-  margin-bottom:24px;
-}
-.ct-title .line1{color:var(--white);}
-.ct-title .line2{color:transparent;-webkit-text-stroke:3px rgba(0,229,204,.45);}
-.ct-title .line3{
-  font-family:var(--S);
-  font-weight:200;
-  font-style:italic;
-  font-size:.8em;
-  color:var(--white60);
-}
-.ct-sub{
-  font-family:var(--S);
-  font-size:1rem;
-  font-weight:400;
-  font-style:italic;
-  color:rgba(244,241,236,.84);
-  max-width:560px;
-  line-height:1.8;
-  margin-bottom:18px;
-}
-.ct-availability{
-  margin-bottom:64px;
-  font-size:.58rem;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:var(--teal);
-}
-.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-.ct-card{padding:40px;}
-.ct-card-tag{
-  font-size:.52rem;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:var(--teal);
-  margin-bottom:28px;
-  display:flex;align-items:center;gap:8px;
-}
-.ct-card-tag::before{
-  content:'';
-  width:14px;height:1px;
-  background:var(--teal);
-  box-shadow:0 0 6px var(--teal);
-}
-.cl-list{display:flex;flex-direction:column;}
-.cl-item{
-  display:flex;align-items:center;gap:15px;
-  padding:16px 0;
-  border-bottom:1px solid var(--border);
-  text-decoration:none;
-  transition:all .35s var(--ease);
-}
-.cl-item:first-child{border-top:1px solid var(--border);}
-.cl-item:hover{padding-left:8px;}
-.cl-ico{
-  width:40px;height:40px;
-  background:rgba(255,255,255,.05);
-  border:1px solid var(--border);
-  border-radius:8px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:.9rem;
-  flex-shrink:0;
-  transition:all .3s;
-}
-.cl-item:hover .cl-ico{border-color:rgba(0,229,204,.3);background:rgba(0,229,204,.07);}
-.cl-k{font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,241,236,.48);margin-bottom:2px;}
-.cl-v{font-size:.78rem;color:var(--white);transition:color .3s;}
-.cl-item:hover .cl-v{color:var(--teal);}
-.cl-ar{color:var(--white30);margin-left:auto;font-size:.85rem;transition:transform .3s,color .3s;}
-.cl-item:hover .cl-ar{transform:translate(4px,-4px);color:var(--teal);}
-.form-title{
-  font-family:var(--D);
-  font-size:1.8rem;
-  letter-spacing:.04em;
-  text-transform:uppercase;
-  color:var(--white);
-  margin-bottom:4px;
-}
-.form-sub{
-  font-size:.52rem;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:rgba(244,241,236,.46);
-  margin-bottom:28px;
-}
-.f2c{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.fg{margin-bottom:13px;}
-.fg label{
-  display:block;
-  font-size:.5rem;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--white30);
-  margin-bottom:7px;
-}
-.fg input,.fg textarea{
-  width:100%;
-  padding:11px 14px;
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.09);
-  border-radius:6px;
-  color:var(--white);
-  font-family:var(--M);
-  font-size:.78rem;
-  outline:none;
-  resize:none;
-  transition:border-color .3s,box-shadow .3s;
-  backdrop-filter:blur(8px);
-}
-.fg input::placeholder,.fg textarea::placeholder{color:var(--white30);}
-.fg input:focus,.fg textarea:focus{
-  border-color:rgba(0,229,204,.4);
-  box-shadow:0 0 0 3px rgba(0,229,204,.07);
-}
-.f-send{
-  width:100%;
-  padding:13px;
-  background:var(--teal);
-  border:none;
-  border-radius:8px;
-  color:#000;
-  font-family:var(--D);
-  font-size:1.1rem;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  transition:all .3s var(--ease);
-  position:relative;
-  overflow:hidden;
-  margin-top:4px;
-  box-shadow:0 4px 20px rgba(0,229,204,.25);
-}
-.f-send:hover{box-shadow:0 8px 36px rgba(0,229,204,.4);}
-
-/* Footer */
-footer{
-  position:relative;z-index:10;
-  display:flex;align-items:center;justify-content:space-between;
-  gap:14px;
-  padding:28px 52px;
-  margin-top:100px;
-  border-top:1px solid var(--border);
-}
-.ft-left{display:flex;align-items:center;gap:10px;}
-.ft-right{font-size:.52rem;letter-spacing:.12em;color:var(--white30);text-transform:uppercase;}
-.ft-center{font-size:.62rem;color:var(--white60);}
-
-/* Back to top */
-#btt{
-  position:fixed;right:28px;bottom:28px;z-index:600;
-  width:48px;height:48px;
-  background:var(--teal);
-  border:none;
-  border-radius:50%;
-  color:#000;
-  font-family:var(--D);
-  font-size:1.2rem;
-  display:flex;align-items:center;justify-content:center;
-  opacity:0;
-  transform:translateY(14px) scale(.8);
-  transition:all .4s var(--ease);
-  box-shadow:0 0 24px rgba(0,229,204,.35);
-}
-#btt.on{opacity:1;transform:translateY(0) scale(1);}
-#btt:hover{background:rgba(0,255,221,.9);box-shadow:0 0 40px rgba(0,229,204,.5);}
-
-/* Responsive */
-@media(max-width:1200px){
-  .about-grid{grid-template-columns:1fr;}
-  .profile-card,.info-panel{grid-column:auto;}
-}
-@media(max-width:1100px){
-  nav{padding:0 24px;}
-  .nav-links{display:none;}
-  #home,#about,#skills,#certifications,#projects,#contact{padding-left:24px;padding-right:24px;}
-  .h-label{position:static;transform:none;align-items:flex-start;margin-top:26px;}
-  .hero-grid{grid-template-columns:1fr;}
-  .hg-cell{border-right:none;border-bottom:1px solid var(--border);}
-  .hg-cell:last-child{border-bottom:none;}
-  .sk-grid{grid-template-columns:1fr 1fr;}
-  .cert-grid{grid-template-columns:1fr;}
-  .pj-card{grid-template-columns:70px 1fr;padding:24px;gap:24px;}
-  .pj-right{display:none;}
-  .ct-grid{grid-template-columns:1fr;}
-  footer{padding:20px 24px;flex-direction:column;text-align:center;}
-}
-@media(max-width:640px){
-  .h-name{font-size:4.5rem;}
-  .sk-head{flex-direction:column;align-items:flex-start;}
-  .sk-sub{text-align:left;max-width:none;}
-  .sk-grid{grid-template-columns:1fr;}
-  .ct-title{font-size:3.2rem;}
-  .f2c{grid-template-columns:1fr;}
-  .achievement-strip{flex-direction:column;}
-  .scroll-cue{left:24px;}
-}
-@media (hover:none), (pointer:coarse), (max-width:900px){
-  html{scroll-behavior:auto;}
-  #glbg,#grain,.scroll-cue{display:none;}
-  #loader{transition:opacity .35s ease;}
-  #loader.out{clip-path:none;}
-  .rv{opacity:1;transform:none;transition:none;}
-  .ld-name-l1,.ld-name-l2,.h-n1,.h-n2{animation:none;transform:none;}
-  .h-tag,.h-label{animation:none;opacity:1;}
-  nav.solid,
-  .glass-card,.profile-card,.info-panel,.sk-card,.pj-card,.ct-card,.cert-card,
-  .pj-btn,.fg input,.fg textarea{
-    backdrop-filter:none !important;
-    -webkit-backdrop-filter:none !important;
-  }
-  .glass-card,.profile-card,.info-panel,.sk-card,.pj-card,.ct-card,.cert-card{
-    background:rgba(9,14,18,.94);
-  }
-  .profile-card:hover,.sk-card:hover,.cert-card:hover,.pj-card:hover,.ach-pill:hover{transform:none;}
-  .cl-item:hover{padding-left:0;}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto;}
-  *,*::before,*::after{
-    animation:none !important;
-    transition:none !important;
-  }
-  #glbg,#grain,.scroll-cue{display:none !important;}
-  .rv{opacity:1 !important;transform:none !important;}
-}
-</style>
+<link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
+<!-- ═══ PRELOADER ═══ -->
 <div id="loader">
-  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" class="ld-logo" style="animation:fade .6s ease forwards;opacity:0;">
-    <circle cx="40" cy="40" r="38" stroke="rgba(0,229,204,0.3)" stroke-width="1"/>
-    <circle cx="40" cy="40" r="38" stroke="url(#lg1)" stroke-width="1.5" stroke-dasharray="240" stroke-dashoffset="0">
-      <animateTransform attributeName="transform" type="rotate" from="0 40 40" to="360 40 40" dur="3s" repeatCount="indefinite"/>
-    </circle>
-    <text x="40" y="50" text-anchor="middle" font-family="'Bebas Neue'" font-size="28" fill="#f4f1ec" letter-spacing="2">GP</text>
-    <defs>
-      <linearGradient id="lg1" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stop-color="#00e5cc"/>
-        <stop offset="100%" stop-color="#8b5cf6"/>
-      </linearGradient>
-    </defs>
-  </svg>
-  <div class="ld-name">
-    <span class="ld-name-l1">GOKUL</span>
-    <span class="ld-name-l2">PRIYAN</span>
+  <div class="loader-logo"><span class="loader-initials">GP</span></div>
+  <div class="loader-name">
+    <span>GOKUL</span>
+    <span>PRIYAN</span>
   </div>
-  <div class="ld-bar-wrap"><div class="ld-bar-fill" id="lf"></div></div>
-  <div class="ld-pct" id="lp">000%</div>
+  <div class="loader-bar"><div class="loader-fill" id="loader-fill"></div></div>
+  <div class="loader-pct" id="loader-pct">000%</div>
 </div>
 
-<canvas id="glbg"></canvas>
-<div id="grain"></div>
+<!-- ═══ BACKGROUNDS ═══ -->
+<div class="aurora">
+  <div class="aurora-orb"></div>
+  <div class="aurora-orb"></div>
+  <div class="aurora-orb"></div>
+</div>
+<canvas id="particles" style="position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.6"></canvas>
+<div class="noise"></div>
 
-<nav id="nav">
-  <a href="#home" class="logo-wrap">
-    <div class="logo-mark">
-      <svg viewBox="0 0 36 36" fill="none">
-        <rect width="36" height="36" rx="8" fill="rgba(0,229,204,0.08)" stroke="rgba(0,229,204,0.25)" stroke-width="1"/>
-        <text x="18" y="25" text-anchor="middle" font-family="'Bebas Neue'" font-size="18" fill="#f4f1ec" letter-spacing="1">GP</text>
-        <circle cx="28" cy="9" r="2.5" fill="#00e5cc">
-          <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
-        </circle>
-      </svg>
-    </div>
-    <div class="logo-text-wrap">
-      <span class="logo-name">GOKUL PRIYAN</span>
-      <span class="logo-sub">Full Stack Developer</span>
+<!-- ═══ NAVIGATION ═══ -->
+<nav class="nav" id="main-nav">
+  <a href="#home" class="nav-brand">
+    <div class="nav-brand-icon">GP</div>
+    <div class="nav-brand-text">
+      <span class="nav-brand-name">Gokul Priyan</span>
+      <span class="nav-brand-role">Full Stack Developer</span>
     </div>
   </a>
-
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -1055,532 +58,305 @@ footer{
     <li><a href="#projects">Work</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-
-  <div class="nav-right">
-    <div class="nav-avail"></div>
-    <span class="nav-avail-txt">Available Now</span>
+  <div class="nav-status">
+    <div class="nav-dot"></div>
+    <span class="nav-status-text">Available Now</span>
   </div>
 </nav>
 
-<section id="home">
-  <div class="hero-top">
-    <div class="h-tag">
-      <div class="h-tag-line"></div>
-      <div class="h-tag-txt">Full Stack Developer · Madurai, India · 2026 Graduate</div>
-    </div>
-    <div class="h-name">
-      <span class="h-n1">GOKUL</span>
-      <span class="h-n2">PRIYAN</span>
-    </div>
-    <div class="h-label">
-      <div class="hl-bar"></div>
-      <div class="hl-txt">Full Stack</div>
-      <div class="hl-txt">Developer</div>
-      <div class="hl-txt">Madurai · India</div>
-      <div class="hl-txt">CSE · 2026</div>
-    </div>
+<!-- ═══ HERO ═══ -->
+<section class="section hero" id="home">
+  <div class="hero-badge">
+    <div class="hero-badge-dot"></div>
+    <span class="hero-badge-text">Full Stack Developer · Madurai, India · 2026 Graduate</span>
   </div>
-
-  <div class="hero-grid">
-    <div class="hg-cell">
-      <div class="hg-lbl">What I Do</div>
-      <p class="hg-desc">I build <strong>clean, real-world</strong> web products and cloud-ready solutions with a strong focus on clarity, usability, and practical problem solving.</p>
+  <h1 class="hero-name">
+    <span class="line">GOKUL</span>
+    <span class="line">PRIYAN</span>
+  </h1>
+  <div class="hero-bottom">
+    <div class="hero-cell">
+      <div class="hero-cell-label">What I Do</div>
+      <p class="hero-cell-text">I build <strong>clean, real-world</strong> web products and cloud-ready solutions with a strong focus on clarity, usability, and practical problem solving.</p>
     </div>
-    <div class="hg-cell">
-      <div class="hg-lbl">By The Numbers</div>
-      <div class="hg-nums">
-        <div class="hgn"><div class="hgn-val">3</div><div class="hgn-lbl">Projects</div></div>
-        <div class="hgn"><div class="hgn-val">1</div><div class="hgn-lbl">Website Sold</div></div>
-        <div class="hgn"><div class="hgn-val">'26</div><div class="hgn-lbl">Graduate</div></div>
+    <div class="hero-cell">
+      <div class="hero-cell-label">By The Numbers</div>
+      <div class="hero-stats">
+        <div><div class="hero-stat-num">3</div><div class="hero-stat-label">Projects</div></div>
+        <div><div class="hero-stat-num">1</div><div class="hero-stat-label">Website Sold</div></div>
+        <div><div class="hero-stat-num">'26</div><div class="hero-stat-label">Graduate</div></div>
       </div>
     </div>
-    <div class="hg-cell">
-      <div class="hg-role-title">Open For</div>
-      <div class="hg-typed" id="typed"></div>
-      <div class="hg-btns">
-        <a href="#projects" class="btn-main"><span>View My Work</span><span>→</span></a>
-        <a href="#contact" class="btn-sec"><span>Contact Me</span><span>↗</span></a>
-        <a href="assets/gokulpriyanP-resume.pdf" class="btn-sec" download target="_blank" rel="noopener noreferrer"><span>Download Resume</span><span>↓</span></a>
+    <div class="hero-cell">
+      <div class="hero-cell-label" style="font-family:var(--heading);font-size:.9rem;font-weight:600;letter-spacing:0;text-transform:none;color:var(--white)">Open For</div>
+      <div class="hero-typed" id="typed"></div>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary"><span>View My Work</span><span>→</span></a>
+        <a href="#contact" class="btn-ghost"><span>Contact Me</span><span>↗</span></a>
+        <a href="assets/gokulpriyanP-resume.pdf" class="btn-ghost" download target="_blank" rel="noopener noreferrer"><span>Download Resume</span><span>↓</span></a>
       </div>
     </div>
   </div>
-  <div class="scroll-cue"><div class="sc-bar"></div><div class="sc-txt">Scroll to explore</div></div>
+  <div class="scroll-indicator"><div class="scroll-line"></div><div class="scroll-text">Scroll to explore</div></div>
 </section>
 
-<section id="about">
-  <div class="rv">
-    <div class="sec-eyebrow">About Me</div>
-    <div class="sec-title">THE PERSON<br/>BEHIND THE <em>CODE.</em></div>
+<!-- ═══ ABOUT ═══ -->
+<section class="section about" id="about">
+  <div class="reveal">
+    <div class="section-label">About Me</div>
+    <h2 class="section-heading">THE PERSON<br/>BEHIND THE <span class="gradient">CODE.</span></h2>
   </div>
-
   <div class="about-grid">
-    <div class="rv">
-      <p class="ab-para">I'm <strong>Gokul Priyan</strong>, a Diploma CSE student from Madurai focused on full stack development, clear UX, and practical software that solves real problems.</p>
-      <p class="ab-para">I delivered and sold a business website to a real client in the fisheries sector, built practical web and AI-based projects, and completed entrepreneurship training at Thiagarajar College of Engineering - Technology Business Incubator (TCE TBI).</p>
-      <p class="ab-para">I want to grow as a developer who builds impactful products, contributes to strong engineering teams, and keeps expanding in web, cloud, and product thinking.</p>
+    <div class="reveal">
+      <p class="about-text">I'm <strong>Gokul Priyan</strong>, a Diploma CSE student from Madurai focused on full stack development, clear UX, and practical software that solves real problems.</p>
+      <p class="about-text">I delivered and sold a business website to a real client in the fisheries sector, built practical web and AI-based projects, and completed entrepreneurship training at Thiagarajar College of Engineering - Technology Business Incubator (TCE TBI).</p>
+      <p class="about-text">I want to grow as a developer who builds impactful products, contributes to strong engineering teams, and keeps expanding in web, cloud, and product thinking.</p>
 
-      <div class="achievement-strip">
-        <div class="ach-pill">Delivered and sold a business website to a real client in the fisheries sector.</div>
-        <div class="ach-pill">Built real-world web and AI-focused projects beyond academics.</div>
-        <div class="ach-pill">Completed entrepreneurship training and product exposure at TBI.</div>
+      <div class="about-achievements">
+        <div class="about-ach">Delivered and sold a business website to a real client in the fisheries sector.</div>
+        <div class="about-ach">Built real-world web and AI-focused projects beyond academics.</div>
+        <div class="about-ach">Completed entrepreneurship training and product exposure at TBI.</div>
       </div>
 
-      <div class="glass-pull">
-        <div class="glass-pull-text">"I don't just write code - I build <em>products</em> that create real value for real people."</div>
-      </div>
-    </div>
-
-    <div class="about-side">
-      <div class="profile-card glass-card rv">
-        <div class="profile-ring">
-          <img src="assets/gokul-profile.jpeg" alt="Portrait of Gokul Priyan"/>
-        </div>
-        <div class="profile-name">Gokul Priyan</div>
-        <div class="profile-role">Full Stack Developer</div>
-
-        <div class="profile-divider"></div>
-
-        <div class="skill-pill-row">
-          <span class="skill-pill">Python</span>
-          <span class="skill-pill">JavaScript</span>
-          <span class="skill-pill">HTML/CSS</span>
-          <span class="skill-pill">Linux</span>
-          <span class="skill-pill">Git</span>
-          <span class="skill-pill">Cloud</span>
-          <span class="skill-pill">Farmer AI</span>
-          <span class="skill-pill">Entrepreneurship</span>
-        </div>
-
-        <div class="profile-divider"></div>
-
-        <div class="profile-lines">
-          <div class="detail-line">📍 Madurai, Tamil Nadu, India</div>
-          <div class="detail-line">📧 <a href="mailto:gokultgb475@gmail.com">gokultgb475@gmail.com</a></div>
-          <div class="detail-line">📞 <a href="tel:+919489392449">+91 94893 92449</a></div>
-          <div class="detail-line">🐙 <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer">github.com/gokultgb475-lgtm</a></div>
-          <div class="detail-line">🌐 <a href="https://fish-corporation-live.onrender.com" target="_blank" rel="noopener noreferrer">fish-corporation-live.onrender.com</a></div>
-        </div>
-      </div>
-
-      <div class="info-panel glass-card rv">
-        <div class="info-head">Quick Facts</div>
-        <div class="info-tbl">
-          <div class="itr"><span class="itr-k">College</span><span class="itr-v">TNGPTC, Madurai</span></div>
-          <div class="itr"><span class="itr-k">Programme</span><span class="itr-v">Diploma in CSE</span></div>
-          <div class="itr"><span class="itr-k">Interests</span><span class="itr-v">Full Stack, AI, Cloud Computing</span></div>
-          <div class="itr"><span class="itr-k">Graduation</span><span class="itr-v">2026</span></div>
-          <div class="itr"><span class="itr-k">Location</span><span class="itr-v">Madurai, Tamil Nadu, India</span></div>
-          <div class="itr"><span class="itr-k">HSC Score</span><span class="itr-v">86% - 2023</span></div>
-        </div>
-
-        <div class="info-head">Timeline</div>
-        <div class="tl-list">
-          <div class="tl-row"><div class="tl-dot"></div><div><div class="tl-yr">2024</div><div class="tl-tt">Sold Fish Corporation Website</div><div class="tl-sb">Delivered to a real business client in the fisheries sector</div></div></div>
-          <div class="tl-row"><div class="tl-dot"></div><div><div class="tl-yr">2025</div><div class="tl-tt">TCE TBI Entrepreneurship Training</div><div class="tl-sb">Startup, product, and pitching exposure</div></div></div>
-          <div class="tl-row"><div class="tl-dot"></div><div><div class="tl-yr">2025</div><div class="tl-tt">Farmer AI Project</div><div class="tl-sb">Python and AI web application for agriculture</div></div></div>
-        </div>
+      <div class="about-quote">
+        <p>"I don't just write code — I build <em>products</em> that create real value for real people."</p>
       </div>
     </div>
-  </div>
-</section>
 
-<section id="skills">
-  <div class="sk-head rv">
     <div>
-      <div class="sec-eyebrow">Skills</div>
-      <div class="sec-title" style="margin-bottom:0;">WHAT I<br/><em>WORK</em> WITH.</div>
-    </div>
-    <div class="sk-sub">Everything below comes from hands-on projects, real delivery work, and steady daily practice.</div>
-  </div>
-
-  <div class="sk-grid rv">
-    <div class="sk-card">
-      <div class="sc-ghost">01</div>
-      <div class="sc-row1"><span class="sc-emoji">🌐</span><span class="sc-badge bi">Intermediate</span></div>
-      <div class="sc-name">HTML / CSS / JS</div>
-      <div class="sc-desc">Building responsive, accessible interfaces and front-end interactions for modern web experiences.</div>
-      <div class="sc-tags"><span class="sc-tag">HTML5</span><span class="sc-tag">CSS3</span><span class="sc-tag">JavaScript</span><span class="sc-tag">Responsive</span></div>
-    </div>
-
-    <div class="sk-card">
-      <div class="sc-ghost">02</div>
-      <div class="sc-row1"><span class="sc-emoji">🐍</span><span class="sc-badge bi">Intermediate</span></div>
-      <div class="sc-name">Python</div>
-      <div class="sc-desc">Used for backend workflows, automation, data handling, and practical AI-based project logic.</div>
-      <div class="sc-tags"><span class="sc-tag">Python 3</span><span class="sc-tag">Automation</span><span class="sc-tag">AI Logic</span><span class="sc-tag">Jupyter</span></div>
-    </div>
-
-    <div class="sk-card">
-      <div class="sc-ghost">03</div>
-      <div class="sc-row1"><span class="sc-emoji">🐧</span><span class="sc-badge ba">Advanced</span></div>
-      <div class="sc-name">Linux</div>
-      <div class="sc-desc">Daily Linux usage for development, terminal workflows, file systems, and system operations.</div>
-      <div class="sc-tags"><span class="sc-tag">Bash</span><span class="sc-tag">SSH</span><span class="sc-tag">Git</span><span class="sc-tag">Permissions</span></div>
+      <div class="profile-card reveal">
+        <div class="profile-avatar">
+          <img src="assets/gokul-profile.jpeg" alt="Portrait of Gokul Priyan" loading="lazy"/>
+        </div>
+        <div class="profile-card-name">Gokul Priyan</div>
+        <div class="profile-card-role">Full Stack Developer</div>
+        <div class="profile-divider"></div>
+        <div class="profile-skills">
+          <span class="profile-skill">Python</span>
+          <span class="profile-skill">JavaScript</span>
+          <span class="profile-skill">HTML/CSS</span>
+          <span class="profile-skill">Linux</span>
+          <span class="profile-skill">Git</span>
+          <span class="profile-skill">Cloud</span>
+          <span class="profile-skill">Farmer AI</span>
+          <span class="profile-skill">Entrepreneurship</span>
+        </div>
+        <div class="profile-divider"></div>
+        <div class="profile-info">
+          <div class="profile-info-item">📍 Madurai, Tamil Nadu, India</div>
+          <div class="profile-info-item">📧 <a href="mailto:gokultgb475@gmail.com">gokultgb475@gmail.com</a></div>
+          <div class="profile-info-item">📞 <a href="tel:+919489392449">+91 94893 92449</a></div>
+          <div class="profile-info-item">🐙 <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer">github.com/gokultgb475-lgtm</a></div>
+          <div class="profile-info-item">🌐 <a href="https://fish-corporation-live.onrender.com" target="_blank" rel="noopener noreferrer">fish-corporation-live.onrender.com</a></div>
+        </div>
+      </div>
     </div>
 
-    <div class="sk-card">
-      <div class="sc-ghost">04</div>
-      <div class="sc-row1"><span class="sc-emoji">🐙</span><span class="sc-badge bi">Intermediate</span></div>
-      <div class="sc-name">Git &amp; GitHub</div>
-      <div class="sc-desc">Version control, clean collaboration, and project tracking for faster and safer development.</div>
-      <div class="sc-tags"><span class="sc-tag">Git</span><span class="sc-tag">GitHub</span><span class="sc-tag">Branching</span><span class="sc-tag">Commits</span></div>
-    </div>
-
-    <div class="sk-card">
-      <div class="sc-ghost">05</div>
-      <div class="sc-row1"><span class="sc-emoji">☁️</span><span class="sc-badge bi">Intermediate</span></div>
-      <div class="sc-name">Cloud &amp; Deploy</div>
-      <div class="sc-desc">Experienced in deploying web apps to Render, Vercel, and managing Linux-based environments.</div>
-      <div class="sc-tags"><span class="sc-tag">Vercel</span><span class="sc-tag">Render</span><span class="sc-tag">DNS</span><span class="sc-tag">Linux</span></div>
-    </div>
-
-    <div class="sk-card">
-      <div class="sc-ghost">06</div>
-      <div class="sc-row1"><span class="sc-emoji">🔧</span><span class="sc-badge bi">Intermediate</span></div>
-      <div class="sc-name">Frontend Workflow</div>
-      <div class="sc-desc">Focused on readable UI structure, animation polish, debugging, and faster iteration during development.</div>
-      <div class="sc-tags"><span class="sc-tag">VS Code</span><span class="sc-tag">UI</span><span class="sc-tag">Debugging</span><span class="sc-tag">Workflow</span></div>
-    </div>
-
-    <div class="sk-card">
-      <div class="sc-ghost">07</div>
-      <div class="sc-row1"><span class="sc-emoji">💡</span><span class="sc-badge bb">Beginner</span></div>
-      <div class="sc-name">Entrepreneurship</div>
-      <div class="sc-desc">Startup thinking, product value, and practical business exposure from TBI entrepreneurship training.</div>
-      <div class="sc-tags"><span class="sc-tag">Startups</span><span class="sc-tag">Pitching</span><span class="sc-tag">Innovation</span></div>
+    <div class="info-panel reveal">
+      <div class="info-panel-head">Quick Facts</div>
+      <div>
+        <div class="info-row"><span class="info-key">College</span><span class="info-val">TNGPTC, Madurai</span></div>
+        <div class="info-row"><span class="info-key">Programme</span><span class="info-val">Diploma in CSE</span></div>
+        <div class="info-row"><span class="info-key">Interests</span><span class="info-val">Full Stack, AI, Cloud Computing</span></div>
+        <div class="info-row"><span class="info-key">Graduation</span><span class="info-val">2026</span></div>
+        <div class="info-row"><span class="info-key">Location</span><span class="info-val">Madurai, Tamil Nadu, India</span></div>
+        <div class="info-row"><span class="info-key">HSC Score</span><span class="info-val">86% — 2023</span></div>
+      </div>
+      <div class="info-panel-head" style="margin-top:28px">Timeline</div>
+      <div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div><div class="timeline-year">2024</div><div class="timeline-title">Sold Fish Corporation Website</div><div class="timeline-desc">Delivered to a real business client in the fisheries sector</div></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div><div class="timeline-year">2025</div><div class="timeline-title">TCE TBI Entrepreneurship Training</div><div class="timeline-desc">Startup, product, and pitching exposure</div></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div><div class="timeline-year">2025</div><div class="timeline-title">Farmer AI Project</div><div class="timeline-desc">Python and AI web application for agriculture</div></div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="certifications">
-  <div class="rv">
-    <div class="sec-eyebrow">Certifications</div>
-    <div class="sec-title" style="margin-bottom:0;">TRAINING &amp;<br/><em>CERTIFICATIONS</em>.</div>
+<!-- ═══ SKILLS ═══ -->
+<section class="section skills" id="skills">
+  <div class="skills-header reveal">
+    <div>
+      <div class="section-label">Skills</div>
+      <h2 class="section-heading" style="margin-bottom:0">WHAT I<br/><span class="outline">WORK</span> WITH.</h2>
+    </div>
+    <div class="skills-sub">Everything below comes from hands-on projects, real delivery work, and steady daily practice.</div>
   </div>
 
-  <div class="cert-grid" style="margin-top:40px;">
-    <div class="cert-card glass-card rv">
-      <div class="cert-year">2025</div>
-      <div class="cert-title">Entrepreneurship &amp; Startup Training</div>
-      <div class="cert-issuer">TCE TBI - Thiagarajar College of Engineering</div>
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <div class="skill-ghost">01</div>
+      <div class="skill-top"><span class="skill-emoji">🌐</span><span class="skill-level level-int">Intermediate</span></div>
+      <div class="skill-name">HTML / CSS / JS</div>
+      <div class="skill-desc">Building responsive, accessible interfaces and front-end interactions for modern web experiences.</div>
+      <div class="skill-tags"><span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Responsive</span></div>
     </div>
-    <div class="cert-card glass-card rv">
-      <div class="cert-year">2024 - 2025</div>
+    <div class="skill-card reveal reveal-delay-1">
+      <div class="skill-ghost">02</div>
+      <div class="skill-top"><span class="skill-emoji">🐍</span><span class="skill-level level-int">Intermediate</span></div>
+      <div class="skill-name">Python</div>
+      <div class="skill-desc">Used for backend workflows, automation, data handling, and practical AI-based project logic.</div>
+      <div class="skill-tags"><span class="skill-tag">Python 3</span><span class="skill-tag">Automation</span><span class="skill-tag">AI Logic</span><span class="skill-tag">Jupyter</span></div>
+    </div>
+    <div class="skill-card reveal reveal-delay-2">
+      <div class="skill-ghost">03</div>
+      <div class="skill-top"><span class="skill-emoji">🐧</span><span class="skill-level level-adv">Advanced</span></div>
+      <div class="skill-name">Linux</div>
+      <div class="skill-desc">Daily Linux usage for development, terminal workflows, file systems, and system operations.</div>
+      <div class="skill-tags"><span class="skill-tag">Bash</span><span class="skill-tag">SSH</span><span class="skill-tag">Git</span><span class="skill-tag">Permissions</span></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-ghost">04</div>
+      <div class="skill-top"><span class="skill-emoji">🐙</span><span class="skill-level level-int">Intermediate</span></div>
+      <div class="skill-name">Git &amp; GitHub</div>
+      <div class="skill-desc">Version control, clean collaboration, and project tracking for faster and safer development.</div>
+      <div class="skill-tags"><span class="skill-tag">Git</span><span class="skill-tag">GitHub</span><span class="skill-tag">Branching</span><span class="skill-tag">Commits</span></div>
+    </div>
+    <div class="skill-card reveal reveal-delay-1">
+      <div class="skill-ghost">05</div>
+      <div class="skill-top"><span class="skill-emoji">☁️</span><span class="skill-level level-int">Intermediate</span></div>
+      <div class="skill-name">Cloud &amp; Deploy</div>
+      <div class="skill-desc">Experienced in deploying web apps to Render, Vercel, and managing Linux-based environments.</div>
+      <div class="skill-tags"><span class="skill-tag">Vercel</span><span class="skill-tag">Render</span><span class="skill-tag">DNS</span><span class="skill-tag">Linux</span></div>
+    </div>
+    <div class="skill-card reveal reveal-delay-2">
+      <div class="skill-ghost">06</div>
+      <div class="skill-top"><span class="skill-emoji">🔧</span><span class="skill-level level-int">Intermediate</span></div>
+      <div class="skill-name">Frontend Workflow</div>
+      <div class="skill-desc">Focused on readable UI structure, animation polish, debugging, and faster iteration during development.</div>
+      <div class="skill-tags"><span class="skill-tag">VS Code</span><span class="skill-tag">UI</span><span class="skill-tag">Debugging</span><span class="skill-tag">Workflow</span></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-ghost">07</div>
+      <div class="skill-top"><span class="skill-emoji">💡</span><span class="skill-level level-beg">Beginner</span></div>
+      <div class="skill-name">Entrepreneurship</div>
+      <div class="skill-desc">Startup thinking, product value, and practical business exposure from TBI entrepreneurship training.</div>
+      <div class="skill-tags"><span class="skill-tag">Startups</span><span class="skill-tag">Pitching</span><span class="skill-tag">Innovation</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CERTIFICATIONS ═══ -->
+<section class="section certs" id="certifications">
+  <div class="reveal">
+    <div class="section-label">Certifications</div>
+    <h2 class="section-heading">TRAINING &amp;<br/><span class="gradient">CERTIFICATIONS</span>.</h2>
+  </div>
+  <div class="certs-grid">
+    <div class="cert-card reveal">
+      <div class="cert-year-badge">2025</div>
+      <div class="cert-title">Entrepreneurship &amp; Startup Training</div>
+      <div class="cert-issuer">TCE TBI — Thiagarajar College of Engineering</div>
+    </div>
+    <div class="cert-card reveal reveal-delay-1">
+      <div class="cert-year-badge">2024 — 2025</div>
       <div class="cert-title">Full Stack Web Development</div>
       <div class="cert-issuer">Self-learning through projects, practical implementation, and daily development practice.</div>
     </div>
   </div>
 </section>
 
-<section id="projects">
-  <div class="pj-head rv">
-    <div>
-      <div class="sec-eyebrow">Selected Work</div>
-      <div class="sec-title" style="margin-bottom:0;">THINGS I'VE<br/><em>BUILT.</em></div>
-    </div>
+<!-- ═══ PROJECTS ═══ -->
+<section class="section projects" id="projects">
+  <div class="reveal">
+    <div class="section-label">Selected Work</div>
+    <h2 class="section-heading">THINGS I'VE<br/><span class="outline">BUILT.</span></h2>
   </div>
-
-  <div class="pj-list">
-    <div class="pj-card rv">
-      <div class="pj-num">01</div>
-      <div class="pj-body">
-        <div class="pj-cat">AI · Agriculture · Python</div>
-        <div class="pj-name">Farmer AI</div>
-        <div class="pj-desc">A Python-based AI web app that suggests crops based on soil type and season inputs, helping small-scale farmers make smarter agricultural decisions.</div>
-        <div class="pj-stack"><span class="pj-tag">Python</span><span class="pj-tag">AI</span><span class="pj-tag">Web</span><span class="pj-tag">Agriculture</span></div>
+  <div class="projects-list">
+    <div class="project-card reveal">
+      <div class="project-num">01</div>
+      <div>
+        <div class="project-cat">AI · Agriculture · Python</div>
+        <div class="project-name">Farmer AI</div>
+        <div class="project-desc">A Python-based AI web app that suggests crops based on soil type and season inputs, helping small-scale farmers make smarter agricultural decisions.</div>
+        <div class="project-stack"><span class="project-tag">Python</span><span class="project-tag">AI</span><span class="project-tag">Web</span><span class="project-tag">Agriculture</span></div>
       </div>
-      <div class="pj-right">
-        <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="pj-btn">GitHub Profile ↗</a>
-        <div class="pj-status">Personal Project</div>
-      </div>
-    </div>
-
-    <div class="pj-card rv">
-      <div class="pj-num">02</div>
-      <div class="pj-body">
-        <div class="pj-cat">Client Work · Web · Linux</div>
-        <div class="pj-name">Fish Corporation Website</div>
-        <div class="pj-desc">Delivered and sold a fully responsive business website to a real client in the fisheries sector, improving their online presence with a clean, professional interface.</div>
-        <div class="pj-stack"><span class="pj-tag">HTML</span><span class="pj-tag">CSS</span><span class="pj-tag">JavaScript</span><span class="pj-tag">Client Work</span><span class="pj-tag">Linux</span></div>
-      </div>
-      <div class="pj-right">
-        <a href="https://fish-corporation-live.onrender.com" target="_blank" rel="noopener noreferrer" class="pj-btn live">Live Demo ↗</a>
-        <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="pj-btn">GitHub ↗</a>
-        <div class="pj-status sold">Sold to Client</div>
+      <div class="project-right">
+        <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="project-btn">GitHub Profile ↗</a>
+        <div class="project-status">Personal Project</div>
       </div>
     </div>
-
-    <div class="pj-card rv">
-      <div class="pj-num">03</div>
-      <div class="pj-body">
-        <div class="pj-cat">Backend · Python · Academic</div>
-        <div class="pj-name">Student Attendance System</div>
-        <div class="pj-desc">A Python backend solution built to automate attendance tracking and reduce manual record work for academic administration, improving consistency and saving time.</div>
-        <div class="pj-stack"><span class="pj-tag">Python</span><span class="pj-tag">Backend</span><span class="pj-tag">Database</span><span class="pj-tag">Academic</span><span class="pj-tag">Teamwork</span></div>
+    <div class="project-card reveal">
+      <div class="project-num">02</div>
+      <div>
+        <div class="project-cat">Client Work · Web · Linux</div>
+        <div class="project-name">Fish Corporation Website</div>
+        <div class="project-desc">Delivered and sold a fully responsive business website to a real client in the fisheries sector, improving their online presence with a clean, professional interface.</div>
+        <div class="project-stack"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JavaScript</span><span class="project-tag">Client Work</span><span class="project-tag">Linux</span></div>
       </div>
-      <div class="pj-right">
-        <a href="#" class="pj-btn">Coming Soon</a>
-        <div class="pj-status">Team Project</div>
+      <div class="project-right">
+        <a href="https://fish-corporation-live.onrender.com" target="_blank" rel="noopener noreferrer" class="project-btn live">Live Demo ↗</a>
+        <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="project-btn">GitHub ↗</a>
+        <div class="project-status sold">Sold to Client</div>
+      </div>
+    </div>
+    <div class="project-card reveal">
+      <div class="project-num">03</div>
+      <div>
+        <div class="project-cat">Backend · Python · Academic</div>
+        <div class="project-name">Student Attendance System</div>
+        <div class="project-desc">A Python backend solution built to automate attendance tracking and reduce manual record work for academic administration, improving consistency and saving time.</div>
+        <div class="project-stack"><span class="project-tag">Python</span><span class="project-tag">Backend</span><span class="project-tag">Database</span><span class="project-tag">Academic</span><span class="project-tag">Teamwork</span></div>
+      </div>
+      <div class="project-right">
+        <a href="#" class="project-btn">Coming Soon</a>
+        <div class="project-status">Team Project</div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="contact">
-  <div class="rv">
-    <div class="sec-eyebrow">Contact</div>
-    <div class="ct-title">
-      <div class="line1">LET'S</div>
-      <div class="line2">BUILD</div>
-      <div class="line3">something.</div>
+<!-- ═══ CONTACT ═══ -->
+<section class="section contact" id="contact">
+  <div class="reveal">
+    <div class="section-label">Contact</div>
+    <div class="contact-title">
+      <div class="l1">LET'S</div>
+      <div class="l2">BUILD</div>
+      <div class="l3">something.</div>
     </div>
-    <p class="ct-sub">If you're hiring, collaborating, or looking for someone who can build with clarity and consistency, let's connect.</p>
-    <div class="ct-availability">Available for internships and freelance work</div>
+    <p class="contact-sub">If you're hiring, collaborating, or looking for someone who can build with clarity and consistency, let's connect.</p>
+    <div class="contact-avail">Available for internships and freelance work</div>
   </div>
 
-  <div class="ct-grid">
-    <div class="ct-card glass-card rv">
-      <div class="ct-card-tag">Get In Touch</div>
-      <div class="cl-list">
-        <a href="mailto:gokultgb475@gmail.com" class="cl-item"><div class="cl-ico">📧</div><div><div class="cl-k">Email</div><div class="cl-v">gokultgb475@gmail.com</div></div><span class="cl-ar">↗</span></a>
-        <a href="tel:+919489392449" class="cl-item"><div class="cl-ico">📞</div><div><div class="cl-k">Phone</div><div class="cl-v">+91 94893 92449</div></div><span class="cl-ar">↗</span></a>
-        <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="cl-item"><div class="cl-ico">🐙</div><div><div class="cl-k">GitHub</div><div class="cl-v">github.com/gokultgb475-lgtm</div></div><span class="cl-ar">↗</span></a>
-        <a href="https://www.linkedin.com/in/gokulpriyan-p-a5b535394/" target="_blank" rel="noopener noreferrer" class="cl-item"><div class="cl-ico">💼</div><div><div class="cl-k">LinkedIn</div><div class="cl-v">linkedin.com/in/gokulpriyan-p-a5b535394</div></div><span class="cl-ar">↗</span></a>
-        <a href="https://maps.google.com/?q=Madurai,Tamil+Nadu,India" target="_blank" rel="noopener noreferrer" class="cl-item"><div class="cl-ico">📍</div><div><div class="cl-k">Location</div><div class="cl-v">Madurai, Tamil Nadu, India</div></div><span class="cl-ar">↗</span></a>
+  <div class="contact-grid">
+    <div class="contact-card reveal">
+      <div class="contact-card-label">Get In Touch</div>
+      <div class="contact-list">
+        <a href="mailto:gokultgb475@gmail.com" class="contact-item"><div class="contact-icon">📧</div><div><div class="contact-key">Email</div><div class="contact-val">gokultgb475@gmail.com</div></div><span class="contact-arrow">↗</span></a>
+        <a href="tel:+919489392449" class="contact-item"><div class="contact-icon">📞</div><div><div class="contact-key">Phone</div><div class="contact-val">+91 94893 92449</div></div><span class="contact-arrow">↗</span></a>
+        <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="contact-item"><div class="contact-icon">🐙</div><div><div class="contact-key">GitHub</div><div class="contact-val">github.com/gokultgb475-lgtm</div></div><span class="contact-arrow">↗</span></a>
+        <a href="https://www.linkedin.com/in/gokulpriyan-p-a5b535394/" target="_blank" rel="noopener noreferrer" class="contact-item"><div class="contact-icon">💼</div><div><div class="contact-key">LinkedIn</div><div class="contact-val">linkedin.com/in/gokulpriyan-p-a5b535394</div></div><span class="contact-arrow">↗</span></a>
+        <a href="https://maps.google.com/?q=Madurai,Tamil+Nadu,India" target="_blank" rel="noopener noreferrer" class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-key">Location</div><div class="contact-val">Madurai, Tamil Nadu, India</div></div><span class="contact-arrow">↗</span></a>
       </div>
     </div>
 
-    <div class="ct-card glass-card rv">
-      <div class="ct-card-tag">Send A Message</div>
+    <div class="contact-card reveal reveal-delay-1">
+      <div class="contact-card-label">Send A Message</div>
       <div class="form-title">Write To Me</div>
       <div class="form-sub">I reply within 24 hours · gokultgb475@gmail.com</div>
-      <div class="f2c">
-        <div class="fg"><label for="name">Name</label><input id="name" type="text" placeholder="Your name"/></div>
-        <div class="fg"><label for="email">Email</label><input id="email" type="email" placeholder="your@email.com"/></div>
+      <div class="form-row">
+        <div class="form-group"><label for="name">Name</label><input id="name" type="text" placeholder="Your name"/></div>
+        <div class="form-group"><label for="email">Email</label><input id="email" type="email" placeholder="your@email.com"/></div>
       </div>
-      <div class="fg"><label for="subject">Subject</label><input id="subject" type="text" placeholder="What's this about?"/></div>
-      <div class="fg"><label for="message">Message</label><textarea id="message" rows="4" placeholder="Tell me about your project or opportunity..."></textarea></div>
-      <button class="f-send" type="button" onclick="window.location.href='mailto:gokultgb475@gmail.com'"><span>Send It →</span></button>
+      <div class="form-group"><label for="subject">Subject</label><input id="subject" type="text" placeholder="What's this about?"/></div>
+      <div class="form-group"><label for="message">Message</label><textarea id="message" rows="4" placeholder="Tell me about your project or opportunity..."></textarea></div>
+      <button class="form-submit" type="button" onclick="window.location.href='mailto:gokultgb475@gmail.com'">Send It →</button>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="ft-left">
-    <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
-      <rect width="36" height="36" rx="7" fill="rgba(0,229,204,0.1)" stroke="rgba(0,229,204,0.3)" stroke-width="1"/>
-      <text x="18" y="25" text-anchor="middle" font-family="'Bebas Neue'" font-size="17" fill="#f4f1ec" letter-spacing="1">GP</text>
-    </svg>
-    <span style="font-family:var(--D);font-size:.9rem;letter-spacing:.1em;color:rgba(244,241,236,0.5);">GOKUL PRIYAN</span>
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-left">
+    <div class="footer-logo">GP</div>
+    <span class="footer-name">GOKUL PRIYAN</span>
   </div>
-  <div class="ft-center">Full Stack · AI · Cloud</div>
-  <div class="ft-right">Built with craft in Madurai, India</div>
+  <div class="footer-center">Full Stack · AI · Cloud</div>
+  <div class="footer-right">Built with craft in Madurai, India</div>
 </footer>
 
 <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-<script>
-const prefersReducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const isCoarsePointer=window.matchMedia('(hover: none), (pointer: coarse)').matches;
-const isLiteMode=prefersReducedMotion||isCoarsePointer||window.innerWidth<=900;
-
-(function(){
-  const lf=document.getElementById('lf'),lp=document.getElementById('lp'),ld=document.getElementById('loader');
-  let p=0;
-  const intervalMs=isLiteMode?42:68;
-  const minStep=isLiteMode?14:4;
-  const stepRange=isLiteMode?18:11;
-  const exitDelay=isLiteMode?180:700;
-  const iv=setInterval(()=>{
-    p+=Math.random()*stepRange+minStep;
-    if(p>=100){
-      p=100;
-      clearInterval(iv);
-      setTimeout(()=>ld.classList.add('out'),exitDelay);
-    }
-    lf.style.right=(100-p)+'%';
-    lp.textContent=String(Math.round(p)).padStart(3,'0')+'%';
-  },intervalMs);
-})();
-
-(function(){
-  if(isLiteMode)return;
-  const c=document.getElementById('glbg');
-  const gl=c.getContext('webgl',{alpha:true,antialias:false,depth:false,stencil:false,powerPreference:'low-power'});
-  if(!gl){
-    c.style.display='none';
-    return;
-  }
-
-  function sz(){
-    c.width=innerWidth;
-    c.height=innerHeight;
-    gl.viewport(0,0,c.width,c.height);
-  }
-  sz();
-  window.addEventListener('resize',sz);
-
-  const vs="attribute vec2 p;void main(){gl_Position=vec4(p,0,1);}";
-  const fs=`
-    precision highp float;
-    uniform float t;uniform vec2 r;uniform vec2 m;
-    float n(vec2 p){return fract(sin(dot(p,vec2(12.9898,78.233)))*43758.5453);}
-    float sn(vec2 p){
-      vec2 i=floor(p),f=fract(p),u=f*f*(3.-2.*f);
-      return mix(mix(n(i),n(i+vec2(1,0)),u.x),mix(n(i+vec2(0,1)),n(i+vec2(1,1)),u.x),u.y);
-    }
-    float fbm(vec2 p){
-      float v=0.,a=.5;
-      for(int i=0;i<7;i++){v+=a*sn(p);p=p*2.1+vec2(5.2+float(i),1.7);a*=.48;}
-      return v;
-    }
-    void main(){
-      vec2 uv=gl_FragCoord.xy/r;
-      vec2 mu=m/r;
-      float s=t*.028;
-      vec2 q=vec2(fbm(uv+s),fbm(uv+vec2(7.3,2.8)+s*.85));
-      float f=fbm(uv+2.*q+vec2(1.7,9.2)+s*.6+mu*.3);
-      f+=.4*fbm(uv+q+f+s*.5);
-      f=clamp(f,0.,1.);
-      vec3 dark=vec3(0.02,0.02,0.04);
-      vec3 teal=vec3(0.0,0.56,0.5);
-      vec3 bright=vec3(0.0,0.9,0.8);
-      vec3 purple=vec3(0.34,0.23,0.6);
-      vec3 col=mix(dark,teal,f*f*1.8);
-      col=mix(col,bright,max(0.,pow(f-.45,2.)*2.5));
-      col=mix(col,purple,max(0.,pow(f-.72,3.)*3.5));
-      gl_FragColor=vec4(col,.65);
-    }
-  `;
-
-  function sh(type,src){
-    const shader=gl.createShader(type);
-    gl.shaderSource(shader,src);
-    gl.compileShader(shader);
-    return shader;
-  }
-
-  const pr=gl.createProgram();
-  gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));
-  gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));
-  gl.linkProgram(pr);
-  gl.useProgram(pr);
-
-  const buf=gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER,buf);
-  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
-  const pa=gl.getAttribLocation(pr,'p');
-  gl.enableVertexAttribArray(pa);
-  gl.vertexAttribPointer(pa,2,gl.FLOAT,false,0,0);
-
-  const tU=gl.getUniformLocation(pr,'t');
-  const rU=gl.getUniformLocation(pr,'r');
-  const mU=gl.getUniformLocation(pr,'m');
-  let mx=innerWidth/2,my=innerHeight/2;
-
-  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;},{passive:true});
-
-  (function draw(ts){
-    requestAnimationFrame(draw);
-    gl.uniform1f(tU,ts*0.001);
-    gl.uniform2f(rU,c.width,c.height);
-    gl.uniform2f(mU,mx,my);
-    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
-  })(0);
-})();
-
-if(!isLiteMode){
-  document.querySelectorAll('.sk-card').forEach(card=>{
-    card.addEventListener('mousemove',e=>{
-      const r=card.getBoundingClientRect();
-      const x=(e.clientX-r.left)/r.width-.5;
-      const y=(e.clientY-r.top)/r.height-.5;
-      card.style.transform=`perspective(700px) rotateX(${-y*10}deg) rotateY(${x*10}deg) translateY(-5px)`;
-      card.style.setProperty('--mx',`${(e.clientX-r.left)/r.width*100}%`);
-      card.style.setProperty('--my',`${(e.clientY-r.top)/r.height*100}%`);
-    });
-    card.addEventListener('mouseleave',()=>{
-      card.style.transform='';
-      card.style.transition='all .6s var(--ease)';
-    });
-    card.addEventListener('mouseenter',()=>{
-      card.style.transition='background .4s,border-color .4s,box-shadow .4s';
-    });
-  });
-}
-
-class Scramble{
-  constructor(el){
-    this.el=el;
-    this.original=el.textContent;
-    this.chars='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$!';
-  }
-  run(){
-    let i=0;
-    const iv=setInterval(()=>{
-      this.el.textContent=this.original.split('').map((ch,index)=>index<i?ch:this.chars[Math.floor(Math.random()*this.chars.length)]).join('');
-      i+=.7;
-      if(i>=this.original.length){
-        this.el.textContent=this.original;
-        clearInterval(iv);
-      }
-    },22);
-  }
-}
-if(!isLiteMode){
-  document.querySelectorAll('.pj-name').forEach(el=>{
-    const scramble=new Scramble(el);
-    el.closest('.pj-card').addEventListener('mouseenter',()=>scramble.run());
-  });
-}
-
-const roles=['Internships','Freelance Work','Collaborations','Full-Time Roles'];
-const typed=document.getElementById('typed');
-if(isLiteMode){
-  typed.textContent='Internships / Freelance Work';
-}else{
-  let ri=0,ci=0,del=false;
-  function type(){
-    const word=roles[ri];
-    if(!del){
-      typed.textContent=word.slice(0,ci+1)+'_';
-      ci++;
-      if(ci===word.length){
-        del=true;
-        setTimeout(type,2100);
-        return;
-      }
-    }else{
-      typed.textContent=word.slice(0,ci-1)+'_';
-      ci--;
-      if(ci===0){
-        del=false;
-        ri=(ri+1)%roles.length;
-      }
-    }
-    setTimeout(type,del?36:95);
-  }
-  type();
-}
-
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').classList.toggle('solid',scrollY>60);
-  document.getElementById('btt').classList.toggle('on',scrollY>500);
-},{passive:true});
-
-const revealEls=document.querySelectorAll('.rv');
-if(isLiteMode){
-  revealEls.forEach(el=>el.classList.add('on'));
-}else{
-  const ro=new IntersectionObserver(entries=>{
-    entries.forEach((entry,index)=>{
-      if(entry.isIntersecting){
-        setTimeout(()=>entry.target.classList.add('on'),index*55);
-      }
-    });
-  },{threshold:.06});
-  revealEls.forEach(el=>ro.observe(el));
-}
-</script>
+<script src="script.js"></script>
 </body>
 </html>
