@@ -1,362 +1,906 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Gokul Priyan — Full Stack Developer</title>
-<meta name="description" content="Portfolio of Gokul Priyan, a Full Stack Developer from Madurai specializing in web development, AI, and cloud-ready products."/>
-<meta name="author" content="Gokul Priyan"/>
-<meta name="theme-color" content="#7c3aed"/>
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="Gokul Priyan — Full Stack Developer"/>
-<meta property="og:description" content="Portfolio of Gokul Priyan, a Full Stack Developer from Madurai specializing in web development, AI, and cloud-ready products."/>
-<meta property="og:image" content="assets/gokul-profile.jpeg"/>
-<meta property="og:image:alt" content="Portrait of Gokul Priyan, Full Stack Developer"/>
-<meta property="og:site_name" content="Gokul Priyan Portfolio"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Gokul Priyan — Full Stack Developer"/>
-<meta name="twitter:description" content="Portfolio of Gokul Priyan, a Full Stack Developer from Madurai specializing in web development, AI, and cloud-ready products."/>
-<meta name="twitter:image" content="assets/gokul-profile.jpeg"/>
-<link rel="stylesheet" href="styles.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gokul Priyan | Frontend Developer Portfolio</title>
+  <meta
+    name="description"
+    content="Frontend Developer portfolio of Gokul Priyan featuring responsive web projects, UI-focused skills, professional experience, and recruiter-ready contact details."
+  />
+  <meta name="author" content="Gokul Priyan" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gokul Priyan | Frontend Developer Portfolio" />
+  <meta
+    property="og:description"
+    content="Explore the portfolio of Gokul Priyan, a Frontend Developer building modern, responsive web applications with polished UI and strong usability."
+  />
+  <meta property="og:image" content="assets/gokul-profile.jpeg" />
+  <meta property="og:image:alt" content="Portrait of Gokul Priyan, Frontend Developer" />
+  <meta property="og:site_name" content="Gokul Priyan Portfolio" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gokul Priyan | Frontend Developer Portfolio" />
+  <meta
+    name="twitter:description"
+    content="Frontend Developer portfolio showcasing modern UI work, responsive websites, and professional contact details."
+  />
+  <meta name="twitter:image" content="assets/gokul-profile.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<!-- ═══ PRELOADER ═══ -->
-<div id="loader">
-  <div class="loader-logo"><span class="loader-initials">GP</span></div>
-  <div class="loader-name">
-    <span>GOKUL</span>
-    <span>PRIYAN</span>
-  </div>
-  <div class="loader-bar"><div class="loader-fill" id="loader-fill"></div></div>
-  <div class="loader-pct" id="loader-pct">000%</div>
-</div>
-
-<!-- ═══ BACKGROUNDS ═══ -->
-<div class="aurora">
-  <div class="aurora-orb"></div>
-  <div class="aurora-orb"></div>
-  <div class="aurora-orb"></div>
-</div>
-<canvas id="particles" style="position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.6"></canvas>
-<div class="noise"></div>
-
-<!-- ═══ NAVIGATION ═══ -->
-<nav class="nav" id="main-nav">
-  <a href="#home" class="nav-brand">
-    <div class="nav-brand-icon">GP</div>
-    <div class="nav-brand-text">
-      <span class="nav-brand-name">Gokul Priyan</span>
-      <span class="nav-brand-role">Full Stack Developer</span>
+  <!-- UPDATED: Preloader kept and refined -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-logo"><span class="loader-initials">GP</span></div>
+    <div class="loader-name">
+      <span>GOKUL</span>
+      <span>PRIYAN</span>
     </div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#projects">Work</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="nav-status">
-    <div class="nav-dot"></div>
-    <span class="nav-status-text">Available Now</span>
+    <div class="loader-bar"><div class="loader-fill" id="loader-fill"></div></div>
+    <div class="loader-pct" id="loader-pct">000%</div>
   </div>
-</nav>
 
-<!-- ═══ HERO ═══ -->
-<section class="section hero" id="home">
-  <div class="hero-badge">
-    <div class="hero-badge-dot"></div>
-    <span class="hero-badge-text">Full Stack Developer · Madurai, India · 2026 Graduate</span>
+  <!-- UPDATED: Decorative background layers -->
+  <div class="aurora" aria-hidden="true">
+    <div class="aurora-orb"></div>
+    <div class="aurora-orb"></div>
+    <div class="aurora-orb"></div>
   </div>
-  <h1 class="hero-name">
-    <span class="line">GOKUL</span>
-    <span class="line">PRIYAN</span>
-  </h1>
-  <div class="hero-bottom">
-    <div class="hero-cell">
-      <div class="hero-cell-label">What I Do</div>
-      <p class="hero-cell-text">I build <strong>clean, real-world</strong> web products and cloud-ready solutions with a strong focus on clarity, usability, and practical problem solving.</p>
-    </div>
-    <div class="hero-cell">
-      <div class="hero-cell-label">By The Numbers</div>
-      <div class="hero-stats">
-        <div><div class="hero-stat-num">3</div><div class="hero-stat-label">Projects</div></div>
-        <div><div class="hero-stat-num">1</div><div class="hero-stat-label">Website Sold</div></div>
-        <div><div class="hero-stat-num">'26</div><div class="hero-stat-label">Graduate</div></div>
-      </div>
-    </div>
-    <div class="hero-cell">
-      <div class="hero-cell-label" style="font-family:var(--heading);font-size:.9rem;font-weight:600;letter-spacing:0;text-transform:none;color:var(--white)">Open For</div>
-      <div class="hero-typed" id="typed"></div>
-      <div class="hero-btns">
-        <a href="#projects" class="btn-primary"><span>View My Work</span><span>→</span></a>
-        <a href="#contact" class="btn-ghost"><span>Contact Me</span><span>↗</span></a>
-        <a href="assets/gokulpriyanP-resume.pdf" class="btn-ghost" download target="_blank" rel="noopener noreferrer"><span>Download Resume</span><span>↓</span></a>
-      </div>
-    </div>
-  </div>
-  <div class="scroll-indicator"><div class="scroll-line"></div><div class="scroll-text">Scroll to explore</div></div>
-</section>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
 
-<!-- ═══ ABOUT ═══ -->
-<section class="section about" id="about">
-  <div class="reveal">
-    <div class="section-label">About Me</div>
-    <h2 class="section-heading">THE PERSON<br/>BEHIND THE <span class="gradient">CODE.</span></h2>
-  </div>
-  <div class="about-grid">
-    <div class="reveal">
-      <p class="about-text">I'm <strong>Gokul Priyan</strong>, a Diploma CSE student from Madurai focused on full stack development, clear UX, and practical software that solves real problems.</p>
-      <p class="about-text">I delivered and sold a business website to a real client in the fisheries sector, built practical web and AI-based projects, and completed entrepreneurship training at Thiagarajar College of Engineering - Technology Business Incubator (TCE TBI).</p>
-      <p class="about-text">I want to grow as a developer who builds impactful products, contributes to strong engineering teams, and keeps expanding in web, cloud, and product thinking.</p>
+  <!-- UPDATED: Semantic navigation with mobile toggle -->
+  <nav class="nav" id="main-nav" aria-label="Primary navigation">
+    <a href="#home" class="nav-brand">
+      <span class="nav-brand-icon">GP</span>
+      <span class="nav-brand-text">
+        <span class="nav-brand-name">Gokul Priyan</span>
+        <span class="nav-brand-role">Frontend Developer</span>
+      </span>
+    </a>
 
-      <div class="about-achievements">
-        <div class="about-ach">Delivered and sold a business website to a real client in the fisheries sector.</div>
-        <div class="about-ach">Built real-world web and AI-focused projects beyond academics.</div>
-        <div class="about-ach">Completed entrepreneurship training and product exposure at TBI.</div>
-      </div>
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="site-menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-      <div class="about-quote">
-        <p>"I don't just write code — I build <em>products</em> that create real value for real people."</p>
-      </div>
+    <ul class="nav-links" id="site-menu">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#featured">Featured</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- ADDED: Sticky resume CTA in navbar -->
+    <div class="nav-actions">
+      <a
+        href="assets/gokulpriyanP-resume.pdf"
+        class="nav-resume"
+        download
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Resume
+      </a>
     </div>
+  </nav>
 
-    <div>
-      <div class="profile-card reveal">
-        <div class="profile-avatar">
-          <img src="assets/gokul-profile.jpeg" alt="Portrait of Gokul Priyan" loading="lazy"/>
+  <!-- UPDATED: Hero rewritten to match recruiter-focused frontend positioning -->
+  <header class="section hero" id="home">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="hero-badge reveal">
+          <span class="hero-badge-dot"></span>
+          <span class="hero-badge-text">Available for internships, freelance projects, and entry-level frontend roles</span>
         </div>
-        <div class="profile-card-name">Gokul Priyan</div>
-        <div class="profile-card-role">Full Stack Developer</div>
-        <div class="profile-divider"></div>
-        <div class="profile-skills">
-          <span class="profile-skill">Python</span>
-          <span class="profile-skill">JavaScript</span>
-          <span class="profile-skill">HTML/CSS</span>
-          <span class="profile-skill">Linux</span>
-          <span class="profile-skill">Git</span>
-          <span class="profile-skill">Cloud</span>
-          <span class="profile-skill">Farmer AI</span>
-          <span class="profile-skill">Entrepreneurship</span>
+
+        <p class="hero-kicker reveal">Frontend Developer</p>
+        <h1 class="hero-title reveal">Hi, I'm Gokul Priyan</h1>
+        <p class="hero-subtitle reveal">Frontend Developer</p>
+        <p class="hero-tagline reveal">I build modern, responsive, and user-friendly web applications.</p>
+        <p class="hero-description reveal">
+          I build recruiter-friendly interfaces with clean code, polished interactions, and responsive layouts that make products feel trustworthy within the first few seconds.
+        </p>
+
+        <div class="hero-btns reveal">
+          <a href="#featured" class="btn-primary">View Projects</a>
+          <a
+            href="assets/gokulpriyanP-resume.pdf"
+            class="btn-ghost"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download Resume &#128196;
+          </a>
         </div>
-        <div class="profile-divider"></div>
-        <div class="profile-info">
-          <div class="profile-info-item">📍 Madurai, Tamil Nadu, India</div>
-          <div class="profile-info-item">📧 <a href="mailto:gokultgb475@gmail.com">gokultgb475@gmail.com</a></div>
-          <div class="profile-info-item">📞 <a href="tel:+919489392449">+91 94893 92449</a></div>
-          <div class="profile-info-item">🐙 <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer">github.com/gokultgb475-lgtm</a></div>
-          <div class="profile-info-item">🌐 <a href="https://fish-corporation-live.onrender.com" target="_blank" rel="noopener noreferrer">fish-corporation-live.onrender.com</a></div>
+
+        <div class="hero-typed-wrap reveal">
+          <span class="hero-typed-label">Open for</span>
+          <span class="hero-typed" id="typed"></span>
         </div>
       </div>
+
+      <aside class="hero-panel reveal" aria-label="Professional snapshot">
+        <div class="hero-panel-top">
+          <div>
+            <div class="hero-panel-label">Current Focus</div>
+            <div class="hero-panel-title">Modern Frontend Experiences</div>
+          </div>
+          <span class="hero-panel-badge">2026</span>
+        </div>
+
+        <p class="hero-panel-text">
+          Frontend developer with hands-on client work, real deployment experience, and a strong focus on UI clarity, responsiveness, and practical problem solving.
+        </p>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-num">3+</div>
+            <div class="hero-stat-label">Projects Built</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">1</div>
+            <div class="hero-stat-label">Client Website Sold</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">2026</div>
+            <div class="hero-stat-label">Graduate</div>
+          </div>
+        </div>
+
+        <div class="hero-highlights">
+          <span class="hero-highlight">HTML</span>
+          <span class="hero-highlight">CSS</span>
+          <span class="hero-highlight">JavaScript</span>
+          <span class="hero-highlight">Responsive Design</span>
+          <span class="hero-highlight">Git &amp; GitHub</span>
+          <span class="hero-highlight">Deployment</span>
+        </div>
+
+        <div class="hero-panel-note">
+          Frontend Developer at <strong>BuildHomeMart Techno Solution Pvt Ltd</strong> from 2026 to present.
+        </div>
+      </aside>
     </div>
 
-    <div class="info-panel reveal">
-      <div class="info-panel-head">Quick Facts</div>
-      <div>
-        <div class="info-row"><span class="info-key">College</span><span class="info-val">TNGPTC, Madurai</span></div>
-        <div class="info-row"><span class="info-key">Programme</span><span class="info-val">Diploma in CSE</span></div>
-        <div class="info-row"><span class="info-key">Interests</span><span class="info-val">Full Stack, AI, Cloud Computing</span></div>
-        <div class="info-row"><span class="info-key">Graduation</span><span class="info-val">2026</span></div>
-        <div class="info-row"><span class="info-key">Location</span><span class="info-val">Madurai, Tamil Nadu, India</span></div>
-        <div class="info-row"><span class="info-key">HSC Score</span><span class="info-val">86% — 2023</span></div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <div class="scroll-text">Scroll to explore</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ADDED: Featured project spotlight -->
+    <section class="section featured-project" id="featured" aria-labelledby="featured-heading">
+      <div class="featured-shell reveal">
+        <div class="featured-copy">
+          <div class="section-label">Featured Project</div>
+          <div class="featured-chip">Featured Project</div>
+          <h2 class="section-heading featured-heading" id="featured-heading">
+            Fish Corporation Website
+          </h2>
+          <p class="featured-lead">
+            A business website I designed and delivered for a real client in the fisheries sector to strengthen trust, improve presentation, and make their services easier to understand online.
+          </p>
+
+          <div class="story-grid">
+            <article class="story-card">
+              <div class="story-label">Problem:</div>
+              <p>
+                The business needed a professional online presence that looked credible on mobile and desktop, explained services clearly, and helped the brand feel more trustworthy to new customers.
+              </p>
+            </article>
+            <article class="story-card">
+              <div class="story-label">Solution:</div>
+              <p>
+                I built a responsive business website using HTML, CSS, and JavaScript with stronger layout hierarchy, clearer content flow, and a polished UI that turned a simple web presence into a client-ready product.
+              </p>
+            </article>
+          </div>
+
+          <div class="featured-stack">
+            <span class="featured-tag">HTML5</span>
+            <span class="featured-tag">CSS3</span>
+            <span class="featured-tag">JavaScript</span>
+            <span class="featured-tag">Responsive UI</span>
+            <span class="featured-tag">Client Delivery</span>
+          </div>
+
+          <div class="featured-actions">
+            <a
+              href="https://fish-corporation-live.onrender.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary"
+            >
+              Live Demo &#127760;
+            </a>
+            <a
+              href="https://github.com/gokultgb475-lgtm/fish-corporation-live"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-ghost"
+            >
+              GitHub &#128187;
+            </a>
+            <a
+              href="https://fish-corporation-live.onrender.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-outline"
+            >
+              Try it Now
+            </a>
+          </div>
+
+          <p class="featured-footnote">
+            This project stands out because it was delivered for a real business need, not just built as a practice exercise.
+          </p>
+        </div>
+
+        <div class="featured-visual reveal reveal-delay-1" aria-hidden="true">
+          <div class="browser-mockup">
+            <div class="browser-top">
+              <div class="browser-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="browser-address">fish-corporation-live.onrender.com</div>
+            </div>
+
+            <div class="browser-screen">
+              <div class="browser-sidebar">
+                <div class="browser-side-pill browser-side-pill-active"></div>
+                <div class="browser-side-pill"></div>
+                <div class="browser-side-pill"></div>
+                <div class="browser-side-pill"></div>
+              </div>
+
+              <div class="browser-content">
+                <div class="browser-hero-card">
+                  <div class="browser-label">Client Website</div>
+                  <div class="browser-title">Fresh design for a real fisheries business</div>
+                  <div class="browser-subtitle">Responsive, modern, and built to communicate trust fast.</div>
+                </div>
+
+                <div class="browser-stat-row">
+                  <div class="browser-stat-card">
+                    <span class="browser-stat-value">01</span>
+                    <span class="browser-stat-text">Client delivery</span>
+                  </div>
+                  <div class="browser-stat-card">
+                    <span class="browser-stat-value">UI</span>
+                    <span class="browser-stat-text">Responsive design</span>
+                  </div>
+                </div>
+
+                <div class="browser-card-grid">
+                  <div class="browser-panel browser-panel-tall"></div>
+                  <div class="browser-panel"></div>
+                  <div class="browser-panel"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="info-panel-head" style="margin-top:28px">Timeline</div>
-      <div>
-        <div class="timeline-item"><div class="timeline-dot"></div><div><div class="timeline-year">2024</div><div class="timeline-title">Sold Fish Corporation Website</div><div class="timeline-desc">Delivered to a real business client in the fisheries sector</div></div></div>
-        <div class="timeline-item"><div class="timeline-dot"></div><div><div class="timeline-year">2025</div><div class="timeline-title">TCE TBI Entrepreneurship Training</div><div class="timeline-desc">Startup, product, and pitching exposure</div></div></div>
-        <div class="timeline-item"><div class="timeline-dot"></div><div><div class="timeline-year">2025</div><div class="timeline-title">Farmer AI Project</div><div class="timeline-desc">Python and AI web application for agriculture</div></div></div>
+    </section>
+
+    <!-- UPDATED: Professional About section with semantic copy -->
+    <section class="section about" id="about" aria-labelledby="about-heading">
+      <div class="reveal">
+        <div class="section-label">About</div>
+        <h2 class="section-heading" id="about-heading">
+          Frontend thinking with real-world delivery.
+        </h2>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- ═══ SKILLS ═══ -->
-<section class="section skills" id="skills">
-  <div class="skills-header reveal">
-    <div>
-      <div class="section-label">Skills</div>
-      <h2 class="section-heading" style="margin-bottom:0">WHAT I<br/><span class="outline">WORK</span> WITH.</h2>
-    </div>
-    <div class="skills-sub">Everything below comes from hands-on projects, real delivery work, and steady daily practice.</div>
-  </div>
+      <div class="about-grid">
+        <article class="about-copy reveal">
+          <p class="about-intro">
+            I'm <strong>Gokul Priyan</strong>, a Frontend Developer from Madurai who enjoys turning ideas into interfaces that are modern, responsive, and easy to navigate.
+          </p>
+          <p class="about-text">
+            My work combines clean HTML structure, polished CSS, and JavaScript interactions to build websites that feel professional to recruiters, clients, and end users.
+          </p>
+          <p class="about-text">
+            I have already delivered a live client website, built practical student and AI-driven products, and continue growing with a strong interest in UI quality, accessibility, and scalable front-end workflows.
+          </p>
 
-  <div class="skills-grid">
-    <div class="skill-card reveal">
-      <div class="skill-ghost">01</div>
-      <div class="skill-top"><span class="skill-emoji">🌐</span><span class="skill-level level-int">Intermediate</span></div>
-      <div class="skill-name">HTML / CSS / JS</div>
-      <div class="skill-desc">Building responsive, accessible interfaces and front-end interactions for modern web experiences.</div>
-      <div class="skill-tags"><span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Responsive</span></div>
-    </div>
-    <div class="skill-card reveal reveal-delay-1">
-      <div class="skill-ghost">02</div>
-      <div class="skill-top"><span class="skill-emoji">🐍</span><span class="skill-level level-int">Intermediate</span></div>
-      <div class="skill-name">Python</div>
-      <div class="skill-desc">Used for backend workflows, automation, data handling, and practical AI-based project logic.</div>
-      <div class="skill-tags"><span class="skill-tag">Python 3</span><span class="skill-tag">Automation</span><span class="skill-tag">AI Logic</span><span class="skill-tag">Jupyter</span></div>
-    </div>
-    <div class="skill-card reveal reveal-delay-2">
-      <div class="skill-ghost">03</div>
-      <div class="skill-top"><span class="skill-emoji">🐧</span><span class="skill-level level-adv">Advanced</span></div>
-      <div class="skill-name">Linux</div>
-      <div class="skill-desc">Daily Linux usage for development, terminal workflows, file systems, and system operations.</div>
-      <div class="skill-tags"><span class="skill-tag">Bash</span><span class="skill-tag">SSH</span><span class="skill-tag">Git</span><span class="skill-tag">Permissions</span></div>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-ghost">04</div>
-      <div class="skill-top"><span class="skill-emoji">🐙</span><span class="skill-level level-int">Intermediate</span></div>
-      <div class="skill-name">Git &amp; GitHub</div>
-      <div class="skill-desc">Version control, clean collaboration, and project tracking for faster and safer development.</div>
-      <div class="skill-tags"><span class="skill-tag">Git</span><span class="skill-tag">GitHub</span><span class="skill-tag">Branching</span><span class="skill-tag">Commits</span></div>
-    </div>
-    <div class="skill-card reveal reveal-delay-1">
-      <div class="skill-ghost">05</div>
-      <div class="skill-top"><span class="skill-emoji">☁️</span><span class="skill-level level-int">Intermediate</span></div>
-      <div class="skill-name">Cloud &amp; Deploy</div>
-      <div class="skill-desc">Experienced in deploying web apps to Render, Vercel, and managing Linux-based environments.</div>
-      <div class="skill-tags"><span class="skill-tag">Vercel</span><span class="skill-tag">Render</span><span class="skill-tag">DNS</span><span class="skill-tag">Linux</span></div>
-    </div>
-    <div class="skill-card reveal reveal-delay-2">
-      <div class="skill-ghost">06</div>
-      <div class="skill-top"><span class="skill-emoji">🔧</span><span class="skill-level level-int">Intermediate</span></div>
-      <div class="skill-name">Frontend Workflow</div>
-      <div class="skill-desc">Focused on readable UI structure, animation polish, debugging, and faster iteration during development.</div>
-      <div class="skill-tags"><span class="skill-tag">VS Code</span><span class="skill-tag">UI</span><span class="skill-tag">Debugging</span><span class="skill-tag">Workflow</span></div>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-ghost">07</div>
-      <div class="skill-top"><span class="skill-emoji">💡</span><span class="skill-level level-beg">Beginner</span></div>
-      <div class="skill-name">Entrepreneurship</div>
-      <div class="skill-desc">Startup thinking, product value, and practical business exposure from TBI entrepreneurship training.</div>
-      <div class="skill-tags"><span class="skill-tag">Startups</span><span class="skill-tag">Pitching</span><span class="skill-tag">Innovation</span></div>
-    </div>
-  </div>
-</section>
+          <div class="about-achievements">
+            <div class="about-ach">Delivered and sold a real business website in the fisheries sector.</div>
+            <div class="about-ach">Focused on responsive layout quality across mobile, tablet, and desktop.</div>
+            <div class="about-ach">Comfortable translating product needs into clear front-end experiences.</div>
+          </div>
 
-<!-- ═══ CERTIFICATIONS ═══ -->
-<section class="section certs" id="certifications">
-  <div class="reveal">
-    <div class="section-label">Certifications</div>
-    <h2 class="section-heading">TRAINING &amp;<br/><span class="gradient">CERTIFICATIONS</span>.</h2>
-  </div>
-  <div class="certs-grid">
-    <div class="cert-card reveal">
-      <div class="cert-year-badge">2025</div>
-      <div class="cert-title">Entrepreneurship &amp; Startup Training</div>
-      <div class="cert-issuer">TCE TBI — Thiagarajar College of Engineering</div>
-    </div>
-    <div class="cert-card reveal reveal-delay-1">
-      <div class="cert-year-badge">2024 — 2025</div>
-      <div class="cert-title">Full Stack Web Development</div>
-      <div class="cert-issuer">Self-learning through projects, practical implementation, and daily development practice.</div>
-    </div>
-  </div>
-</section>
+          <blockquote class="about-quote">
+            <p>
+              I aim to build interfaces that look premium, communicate clearly, and make products feel immediately trustworthy.
+            </p>
+          </blockquote>
+        </article>
 
-<!-- ═══ PROJECTS ═══ -->
-<section class="section projects" id="projects">
-  <div class="reveal">
-    <div class="section-label">Selected Work</div>
-    <h2 class="section-heading">THINGS I'VE<br/><span class="outline">BUILT.</span></h2>
-  </div>
-  <div class="projects-list">
-    <div class="project-card reveal">
-      <div class="project-num">01</div>
-      <div>
-        <div class="project-cat">AI · Agriculture · Python</div>
-        <div class="project-name">Farmer AI</div>
-        <div class="project-desc">A Python-based AI web app that suggests crops based on soil type and season inputs, helping small-scale farmers make smarter agricultural decisions.</div>
-        <div class="project-stack"><span class="project-tag">Python</span><span class="project-tag">AI</span><span class="project-tag">Web</span><span class="project-tag">Agriculture</span></div>
+        <aside class="profile-card reveal" aria-label="Profile summary">
+          <div class="profile-avatar">
+            <img
+              src="assets/gokul-profile.jpeg"
+              alt="Portrait of Gokul Priyan"
+              width="480"
+              height="480"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="profile-card-name">Gokul Priyan</div>
+          <div class="profile-card-role">Frontend Developer</div>
+          <div class="profile-divider"></div>
+          <div class="profile-skills">
+            <span class="profile-skill">Frontend UI</span>
+            <span class="profile-skill">Responsive CSS</span>
+            <span class="profile-skill">JavaScript</span>
+            <span class="profile-skill">GitHub</span>
+            <span class="profile-skill">Linux</span>
+            <span class="profile-skill">Deployment</span>
+          </div>
+          <div class="profile-divider"></div>
+          <address class="profile-info">
+            <div class="profile-info-item">Madurai, Tamil Nadu, India</div>
+            <div class="profile-info-item">
+              <a href="mailto:gokultgb475@gmail.com">gokultgb475@gmail.com</a>
+            </div>
+            <div class="profile-info-item">
+              <a href="tel:+919489392449">+91 94893 92449</a>
+            </div>
+            <div class="profile-info-item">
+              <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+            </div>
+            <div class="profile-info-item">
+              <a href="https://www.linkedin.com/in/gokulpriyan-p-a5b535394/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+            </div>
+          </address>
+        </aside>
+
+        <div class="info-panel reveal">
+          <div class="info-block">
+            <div class="info-panel-head">Quick Facts</div>
+            <div class="info-row"><span class="info-key">Role</span><span class="info-val">Frontend Developer</span></div>
+            <div class="info-row"><span class="info-key">Programme</span><span class="info-val">Diploma in CSE</span></div>
+            <div class="info-row"><span class="info-key">College</span><span class="info-val">TNGPTC, Madurai</span></div>
+            <div class="info-row"><span class="info-key">Graduation</span><span class="info-val">2026</span></div>
+            <div class="info-row"><span class="info-key">Focus</span><span class="info-val">Frontend, UI, Responsive Web</span></div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-panel-head">Timeline</div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div>
+                <div class="timeline-year">2024</div>
+                <div class="timeline-title">Fish Corporation Website</div>
+                <div class="timeline-desc">Delivered a responsive website for a real business client and successfully sold the project.</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div>
+                <div class="timeline-year">2025</div>
+                <div class="timeline-title">Entrepreneurship Training</div>
+                <div class="timeline-desc">Completed startup and product exposure through TCE TBI.</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div>
+                <div class="timeline-year">2026</div>
+                <div class="timeline-title">Frontend Developer</div>
+                <div class="timeline-desc">Joined BuildHomeMart Techno Solution Pvt Ltd and continued building front-end experience.</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="project-right">
-        <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="project-btn">GitHub Profile ↗</a>
-        <div class="project-status">Personal Project</div>
-      </div>
-    </div>
-    <div class="project-card reveal">
-      <div class="project-num">02</div>
-      <div>
-        <div class="project-cat">Client Work · Web · Linux</div>
-        <div class="project-name">Fish Corporation Website</div>
-        <div class="project-desc">Delivered and sold a fully responsive business website to a real client in the fisheries sector, improving their online presence with a clean, professional interface.</div>
-        <div class="project-stack"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JavaScript</span><span class="project-tag">Client Work</span><span class="project-tag">Linux</span></div>
-      </div>
-      <div class="project-right">
-        <a href="https://fish-corporation-live.onrender.com" target="_blank" rel="noopener noreferrer" class="project-btn live">Live Demo ↗</a>
-        <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="project-btn">GitHub ↗</a>
-        <div class="project-status sold">Sold to Client</div>
-      </div>
-    </div>
-    <div class="project-card reveal">
-      <div class="project-num">03</div>
-      <div>
-        <div class="project-cat">Backend · Python · Academic</div>
-        <div class="project-name">Student Attendance System</div>
-        <div class="project-desc">A Python backend solution built to automate attendance tracking and reduce manual record work for academic administration, improving consistency and saving time.</div>
-        <div class="project-stack"><span class="project-tag">Python</span><span class="project-tag">Backend</span><span class="project-tag">Database</span><span class="project-tag">Academic</span><span class="project-tag">Teamwork</span></div>
-      </div>
-      <div class="project-right">
-        <a href="#" class="project-btn">Coming Soon</a>
-        <div class="project-status">Team Project</div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ═══ CONTACT ═══ -->
-<section class="section contact" id="contact">
-  <div class="reveal">
-    <div class="section-label">Contact</div>
-    <div class="contact-title">
-      <div class="l1">LET'S</div>
-      <div class="l2">BUILD</div>
-      <div class="l3">something.</div>
-    </div>
-    <p class="contact-sub">If you're hiring, collaborating, or looking for someone who can build with clarity and consistency, let's connect.</p>
-    <div class="contact-avail">Available for internships and freelance work</div>
-  </div>
-
-  <div class="contact-grid">
-    <div class="contact-card reveal">
-      <div class="contact-card-label">Get In Touch</div>
-      <div class="contact-list">
-        <a href="mailto:gokultgb475@gmail.com" class="contact-item"><div class="contact-icon">📧</div><div><div class="contact-key">Email</div><div class="contact-val">gokultgb475@gmail.com</div></div><span class="contact-arrow">↗</span></a>
-        <a href="tel:+919489392449" class="contact-item"><div class="contact-icon">📞</div><div><div class="contact-key">Phone</div><div class="contact-val">+91 94893 92449</div></div><span class="contact-arrow">↗</span></a>
-        <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="contact-item"><div class="contact-icon">🐙</div><div><div class="contact-key">GitHub</div><div class="contact-val">github.com/gokultgb475-lgtm</div></div><span class="contact-arrow">↗</span></a>
-        <a href="https://www.linkedin.com/in/gokulpriyan-p-a5b535394/" target="_blank" rel="noopener noreferrer" class="contact-item"><div class="contact-icon">💼</div><div><div class="contact-key">LinkedIn</div><div class="contact-val">linkedin.com/in/gokulpriyan-p-a5b535394</div></div><span class="contact-arrow">↗</span></a>
-        <a href="https://maps.google.com/?q=Madurai,Tamil+Nadu,India" target="_blank" rel="noopener noreferrer" class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-key">Location</div><div class="contact-val">Madurai, Tamil Nadu, India</div></div><span class="contact-arrow">↗</span></a>
+    <!-- UPDATED: Skill cards simplified into clean frontend-focused categories -->
+    <section class="section skills" id="skills" aria-labelledby="skills-heading">
+      <div class="skills-header reveal">
+        <div>
+          <div class="section-label">Skills</div>
+          <h2 class="section-heading" id="skills-heading">
+            Skills I use to build polished interfaces.
+          </h2>
+        </div>
+        <p class="skills-sub">
+          I focus on tools and workflows that help me create clean layouts, responsive components, and smooth user interactions.
+        </p>
       </div>
-    </div>
 
-    <div class="contact-card reveal reveal-delay-1">
-      <div class="contact-card-label">Send A Message</div>
-      <div class="form-title">Write To Me</div>
-      <div class="form-sub">I reply within 24 hours · gokultgb475@gmail.com</div>
-      <div class="form-row">
-        <div class="form-group"><label for="name">Name</label><input id="name" type="text" placeholder="Your name"/></div>
-        <div class="form-group"><label for="email">Email</label><input id="email" type="email" placeholder="your@email.com"/></div>
+      <div class="skills-grid">
+        <article class="skill-card reveal">
+          <div class="skill-icon">FE</div>
+          <div class="skill-name">Frontend Development</div>
+          <div class="skill-desc">Semantic HTML, structured CSS, reusable UI sections, and user-first layouts for professional websites.</div>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">Semantic Markup</span>
+            <span class="skill-tag">Reusable Sections</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal reveal-delay-1">
+          <div class="skill-icon">CS</div>
+          <div class="skill-name">CSS &amp; Visual Design</div>
+          <div class="skill-desc">Modern dark themes, spacing systems, gradients, hover states, and card-based UI styling for standout presentation.</div>
+          <div class="skill-tags">
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">Animations</span>
+            <span class="skill-tag">Design Systems</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal reveal-delay-2">
+          <div class="skill-icon">JS</div>
+          <div class="skill-name">JavaScript Interactions</div>
+          <div class="skill-desc">Smooth scrolling, dynamic states, navigation behavior, reveal effects, and small enhancements that improve UX.</div>
+          <div class="skill-tags">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">DOM</span>
+            <span class="skill-tag">UX Logic</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-icon">RD</div>
+          <div class="skill-name">Responsive Design</div>
+          <div class="skill-desc">Layouts tuned for mobile, tablet, and desktop so every screen size feels intentional and usable.</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Mobile First</span>
+            <span class="skill-tag">Tablet</span>
+            <span class="skill-tag">Desktop</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal reveal-delay-1">
+          <div class="skill-icon">GT</div>
+          <div class="skill-name">Git &amp; Collaboration</div>
+          <div class="skill-desc">Version control, project tracking, and cleaner development habits for safe iteration and better teamwork.</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Commits</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal reveal-delay-2">
+          <div class="skill-icon">DP</div>
+          <div class="skill-name">Deployment &amp; Workflow</div>
+          <div class="skill-desc">Comfortable shipping projects to the web and working with practical tooling for testing, iteration, and delivery.</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Render</span>
+            <span class="skill-tag">Vercel</span>
+            <span class="skill-tag">Linux</span>
+          </div>
+        </article>
       </div>
-      <div class="form-group"><label for="subject">Subject</label><input id="subject" type="text" placeholder="What's this about?"/></div>
-      <div class="form-group"><label for="message">Message</label><textarea id="message" rows="4" placeholder="Tell me about your project or opportunity..."></textarea></div>
-      <button class="form-submit" type="button" onclick="window.location.href='mailto:gokultgb475@gmail.com'">Send It →</button>
+    </section>
+
+    <!-- ADDED: Current learning section -->
+    <section class="section learning" id="learning" aria-labelledby="learning-heading">
+      <div class="reveal">
+        <div class="section-label">Current Learning</div>
+        <h2 class="section-heading" id="learning-heading">
+          What I'm Currently Learning
+        </h2>
+        <p class="learning-intro">
+          I'm actively sharpening the next set of skills that will help me build stronger front-end products and grow faster inside real engineering teams.
+        </p>
+      </div>
+
+      <div class="learning-grid">
+        <article class="learning-card reveal">
+          <div class="learning-icon">01</div>
+          <h3 class="learning-title">React.js</h3>
+          <p class="learning-copy">
+            Learning component-based frontend development to build faster, more scalable, and reusable user interfaces.
+          </p>
+        </article>
+
+        <article class="learning-card reveal reveal-delay-1">
+          <div class="learning-icon">02</div>
+          <h3 class="learning-title">Advanced JavaScript</h3>
+          <p class="learning-copy">
+            Improving problem-solving, DOM control, asynchronous logic, and cleaner interactive behavior for richer web experiences.
+          </p>
+        </article>
+
+        <article class="learning-card reveal reveal-delay-2">
+          <div class="learning-icon">03</div>
+          <h3 class="learning-title">Building Real-World Projects</h3>
+          <p class="learning-copy">
+            Focusing on portfolio-worthy projects that solve practical problems and demonstrate production-ready frontend thinking.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- UPDATED: Added experience section -->
+    <section class="section experience" id="experience" aria-labelledby="experience-heading">
+      <div class="reveal">
+        <div class="section-label">Experience</div>
+        <h2 class="section-heading" id="experience-heading">
+          Experience that shows I can ship.
+        </h2>
+      </div>
+
+      <div class="experience-grid">
+        <article class="experience-card reveal">
+          <div class="experience-head">
+            <div>
+              <div class="experience-period">2026 - Present</div>
+              <h3 class="experience-role">Frontend Developer</h3>
+              <p class="experience-company">BuildHomeMart Techno Solution Pvt Ltd</p>
+            </div>
+            <span class="experience-badge">Current Role</span>
+          </div>
+
+          <p class="experience-summary">
+            Frontend Developer at BuildHomeMart Techno Solution Pvt Ltd, contributing to cleaner interfaces, better usability, and continuous improvements across live web experiences.
+          </p>
+
+          <ul class="experience-points">
+            <li>Developed responsive UI using HTML, CSS, and JavaScript for better cross-device consistency.</li>
+            <li>Improved website usability and performance through layout refinement, cleaner structure, and smoother interaction flow.</li>
+            <li>Fixed bugs and enhanced features to make existing pages more stable, polished, and user-friendly.</li>
+          </ul>
+        </article>
+
+        <aside class="experience-side reveal reveal-delay-1">
+          <div class="experience-side-label">Impact</div>
+          <p class="experience-side-text">
+            This experience adds real company exposure to my portfolio and shows that I can contribute beyond personal projects with practical frontend improvements.
+          </p>
+          <div class="experience-highlights">
+            <span class="experience-highlight">Responsive UI</span>
+            <span class="experience-highlight">Usability improvements</span>
+            <span class="experience-highlight">Bug fixing</span>
+            <span class="experience-highlight">Feature enhancement</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ADDED: Why hire me section -->
+    <section class="section hire" id="why-hire" aria-labelledby="hire-heading">
+      <div class="reveal">
+        <div class="section-label">Why Hire Me</div>
+        <h2 class="section-heading" id="hire-heading">
+          Why I can be a strong frontend addition.
+        </h2>
+        <p class="hire-intro">
+          I combine strong fundamentals, practical project delivery, and a fast-learning mindset that helps me contribute quickly while continuing to grow.
+        </p>
+      </div>
+
+      <div class="hire-grid">
+        <article class="hire-card reveal">
+          <div class="hire-icon">01</div>
+          <h3 class="hire-title">Strong frontend fundamentals</h3>
+          <p class="hire-copy">
+            Confident with HTML, CSS, JavaScript, responsive layouts, and semantic structure that keeps interfaces clean and maintainable.
+          </p>
+        </article>
+
+        <article class="hire-card reveal reveal-delay-1">
+          <div class="hire-icon">02</div>
+          <h3 class="hire-title">Fast learner and adaptable</h3>
+          <p class="hire-copy">
+            I learn quickly, adjust to feedback, and keep improving my workflow so I can match team expectations faster.
+          </p>
+        </article>
+
+        <article class="hire-card reveal reveal-delay-2">
+          <div class="hire-icon">03</div>
+          <h3 class="hire-title">Hands-on project experience</h3>
+          <p class="hire-copy">
+            My portfolio includes a real client website, practical applications, and ongoing experience that goes beyond classroom work.
+          </p>
+        </article>
+
+        <article class="hire-card reveal">
+          <div class="hire-icon">04</div>
+          <h3 class="hire-title">Passion for clean, modern UI</h3>
+          <p class="hire-copy">
+            I care about the small details that make interfaces feel professional, easy to use, and impressive to recruiters and users.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- UPDATED: Certifications copy refined -->
+    <section class="section certs" id="certifications" aria-labelledby="certifications-heading">
+      <div class="reveal">
+        <div class="section-label">Certifications</div>
+        <h2 class="section-heading" id="certifications-heading">
+          Training that supports practical execution.
+        </h2>
+      </div>
+
+      <div class="certs-grid">
+        <article class="cert-card reveal">
+          <div class="cert-year-badge">2025</div>
+          <div class="cert-title">Entrepreneurship &amp; Startup Training</div>
+          <div class="cert-issuer">TCE TBI - Thiagarajar College of Engineering</div>
+          <p class="cert-copy">
+            Strengthened product thinking, value communication, and exposure to startup-oriented problem solving.
+          </p>
+        </article>
+
+        <article class="cert-card reveal reveal-delay-1">
+          <div class="cert-year-badge">2024 - 2026</div>
+          <div class="cert-title">Full Stack &amp; Frontend Practice</div>
+          <div class="cert-issuer">Self-driven project learning and hands-on development</div>
+          <p class="cert-copy">
+            Built practical web projects, improved UI implementation skills, and developed stronger deployment and iteration habits.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- UPDATED: Project cards rebuilt to include title, description, tech stack, GitHub, and live/demo CTA -->
+    <section class="section projects" id="projects" aria-labelledby="projects-heading">
+      <div class="reveal">
+        <div class="section-label">Projects</div>
+        <h2 class="section-heading" id="projects-heading">
+          Projects built around real problems.
+        </h2>
+        <p class="projects-intro">
+          Each project below highlights the problem I focused on and the solution I built using frontend and web development skills.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card reveal">
+          <div class="project-top">
+            <div class="project-num">01</div>
+            <div class="project-status">AI Project</div>
+          </div>
+          <div class="project-cat">AI Web Application</div>
+          <h3 class="project-name">Farmer AI</h3>
+          <p class="project-desc">
+            A Python-powered agriculture web application that helps users identify suitable crops based on soil and seasonal inputs through a simple web interface.
+          </p>
+          <div class="project-story">
+            <div class="project-story-block">
+              <div class="project-story-label">Problem:</div>
+              <p>Small-scale farmers need better guidance when choosing crops for changing soil and seasonal conditions.</p>
+            </div>
+            <div class="project-story-block">
+              <div class="project-story-label">Solution:</div>
+              <p>I built a web-based AI project that uses Python logic and structured inputs to recommend better crop options in a user-friendly way.</p>
+            </div>
+          </div>
+          <div class="project-stack">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">AI Logic</span>
+            <span class="project-tag">Web UI</span>
+            <span class="project-tag">Agriculture</span>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/gokultgb475-lgtm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-btn"
+              title="Repository is not public yet. This links to my GitHub profile."
+            >
+              GitHub
+            </a>
+            <a href="#contact" class="project-btn live">Live Demo</a>
+          </div>
+          <p class="project-note">Live walkthrough and repository details are available on request.</p>
+        </article>
+
+        <article class="project-card reveal reveal-delay-1">
+          <div class="project-top">
+            <div class="project-num">02</div>
+            <div class="project-status sold">Client Delivery</div>
+          </div>
+          <div class="project-cat">Business Website</div>
+          <h3 class="project-name">Fish Corporation Website</h3>
+          <p class="project-desc">
+            A responsive website created and sold to a fisheries-sector client to improve credibility, service presentation, and customer trust online.
+          </p>
+          <div class="project-story">
+            <div class="project-story-block">
+              <div class="project-story-label">Problem:</div>
+              <p>The client needed a stronger online presence that looked professional and explained the business clearly across all devices.</p>
+            </div>
+            <div class="project-story-block">
+              <div class="project-story-label">Solution:</div>
+              <p>I designed and built a cleaner business website with responsive layout structure, modern visuals, and better communication of services.</p>
+            </div>
+          </div>
+          <div class="project-stack">
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">Client Work</span>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/gokultgb475-lgtm/fish-corporation-live"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-btn"
+            >
+              GitHub
+            </a>
+            <a href="https://fish-corporation-live.onrender.com" target="_blank" rel="noopener noreferrer" class="project-btn live">Live Demo</a>
+          </div>
+          <p class="project-note">Delivered to a live client, published online, and backed by a public GitHub repository.</p>
+        </article>
+
+        <article class="project-card reveal reveal-delay-2">
+          <div class="project-top">
+            <div class="project-num">03</div>
+            <div class="project-status">Academic Project</div>
+          </div>
+          <div class="project-cat">Utility Application</div>
+          <h3 class="project-name">Student Attendance System</h3>
+          <p class="project-desc">
+            A practical system created to make attendance tracking more organized, consistent, and less dependent on manual record work.
+          </p>
+          <div class="project-story">
+            <div class="project-story-block">
+              <div class="project-story-label">Problem:</div>
+              <p>Manual attendance tracking takes time, creates inconsistency, and makes academic record management harder.</p>
+            </div>
+            <div class="project-story-block">
+              <div class="project-story-label">Solution:</div>
+              <p>I built a structured attendance system with Python and backend logic to simplify record handling and improve reliability.</p>
+            </div>
+          </div>
+          <div class="project-stack">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Backend Logic</span>
+            <span class="project-tag">Database</span>
+            <span class="project-tag">Academic Use</span>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/gokultgb475-lgtm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-btn"
+              title="Repository is not public yet. This links to my GitHub profile."
+            >
+              GitHub
+            </a>
+            <a href="#contact" class="project-btn live">Live Demo</a>
+          </div>
+          <p class="project-note">Private demo and repository walkthrough can be arranged on request.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- UPDATED: Contact details and form improved -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="reveal">
+        <div class="section-label">Contact</div>
+        <h2 class="section-heading" id="contact-heading">
+          Let's build something strong together.
+        </h2>
+        <p class="contact-cta-line">Let's build something amazing together &#128640;</p>
+        <p class="contact-sub">
+          If you're hiring, collaborating, or reviewing candidates for frontend opportunities, I'd be happy to connect.
+        </p>
+        <div class="contact-avail">Available for internships, freelance work, and frontend roles</div>
+      </div>
+
+      <div class="contact-grid">
+        <article class="contact-card reveal">
+          <div class="contact-card-label">Contact Details</div>
+          <div class="contact-list">
+            <a href="mailto:gokultgb475@gmail.com" class="contact-item">
+              <span class="contact-icon">@</span>
+              <span>
+                <span class="contact-key">Email</span>
+                <span class="contact-val">gokultgb475@gmail.com</span>
+              </span>
+              <span class="contact-arrow">-&gt;</span>
+            </a>
+            <a href="tel:+919489392449" class="contact-item">
+              <span class="contact-icon">PH</span>
+              <span>
+                <span class="contact-key">Phone</span>
+                <span class="contact-val">+91 94893 92449</span>
+              </span>
+              <span class="contact-arrow">-&gt;</span>
+            </a>
+            <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <span class="contact-icon">GH</span>
+              <span>
+                <span class="contact-key">GitHub</span>
+                <span class="contact-val">github.com/gokultgb475-lgtm</span>
+              </span>
+              <span class="contact-arrow">-&gt;</span>
+            </a>
+            <a href="https://www.linkedin.com/in/gokulpriyan-p-a5b535394/" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <span class="contact-icon">in</span>
+              <span>
+                <span class="contact-key">LinkedIn</span>
+                <span class="contact-val">linkedin.com/in/gokulpriyan-p-a5b535394</span>
+              </span>
+              <span class="contact-arrow">-&gt;</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="contact-card reveal reveal-delay-1">
+          <div class="contact-card-label">Send A Message</div>
+          <div class="form-title">Start the conversation</div>
+          <div class="form-sub">The form opens your email app with a pre-filled message.</div>
+
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="your@email.com" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" placeholder="Job opportunity, freelance project, collaboration..." required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me a little about the role, project, or opportunity." required></textarea>
+            </div>
+
+            <button class="form-submit" type="submit">Send Message</button>
+            <p class="form-response" id="form-response" aria-live="polite"></p>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- UPDATED: Cleaner footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      <span class="footer-logo">GP</span>
+      <span class="footer-name">Gokul Priyan</span>
     </div>
-  </div>
-</section>
+    <div class="footer-center">Frontend Developer Portfolio</div>
+    <div class="footer-right">Built in Madurai | <span id="year"></span></div>
+  </footer>
 
-<!-- ═══ FOOTER ═══ -->
-<footer class="footer">
-  <div class="footer-left">
-    <div class="footer-logo">GP</div>
-    <span class="footer-name">GOKUL PRIYAN</span>
-  </div>
-  <div class="footer-center">Full Stack · AI · Cloud</div>
-  <div class="footer-right">Built with craft in Madurai, India</div>
-</footer>
+  <button id="btt" type="button" aria-label="Back to top">^</button>
 
-<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
