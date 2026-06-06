@@ -3,1027 +3,539 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gokul Priyan — Frontend Developer</title>
-<meta name="description" content="Portfolio of Gokul Priyan P, a Frontend Developer from Madurai building responsive web experiences with React.js, JavaScript, HTML, CSS, and real-world project delivery.">
+<title>Gokul Priyan — Cloud Engineer · Python Developer · AI Builder</title>
+<meta name="description" content="Portfolio of Gokul Priyan P — Cloud Engineer, Python Developer, AI Builder, Linux Enthusiast, and Open Source Learner from Madurai. A cinematic journey through technology and craftsmanship.">
 <meta name="author" content="Gokul Priyan P">
-<meta name="theme-color" content="#f8f5ed">
+<meta name="theme-color" content="#1a1008">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Gokul Priyan — Frontend Developer">
-<meta property="og:description" content="Explore Gokul Priyan's frontend projects, skills, experience, and resume.">
+<meta property="og:title" content="Gokul Priyan — A Cinematic Portfolio">
+<meta property="og:description" content="Step into the vintage world of Gokul Priyan — Cloud Engineer, Python Developer, and AI Builder. A film-inspired journey through code and creativity.">
 <meta property="og:image" content="assets/gokul-profile.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --cream: #f8f5ed;
-    --warm-beige: #e9f1ed;
-    --parchment: #cbd8d0;
-    --brown-light: #66838b;
-    --brown: #255f66;
-    --brown-dark: #103c44;
-    --ink: #111c20;
-    --rose: #c86458;
-    --rose-light: #ef9a8d;
-    --sage: #7f9b72;
-    --dusty-gold: #c9a13c;
-    --dusty-gold-light: #ead18a;
-    --surface: rgba(255, 252, 244, 0.78);
-    --surface-strong: #fffaf0;
-    --line: rgba(37, 95, 102, 0.18);
-    --shadow-soft: 0 22px 70px rgba(16, 60, 68, 0.12);
-    --shadow-crisp: 0 12px 34px rgba(16, 60, 68, 0.14);
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background:
-      linear-gradient(118deg, rgba(248,245,237,0.98) 0%, rgba(233,241,237,0.86) 46%, rgba(255,247,232,0.92) 100%),
-      var(--cream);
-    color: var(--ink);
-    font-family: 'Libre Baskerville', serif;
-    overflow-x: hidden;
-    cursor: auto;
-  }
-
-  ::selection { background: rgba(200,100,88,0.2); color: var(--brown-dark); }
-  :focus-visible { outline: 2px solid var(--rose); outline-offset: 4px; }
-  body > * { position: relative; z-index: 2; }
-
-  /* ── GRAIN OVERLAY ── */
-  body::before {
-    content: '';
-    position: fixed; inset: 0; z-index: 1; pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    opacity: 0.28;
-  }
-
-  /* ── LOADER ── */
-  #loader {
-    position: fixed; inset: 0; z-index: 9990;
-    background: var(--cream);
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    transition: opacity 0.8s ease, visibility 0.8s ease;
-  }
-  #loader.hide { opacity: 0; visibility: hidden; }
-  .loader-text {
-    font-family: 'Caveat', cursive; font-size: 2.5rem; color: var(--brown);
-    letter-spacing: 0.1em; animation: fadeUpIn 0.8s ease forwards;
-  }
-  .loader-sub { font-family: 'IM Fell English', serif; font-size: 1rem; color: var(--brown-light); font-style: italic; margin-top: 0.5rem; animation: fadeUpIn 0.8s 0.2s ease both; }
-  .loader-line { width: 0; height: 1px; background: var(--brown-light); margin-top: 2rem; animation: expandLine 1.5s 0.4s ease forwards; }
-  @keyframes expandLine { to { width: 200px; } }
-
-  /* ── NAVIGATION ── */
-  nav {
-    position: fixed; top: 1rem; left: 50%; z-index: 100;
-    width: min(calc(100% - 2rem), 1180px);
-    padding: 0.7rem 0.9rem;
-    display: flex; align-items: center; justify-content: space-between;
-    transform: translateX(-50%);
-    background: rgba(255,250,240,0.74);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    box-shadow: 0 14px 48px rgba(16,60,68,0.10);
-  }
-  .nav-logo {
-    font-family: 'Caveat', cursive; font-size: 1.6rem; font-weight: 700;
-    color: var(--brown-dark); letter-spacing: 0.05em;
-    text-decoration: none;
-  }
-  .nav-logo span { color: var(--rose); }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a {
-    font-family: 'IM Fell English', serif; font-size: 0.9rem; font-style: italic;
-    color: var(--brown); text-decoration: none; letter-spacing: 0.05em;
-    position: relative; transition: color 0.3s;
-  }
-  .nav-links a::after {
-    content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1px;
-    background: var(--rose); transition: width 0.3s ease;
-  }
-  .nav-links a:hover { color: var(--rose); }
-  .nav-links a:hover::after { width: 100%; }
-  .nav-resume {
-    padding: 0.55rem 1.2rem;
-    border: 1px solid rgba(37,95,102,0.25);
-    border-radius: 999px;
-    color: var(--brown-dark);
-    font-family: 'IM Fell English', serif;
-    font-size: 0.9rem;
-    font-style: italic;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
-  }
-  .nav-resume:hover {
-    background: rgba(200,100,88,0.1);
-    border-color: var(--rose);
-    color: var(--rose);
-  }
-
-  /* ── SECTIONS ── */
-  section { padding: 7rem 3rem; max-width: 1200px; margin: 0 auto; scroll-margin-top: 1rem; }
-  #skills, #contact { scroll-margin-top: 1rem; }
-
-  /* ── HERO ── */
-  #hero {
-    min-height: 100svh; display: flex; align-items: center;
-    padding-top: 7rem; max-width: 100%; position: relative; overflow: hidden;
-    isolation: isolate;
-  }
-  .hero-bg {
-    position: absolute; inset: 0; pointer-events: none;
-    background:
-      linear-gradient(100deg, rgba(248,245,237,0.99) 0%, rgba(248,245,237,0.92) 42%, rgba(248,245,237,0.56) 68%, rgba(248,245,237,0.96) 100%),
-      linear-gradient(135deg, rgba(37,95,102,0.10), transparent 45%, rgba(201,161,60,0.16));
-  }
-  .hero-bg::before {
-    content: ''; position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(16,60,68,0.055) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(16,60,68,0.045) 1px, transparent 1px);
-    background-size: 92px 92px;
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.75), transparent 86%);
-  }
-  .hero-bg::after {
-    content: ''; position: absolute; inset: auto 0 0 0; height: 36%;
-    background: linear-gradient(to top, rgba(16,60,68,0.08), transparent);
-  }
-  .hero-inner {
-    max-width: 1200px; margin: 0 auto; padding: 0 3rem; width: 100%;
-    position: relative; z-index: 2;
-    display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.78fr);
-    gap: clamp(2.5rem, 6vw, 5rem); align-items: center;
-  }
-  .hero-copy { min-width: 0; }
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    padding: 0.45rem 1rem; border: 1px solid var(--line);
-    border-radius: 999px; background: rgba(255,250,240,0.72);
-    backdrop-filter: blur(12px);
-    font-family: 'Caveat', cursive; font-size: 1rem; color: var(--brown);
-    letter-spacing: 0.07em; margin-bottom: 2rem;
-    animation: fadeUpIn 0.8s 1s ease both;
-  }
-  .hero-badge::before { content: '✦'; color: var(--rose); }
-  .hero-name {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(4rem, 8.8vw, 8rem); line-height: 0.94;
-    color: var(--brown-dark); letter-spacing: 0;
-    animation: fadeUpIn 0.8s 1.1s ease both;
-    max-width: 780px;
-  }
-  .hero-name em { font-style: italic; color: var(--rose); }
-  .hero-title {
-    font-family: 'Caveat', cursive; font-size: clamp(1.35rem, 2.6vw, 2rem);
-    color: var(--brown); margin-top: 1.2rem; letter-spacing: 0.08em;
-    animation: fadeUpIn 0.8s 1.2s ease both;
-  }
-  .hero-desc {
-    max-width: 610px; font-size: 1.08rem; line-height: 1.9;
-    color: var(--brown); margin-top: 1.3rem; font-style: italic;
-    animation: fadeUpIn 0.8s 1.3s ease both;
-  }
-  .hero-ctas { display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; animation: fadeUpIn 0.8s 1.4s ease both; }
-  .btn-primary {
-    padding: 0.9rem 1.65rem; background: var(--brown-dark); color: var(--cream);
-    font-family: 'Caveat', cursive; font-size: 1.1rem; letter-spacing: 0.08em;
-    border: 1px solid var(--brown-dark); border-radius: 999px; cursor: pointer; text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 12px 28px rgba(16,60,68,0.18);
-  }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 18px 34px rgba(16,60,68,0.22); }
-  .btn-secondary {
-    padding: 0.9rem 1.65rem; background: rgba(255,250,240,0.72); color: var(--brown-dark);
-    font-family: 'Caveat', cursive; font-size: 1.1rem; letter-spacing: 0.08em;
-    border: 1px solid var(--line); border-radius: 999px; cursor: pointer; text-decoration: none;
-    backdrop-filter: blur(12px);
-    transition: border-color 0.2s, color 0.2s, transform 0.2s;
-  }
-  .btn-secondary:hover { border-color: var(--rose); color: var(--rose); transform: translateY(-2px); }
-  .hero-ornament {
-    position: absolute; right: 5%; top: 50%; transform: translateY(-50%);
-    opacity: 0.07; font-size: 20rem; font-family: 'Playfair Display', serif;
-    color: var(--brown); user-select: none; animation: floatSlow 6s ease-in-out infinite;
-    pointer-events: none;
-  }
-  .hero-card {
-    --tilt-x: 0deg; --tilt-y: 0deg;
-    position: relative;
-    padding: clamp(1rem, 2vw, 1.35rem);
-    border: 1px solid rgba(37,95,102,0.2);
-    border-radius: 8px;
-    background:
-      linear-gradient(145deg, rgba(255,250,240,0.92), rgba(233,241,237,0.84)),
-      var(--surface-strong);
-    box-shadow: 0 24px 56px rgba(16,60,68,0.16), inset 0 0 0 1px rgba(255,255,255,0.65);
-    transform: perspective(900px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
-    animation: cabinetArrive 1.1s 1.25s cubic-bezier(.2,.7,.2,1) both, cardFloat 5.8s 2.4s ease-in-out infinite;
-    transform-style: preserve-3d;
-  }
-  .hero-card::before {
-    content: ''; position: absolute; inset: 0;
-    border-radius: inherit; pointer-events: none;
-    background:
-      linear-gradient(115deg, transparent 0 38%, rgba(255,255,255,0.42) 44%, transparent 52%),
-      repeating-linear-gradient(0deg, rgba(17,28,32,0.025) 0 1px, transparent 1px 12px);
-    mix-blend-mode: screen;
-    opacity: 0.9;
-  }
-  .hero-card::after {
-    content: 'PORTFOLIO / 2026';
-    position: absolute; top: 1.15rem; right: -1.6rem;
-    padding: 0.35rem 1.1rem;
-    border: 1px solid rgba(200,100,88,0.35);
-    border-radius: 999px;
-    background: rgba(255,250,240,0.82);
-    color: var(--rose);
-    font-family: 'Caveat', cursive; font-size: 0.86rem;
-    letter-spacing: 0.08em;
-    transform: rotate(7deg);
-  }
-  .hero-photo-frame {
-    position: relative;
-    aspect-ratio: 4 / 5;
-    overflow: hidden;
-    border-radius: 6px;
-    border: 1px solid rgba(37,95,102,0.22);
-    background: var(--warm-beige);
-  }
-  .hero-photo-frame img {
-    width: 100%; height: 100%; object-fit: cover; object-position: top center;
-    filter: sepia(0.22) saturate(0.98) contrast(1.08) brightness(1.02);
-    transform: scale(1.015);
-    animation: portraitDevelop 1.4s 1.55s ease both;
-  }
-  .hero-photo-frame::before {
-    content: ''; position: absolute; inset: 0; z-index: 1;
-    background:
-      radial-gradient(circle at 30% 15%, rgba(255,250,240,0.22), transparent 38%),
-      linear-gradient(to bottom, transparent 60%, rgba(16,60,68,0.22));
-    pointer-events: none;
-  }
-  .hero-photo-frame::after {
-    content: ''; position: absolute; inset: 0; z-index: 2; pointer-events: none;
-    border: 10px solid rgba(255,250,240,0.28);
-    box-shadow: inset 0 0 0 1px rgba(16,60,68,0.12);
-  }
-  .hero-card-caption {
-    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-    padding: 0.9rem 0.25rem 0.15rem;
-    color: var(--brown);
-    font-family: 'Caveat', cursive;
-    font-size: 1.05rem;
-    letter-spacing: 0.05em;
-  }
-  .hero-card-caption span:last-child {
-    color: var(--rose);
-    font-family: 'IM Fell English', serif;
-    font-size: 0.75rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-  }
-  .hero-stats {
-    display: flex; gap: clamp(1.5rem, 5vw, 4.5rem); margin-top: 3.6rem;
-    padding-top: 1.35rem; border-top: 1px solid var(--line); max-width: 620px;
-    animation: fadeUpIn 0.8s 1.5s ease both;
-  }
-  .hero-stat-num {
-    font-family: 'DM Serif Display', serif; font-size: 2.2rem;
-    color: var(--brown-dark); display: block;
-  }
-  .hero-stat-label {
-    font-family: 'Caveat', cursive; font-size: 0.9rem; color: var(--brown);
-    letter-spacing: 0.08em; display: block; margin-top: 0.15rem;
-  }
-
-  /* ── DIVIDER ── */
-  .divider {
-    width: 100%; height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent);
-    position: relative; margin: 0 auto;
-  }
-  .divider-wrap { max-width: 1200px; margin: 0 auto; padding: 0 3rem; }
-  .divider::before {
-    content: '✦'; position: absolute; left: 50%; top: 50%;
-    transform: translate(-50%, -50%);
-    background: var(--cream); padding: 0 0.75rem;
-    color: var(--brown-light); font-size: 0.9rem;
-  }
-
-  /* ── SECTION LABELS ── */
-  .section-label {
-    font-family: 'Caveat', cursive; font-size: 0.95rem; color: var(--brown-light);
-    letter-spacing: 0.24em; text-transform: uppercase; margin-bottom: 0.85rem;
-    display: flex; align-items: center; gap: 0.5rem;
-  }
-  .section-label::before { content: '—'; }
-  .section-title {
-    font-family: 'DM Serif Display', serif; font-size: clamp(2.25rem, 4.5vw, 4rem);
-    color: var(--brown-dark); line-height: 1.02; margin-bottom: 1.7rem;
-    max-width: 860px;
-  }
-  .section-title em { font-style: italic; color: var(--rose); }
-
-  /* ── ABOUT ── */
-  .about-grid { display: grid; grid-template-columns: minmax(300px, 0.9fr) 1.1fr; gap: clamp(3rem, 7vw, 6rem); align-items: center; }
-  .about-img-wrap {
-    position: relative;
-  }
-  .about-photo-frame {
-    width: 100%; aspect-ratio: 4/5; border-radius: 8px;
-    background: var(--warm-beige);
-    border: 1px solid var(--line);
-    overflow: hidden; position: relative;
-    box-shadow: var(--shadow-soft);
-  }
-  .about-photo-frame img {
-    width: 100%; height: 100%; object-fit: cover;
-    filter: sepia(15%) contrast(1.05) brightness(0.97);
-  }
-  .profile-fallback {
-    display: flex; align-items: center; justify-content: center; height: 100%;
-    font-family: 'Caveat', cursive; font-size: 4rem; color: var(--brown-light);
-  }
-  .about-photo-frame::after {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(248,245,237,0.16) 0%, transparent 60%);
-    mix-blend-mode: screen;
-  }
-  .about-photo-caption {
-    font-family: 'Caveat', cursive; font-size: 1rem; color: var(--brown-light);
-    text-align: center; margin-top: 0.75rem; letter-spacing: 0.05em;
-  }
-  .about-corner-ornament {
-    position: absolute; top: -12px; right: -12px;
-    width: 50px; height: 50px; border-top: 2px solid var(--rose); border-right: 2px solid var(--rose);
-  }
-  .about-corner-ornament-bl {
-    position: absolute; bottom: -12px; left: -12px;
-    width: 50px; height: 50px; border-bottom: 2px solid var(--dusty-gold); border-left: 2px solid var(--dusty-gold);
-  }
-  .about-text p {
-    font-size: 1.05rem; line-height: 1.9; color: var(--brown);
-    margin-bottom: 1.2rem;
-  }
-  .about-text p:first-of-type::first-letter {
-    font-family: 'Playfair Display', serif; font-size: 3.5em; float: left;
-    line-height: 0.7; margin-right: 0.1em; margin-top: 0.1em;
-    color: var(--rose); font-weight: 400;
-  }
-  .about-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
-  .chip {
-    padding: 0.38rem 0.9rem; border: 1px solid var(--line);
-    border-radius: 999px; font-family: 'Caveat', cursive; font-size: 0.9rem;
-    color: var(--brown); background: rgba(255,250,240,0.68);
-    transition: border-color 0.2s, color 0.2s, transform 0.2s;
-  }
-  .chip:hover { border-color: var(--rose); color: var(--rose); transform: translateY(-1px); }
-
-  /* ── SKILLS ── */
-  #skills {
-    background:
-      linear-gradient(180deg, rgba(233,241,237,0.82), rgba(248,245,237,0.92));
-    max-width: 100%;
-    border-top: 1px solid rgba(37,95,102,0.08);
-    border-bottom: 1px solid rgba(37,95,102,0.08);
-  }
-  #skills .inner { max-width: 1200px; margin: 0 auto; padding: 7rem 3rem; }
-  .skills-grid { counter-reset: skill; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.35rem; margin-top: 2.4rem; }
-  .skill-card {
-    counter-increment: skill;
-    background: var(--surface); border: 1px solid var(--line);
-    padding: 1.9rem; border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative; overflow: hidden;
-    box-shadow: 0 1px 0 rgba(255,255,255,0.7) inset;
-  }
-  .skill-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, var(--rose-light), var(--dusty-gold-light), var(--sage));
-    transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease;
-  }
-  .skill-card::after {
-    content: counter(skill, decimal-leading-zero);
-    position: absolute; right: 1.3rem; top: 1.1rem;
-    font-family: 'Caveat', cursive; font-size: 1.05rem;
-    color: rgba(37,95,102,0.22);
-  }
-  .skill-card .skill-name,
-  .skill-card .skill-desc,
-  .skill-card .skill-tags,
-  .skill-card .skill-icon { position: relative; z-index: 1; }
-  .skill-card:nth-child(2),
-  .skill-card:nth-child(5) { transform-origin: center left; }
-  .skill-card:nth-child(3),
-  .skill-card:nth-child(4) { transform-origin: center right; }
-  .skill-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-crisp); }
-  .skill-card:hover::before { transform: scaleX(1); }
-  .delay-1 { transition-delay: 0.05s; }
-  .delay-2 { transition-delay: 0.1s; }
-  .delay-3 { transition-delay: 0.15s; }
-  .delay-4 { transition-delay: 0.2s; }
-  .delay-5 { transition-delay: 0.25s; }
-  .delay-6 { transition-delay: 0.3s; }
-  .skill-icon {
-    font-family: 'Caveat', cursive; font-size: 2.5rem; color: var(--rose);
-    line-height: 1; margin-bottom: 0.75rem; display: block;
-  }
-  .skill-name { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: var(--brown-dark); margin-bottom: 0.5rem; }
-  .skill-desc { font-size: 0.9rem; color: var(--brown-light); line-height: 1.7; font-style: italic; }
-  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 1rem; }
-  .skill-tag {
-    font-family: 'Caveat', cursive; font-size: 0.8rem; padding: 0.2rem 0.55rem;
-    background: rgba(233,241,237,0.8); border: 1px solid rgba(37,95,102,0.08); border-radius: 999px; color: var(--brown);
-  }
-
-  /* ── PROJECTS ── */
-  .projects-grid { display: grid; gap: 2rem; margin-top: 2.4rem; }
-  .project-card {
-    display: grid; grid-template-columns: 1fr 1.4fr; gap: 0;
-    border: 1px solid var(--line); border-radius: 8px;
-    overflow: hidden; background: var(--surface);
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 1px 0 rgba(255,255,255,0.72) inset;
-    position: relative;
-  }
-  .project-card::before {
-    content: 'CASE STUDY';
-    position: absolute;
-    top: 0.9rem;
-    left: clamp(1.25rem, 3vw, 2rem);
-    padding: 0.28rem 0.8rem;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    background: var(--surface-strong);
-    color: var(--brown-light);
-    font-family: 'IM Fell English', serif;
-    font-size: 0.7rem;
-    letter-spacing: 0.14em;
-    z-index: 2;
-  }
-  .project-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-soft); }
-  .project-card:nth-child(even) { grid-template-columns: 1.4fr 1fr; }
-  .project-card:nth-child(even) .project-visual { order: 2; }
-  .project-card:nth-child(even) .project-info { order: 1; }
-  .project-visual {
-    background:
-      linear-gradient(145deg, rgba(233,241,237,0.95), rgba(255,250,240,0.72));
-    position: relative; min-height: 300px;
-    display: flex; align-items: center; justify-content: center;
-    overflow: hidden;
-  }
-  .project-visual::before {
-    content: ''; position: absolute; inset: 1.2rem;
-    border: 1px solid rgba(37,95,102,0.12);
-    border-radius: 6px;
-  }
-  .project-visual::after {
-    content: ''; position: absolute; inset: 0;
-    background:
-      linear-gradient(120deg, transparent 0 42%, rgba(255,250,240,0.62) 42% 44%, transparent 44%),
-      repeating-linear-gradient(90deg, rgba(37,95,102,0.04) 0 1px, transparent 1px 38px);
-    opacity: 0.8;
-  }
-  .project-visual-inner {
-    position: relative; z-index: 1;
-    font-family: 'Playfair Display', serif; font-size: 5.4rem;
-    color: var(--brown); opacity: 0.55;
-    animation: floatSlow 5s ease-in-out infinite;
-    filter: drop-shadow(0 18px 20px rgba(16,60,68,0.10));
-  }
-  .project-num {
-    position: absolute; top: 1.5rem; left: 1.5rem;
-    font-family: 'Caveat', cursive; font-size: 1rem; color: var(--brown-light);
-    letter-spacing: 0.1em;
-  }
-  .project-type-badge {
-    position: absolute; top: 1.5rem; right: 1.5rem;
-    padding: 0.25rem 0.75rem; border: 1px solid var(--parchment);
-    font-family: 'Caveat', cursive; font-size: 0.85rem; color: var(--brown-light);
-    border-radius: 999px; background: rgba(255,250,240,0.8);
-    backdrop-filter: blur(10px);
-  }
-  .project-info { padding: clamp(2rem, 4vw, 3.2rem); display: flex; flex-direction: column; justify-content: center; }
-  .project-title { font-family: 'DM Serif Display', serif; font-size: clamp(1.65rem, 3vw, 2.35rem); color: var(--brown-dark); margin-bottom: 0.75rem; line-height: 1.04; }
-  .project-problem { font-size: 0.9rem; color: var(--brown-light); font-style: italic; line-height: 1.7; margin-bottom: 0.5rem; }
-  .project-desc { font-size: 1rem; color: var(--brown); line-height: 1.85; margin-bottom: 1.35rem; }
-  .project-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
-  .stack-tag {
-    padding: 0.25rem 0.7rem; background: rgba(233,241,237,0.8); border: 1px solid rgba(37,95,102,0.12);
-    font-family: 'Caveat', cursive; font-size: 0.8rem; color: var(--brown);
-    border-radius: 999px;
-  }
-  .project-links { display: flex; gap: 1rem; }
-  .project-link {
-    font-family: 'Caveat', cursive; font-size: 1rem; color: var(--rose);
-    text-decoration: none; letter-spacing: 0.05em;
-    border-bottom: 1px solid transparent; transition: border-color 0.2s, transform 0.2s;
-  }
-  .project-link:hover { border-color: var(--rose); transform: translateY(-1px); }
-
-  /* ── EXPERIENCE ── */
-  .exp-timeline { position: relative; padding-left: 2rem; margin-top: 2.4rem; }
-  .exp-timeline::before {
-    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
-    width: 1px; background: var(--parchment);
-  }
-  .exp-item {
-    position: relative; padding: 0 0 3.2rem 2rem;
-  }
-  .exp-item::before {
-    content: '✦'; position: absolute; left: -0.55rem; top: 0.2rem;
-    font-size: 0.7rem; color: var(--rose); background: var(--cream); padding: 0.1rem;
-  }
-  .exp-date { font-family: 'Caveat', cursive; font-size: 0.95rem; color: var(--brown-light); letter-spacing: 0.12em; margin-bottom: 0.4rem; }
-  .exp-role { font-family: 'DM Serif Display', serif; font-size: clamp(1.35rem, 2vw, 1.7rem); color: var(--brown-dark); margin-bottom: 0.25rem; }
-  .exp-company { font-size: 0.9rem; color: var(--brown-light); font-style: italic; margin-bottom: 1rem; }
-  .exp-bullets { list-style: none; }
-  .exp-bullets li {
-    font-size: 0.95rem; color: var(--brown); line-height: 1.8; padding-left: 1.25rem; position: relative; margin-bottom: 0.4rem;
-  }
-  .exp-bullets li::before { content: '—'; position: absolute; left: 0; color: var(--rose-light); }
-
-  /* ── CONTACT ── */
-  #contact {
-    background:
-      linear-gradient(135deg, #103c44 0%, #164a4f 52%, #244c40 100%);
-    max-width: 100%;
-    position: relative;
-    overflow: hidden;
-  }
-  #contact::before {
-    content: ''; position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(255,250,240,0.045) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,250,240,0.035) 1px, transparent 1px);
-    background-size: 84px 84px;
-  }
-  #contact .inner { max-width: 1200px; margin: 0 auto; padding: 7rem 3rem; text-align: center; position: relative; z-index: 1; }
-  #contact .section-label { justify-content: center; color: var(--parchment); }
-  #contact .section-title { color: var(--cream); }
-  #contact .section-title em { color: var(--rose-light); }
-  .contact-desc { font-size: 1.05rem; color: var(--parchment); font-style: italic; line-height: 1.8; max-width: 500px; margin: 0 auto 2.5rem; }
-  .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 3rem; }
-  .contact-link {
-    display: flex; align-items: center; gap: 0.5rem;
-    font-family: 'Caveat', cursive; font-size: 1.1rem; color: var(--cream);
-    text-decoration: none; letter-spacing: 0.05em; padding: 0.75rem 1.5rem;
-    border: 1px solid rgba(248,245,237,0.22); border-radius: 999px;
-    background: rgba(248,245,237,0.055);
-    transition: background 0.2s, border-color 0.2s, transform 0.2s;
-  }
-  .contact-link:hover { background: rgba(248,245,237,0.1); border-color: var(--rose-light); color: var(--rose-light); transform: translateY(-2px); }
-  .contact-link span { font-size: 1.2rem; }
-  .contact-footer { font-family: 'IM Fell English', serif; font-size: 0.9rem; font-style: italic; color: rgba(248,245,237,0.56); }
-
-  /* ── MARQUEE BAND ── */
-  .marquee-band {
-    background: var(--brown-dark); padding: 0.85rem 0; overflow: hidden;
-    border-top: 1px solid rgba(248,245,237,0.1); border-bottom: 1px solid rgba(248,245,237,0.1);
-    mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
-  }
-  .marquee-track {
-    display: flex; width: max-content;
-    animation: marqueeRoll 18s linear infinite;
-  }
-  .marquee-item {
-    font-family: 'Caveat', cursive; font-size: 1rem; letter-spacing: 0.15em;
-    color: var(--parchment); padding: 0 2rem; white-space: nowrap; opacity: 0.7;
-  }
-  .marquee-dot { color: var(--rose); margin: 0 0.5rem; }
-  @keyframes marqueeRoll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-  /* ── SCROLL REVEAL ── */
-  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-  .reveal-left { opacity: 0; transform: translateX(-30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .reveal-left.visible { opacity: 1; transform: translateX(0); }
-  .reveal-right { opacity: 0; transform: translateX(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .reveal-right.visible { opacity: 1; transform: translateX(0); }
-  .skill-card.reveal { transform: translateY(42px) rotate(-1.5deg); }
-  .skill-card.reveal.visible { transform: translateY(0) rotate(0deg); }
-  .skill-card.reveal.visible:hover { transform: translateY(-5px) rotate(0deg); }
-  .project-card.reveal {
-    opacity: 0;
-    transform: translateY(34px) rotateX(6deg) scale(0.98);
-    transform-origin: top center;
-  }
-  .project-card.reveal.visible {
-    opacity: 1;
-    transform: translateY(0) rotateX(0deg) scale(1);
-    transition-duration: 0.9s;
-  }
-  .project-card.reveal.visible:hover { transform: translateY(-5px); }
-  .exp-item.reveal { transform: translateX(-24px); }
-  .exp-item.reveal.visible { transform: translateX(0); }
-
-  /* ── KEYFRAMES ── */
-  @keyframes fadeUpIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-  @keyframes floatSlow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
-  @keyframes cabinetArrive {
-    from { opacity: 0; transform: perspective(900px) rotateX(9deg) rotateY(-12deg) translateY(34px) scale(0.96); }
-    to { opacity: 1; transform: perspective(900px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translateY(0) scale(1); }
-  }
-  @keyframes cardFloat {
-    0%, 100% { translate: 0 0; }
-    50% { translate: 0 -10px; }
-  }
-  @keyframes portraitDevelop {
-    from { filter: sepia(0.55) saturate(0.72) contrast(0.94); transform: scale(1.04); opacity: 0.55; }
-    to { filter: sepia(0.22) saturate(0.98) contrast(1.08) brightness(1.02); transform: scale(1.015); opacity: 1; }
-  }
-
-  /* ── FOOTER ── */
-  .page-footer {
-    background: var(--brown-dark); text-align: center; padding: 1.5rem;
-    border-top: 1px solid rgba(248,245,237,0.1);
-  }
-  .page-footer p { font-family: 'Caveat', cursive; font-size: 0.95rem; color: rgba(248,245,237,0.44); letter-spacing: 0.1em; }
-
-  /* ── MOBILE ── */
-  @media (max-width: 768px) {
-    nav { top: 0.75rem; width: calc(100% - 1rem); padding: 0.65rem 0.75rem; }
-    .nav-links { display: none; }
-    .nav-resume { padding: 0.45rem 0.9rem; font-size: 0.85rem; }
-    section { padding: 4rem 1.5rem; }
-    section, #skills, #contact { scroll-margin-top: 0.75rem; }
-    #skills .inner, #contact .inner { padding: 4.5rem 1.5rem; }
-    #hero { min-height: 100svh; padding-top: 6rem; }
-    .hero-inner { grid-template-columns: 1fr; gap: 1.5rem; }
-    .hero-card { order: -1; width: min(72vw, 240px); margin: 0 auto 0.5rem; padding: 0.8rem; }
-    .hero-card::after { right: -0.45rem; top: 0.85rem; font-size: 0.7rem; }
-    .hero-card-caption { font-size: 0.9rem; padding-top: 0.65rem; }
-    .hero-card-caption span:last-child { font-size: 0.65rem; }
-    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .about-photo-frame { max-width: 420px; margin: 0 auto; }
-    .project-card, .project-card:nth-child(even) { grid-template-columns: 1fr; }
-    .project-card:nth-child(even) .project-visual { order: 0; }
-    .project-card:nth-child(even) .project-info { order: 0; }
-    .project-visual { min-height: 220px; }
-    .project-visual-inner { font-size: 4.5rem; }
-    .project-info { padding: 2rem; }
-    .project-links { flex-wrap: wrap; }
-    .hero-inner { padding: 0 1.5rem; }
-    .hero-name { font-size: clamp(3.2rem, 17vw, 5rem); }
-    .hero-title { max-width: 300px; }
-    .hero-desc { font-size: 0.98rem; }
-    .hero-ctas a { width: 100%; text-align: center; }
-    .hero-ornament { display: none; }
-    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
-    .divider-wrap { padding: 0 1.5rem; }
-    .contact-links { gap: 0.85rem; }
-    .contact-link { width: 100%; justify-content: center; max-width: 320px; margin: 0 auto; }
-  }
-  @media (hover: none), (pointer: coarse) {
-    .btn-primary, .btn-secondary, .nav-resume { cursor: auto; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      scroll-behavior: auto !important;
-      transition-duration: 0.01ms !important;
-    }
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Caveat:wght@400;500;600;700&family=Special+Elite&family=IM+Fell+English:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Loader -->
-<div id="loader">
-  <div class="loader-text">Gokul Priyan</div>
-  <div class="loader-sub">— Frontend Developer, Madurai —</div>
-  <div class="loader-line"></div>
+<!-- ═══════════════════ CINEMATIC LOADER ═══════════════════ -->
+<div id="cinematic-loader">
+  <div class="loader-film-strip">
+    <div class="film-holes top"></div>
+    <div class="loader-content">
+      <div class="loader-reel">
+        <svg viewBox="0 0 100 100" class="reel-svg">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(201,169,106,0.3)" stroke-width="2"/>
+          <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(201,169,106,0.2)" stroke-width="1"/>
+          <circle cx="50" cy="50" r="8" fill="rgba(201,169,106,0.4)"/>
+          <circle cx="50" cy="15" r="5" fill="none" stroke="rgba(201,169,106,0.3)" stroke-width="1.5"/>
+          <circle cx="80" cy="30" r="5" fill="none" stroke="rgba(201,169,106,0.3)" stroke-width="1.5"/>
+          <circle cx="80" cy="70" r="5" fill="none" stroke="rgba(201,169,106,0.3)" stroke-width="1.5"/>
+          <circle cx="50" cy="85" r="5" fill="none" stroke="rgba(201,169,106,0.3)" stroke-width="1.5"/>
+          <circle cx="20" cy="70" r="5" fill="none" stroke="rgba(201,169,106,0.3)" stroke-width="1.5"/>
+          <circle cx="20" cy="30" r="5" fill="none" stroke="rgba(201,169,106,0.3)" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="loader-title-wrap">
+        <p class="loader-presents">A PERSONAL FILM PRESENTS</p>
+        <h1 class="loader-name">Gokul Priyan</h1>
+        <p class="loader-subtitle">— The Portfolio —</p>
+      </div>
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill" id="loaderBar"></div>
+      </div>
+      <p class="loader-counter" id="loaderCounter">Loading reel...</p>
+    </div>
+    <div class="film-holes bottom"></div>
+  </div>
 </div>
 
-<!-- Nav -->
-<nav aria-label="Primary navigation">
-  <a href="#hero" class="nav-logo">G<span>P</span></a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#contact">Contact</a></li>
+<!-- ═══════════════════ DUST & GRAIN OVERLAYS ═══════════════════ -->
+<div class="grain-overlay" aria-hidden="true"></div>
+<div class="dust-particles" id="dustCanvas" aria-hidden="true"></div>
+<div class="light-leak" aria-hidden="true"></div>
+
+<!-- ═══════════════════ NAVIGATION ═══════════════════ -->
+<nav id="mainNav" aria-label="Primary navigation">
+  <a href="#prologue" class="nav-brand">
+    <span class="nav-brand-icon">☽</span>
+    <span class="nav-brand-text">Gokul Priyan</span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#prologue">Prologue</a></li>
+    <li><a href="#story">My Story</a></li>
+    <li><a href="#craft">Craft</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#chapters">Chapters</a></li>
+    <li><a href="#letter">Letter</a></li>
+    <li><a href="assets/gokulpriyanP-resume.pdf" target="_blank" rel="noopener noreferrer" download class="nav-resume-btn">⤓ Resume</a></li>
   </ul>
-  <a href="assets/gokulpriyanP-resume.pdf" target="_blank" rel="noopener noreferrer" download class="nav-resume">Resume</a>
 </nav>
 
-<!-- Hero -->
-<div id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-ornament">G</div>
-  <div class="hero-inner">
-    <div class="hero-copy">
-      <div class="hero-badge">Available for Frontend Roles</div>
-      <h1 class="hero-name">Gokul <em>Priyan</em></h1>
-      <p class="hero-title">✦ Frontend Developer · React.js · UI Craftsman</p>
-      <p class="hero-desc">Building polished, responsive web experiences with real-world delivery mindset — from Madurai to the modern web.</p>
-      <div class="hero-ctas">
-        <a href="#projects" class="btn-primary">View Projects →</a>
-        <a href="assets/gokulpriyanP-resume.pdf" target="_blank" rel="noopener noreferrer" download class="btn-secondary">Download Resume</a>
+<!-- ═══════════════════ ACT I — PROLOGUE (HERO) ═══════════════════ -->
+<section id="prologue" class="hero-section">
+  <div class="hero-vignette"></div>
+  <div class="hero-content">
+    <div class="hero-text-col">
+      <div class="film-date-stamp">REEL 01 · EST. MADURAI, 2026</div>
+      <h1 class="hero-headline">
+        <span class="hero-line hero-line-1">Gokul</span>
+        <span class="hero-line hero-line-2"><em>Priyan</em></span>
+      </h1>
+      <div class="hero-roles typewriter-container">
+        <span class="typewriter-text" id="typewriterText"></span>
+        <span class="typewriter-cursor">|</span>
       </div>
-      <div class="hero-stats">
-        <div>
-          <span class="hero-stat-num">5+</span>
-          <span class="hero-stat-label">Projects Delivered</span>
+      <p class="hero-tagline">Building polished, responsive web experiences with real-world delivery mindset — from Madurai to the modern web.</p>
+      <div class="hero-actions">
+        <a href="#gallery" class="btn-film">View My Reels →</a>
+        <a href="assets/gokulpriyanP-resume.pdf" target="_blank" rel="noopener noreferrer" download class="btn-vintage">Download Resume</a>
+      </div>
+      <div class="hero-stats-strip">
+        <div class="stat-frame">
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Projects Delivered</span>
         </div>
-        <div>
-          <span class="hero-stat-num">1</span>
-          <span class="hero-stat-label">Live Client Site</span>
+        <div class="stat-divider">✦</div>
+        <div class="stat-frame">
+          <span class="stat-number">1</span>
+          <span class="stat-label">Live Client Site</span>
         </div>
-        <div>
-          <span class="hero-stat-num">2026</span>
-          <span class="hero-stat-label">Graduate</span>
+        <div class="stat-divider">✦</div>
+        <div class="stat-frame">
+          <span class="stat-number">2026</span>
+          <span class="stat-label">Graduate</span>
         </div>
       </div>
     </div>
-    <aside class="hero-card" data-tilt aria-label="Vintage portrait card">
-      <div class="hero-photo-frame">
-        <img src="assets/gokul-profile.jpeg" alt="Portrait of Gokul Priyan" decoding="async">
+    <div class="hero-photo-col">
+      <div class="polaroid-hero" data-tilt>
+        <div class="polaroid-inner">
+          <div class="polaroid-image-wrap">
+            <img src="assets/gokul-profile.jpeg" alt="Portrait of Gokul Priyan" loading="eager" decoding="async">
+            <div class="polaroid-light-leak"></div>
+          </div>
+          <div class="polaroid-caption">
+            <span class="caption-handwritten">Gokul Priyan · Madurai</span>
+            <span class="caption-stamp">PORTFOLIO / 2026</span>
+          </div>
+        </div>
+        <div class="polaroid-tape"></div>
+        <div class="polaroid-shadow"></div>
       </div>
-      <div class="hero-card-caption">
-        <span>Gokul Priyan · Madurai</span>
-        <span>Frontend</span>
-      </div>
-    </aside>
     </div>
   </div>
+  <div class="hero-scroll-hint">
+    <span>scroll down</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
 
-<!-- Marquee -->
-<div class="marquee-band">
+<!-- ═══════════════════ FILM STRIP DIVIDER ═══════════════════ -->
+<div class="film-strip-divider">
+  <div class="film-strip-track" id="filmStrip1">
+    <div class="film-strip-content"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════ ACT II — MY STORY (ABOUT) ═══════════════════ -->
+<section id="story" class="story-section">
+  <div class="section-inner">
+    <div class="chapter-header reveal">
+      <span class="chapter-number">Chapter I</span>
+      <h2 class="chapter-title">The <em>Origin</em> Story</h2>
+      <div class="chapter-underline"></div>
+    </div>
+    <div class="story-layout">
+      <div class="story-photo-side reveal-left">
+        <div class="vintage-photo-frame">
+          <img src="assets/gokul-profile.jpeg" alt="Gokul Priyan" loading="lazy" decoding="async">
+          <div class="photo-corner tl"></div>
+          <div class="photo-corner tr"></div>
+          <div class="photo-corner bl"></div>
+          <div class="photo-corner br"></div>
+        </div>
+        <p class="photo-annotation">Gokul Priyan · Madurai, Tamil Nadu</p>
+        <div class="scrapbook-sticker sticker-1">✦ Madurai</div>
+        <div class="scrapbook-sticker sticker-2">est. 2026</div>
+      </div>
+      <div class="story-text-side reveal-right">
+        <div class="journal-page">
+          <div class="journal-line-bg"></div>
+          <div class="journal-content">
+            <p class="journal-drop-cap">In the sun-drenched lanes of Madurai, where ancient temple towers meet modern ambitions, a self-driven developer began writing his story. I'm Gokul Priyan — crafting interfaces that are modern, responsive, and genuinely useful. I blend clean HTML architecture, thoughtful CSS, and JavaScript interactions to build experiences that feel premium.</p>
+            <p>Currently pursuing Diploma in CSE at TNGPTC Madurai and working as a Frontend Developer at BuildHomeMart Techno Solution Pvt Ltd — with entrepreneurship training at TCE TBI under my belt.</p>
+            <p>I've shipped a live commercial client website solo, built AI-integrated platforms for agriculture, and keep exploring the intersection of design and code.</p>
+            <div class="journal-signature">
+              <span class="signature-text">— Gokul Priyan</span>
+              <span class="signature-date">Madurai, 2026</span>
+            </div>
+          </div>
+        </div>
+        <div class="identity-stamps">
+          <span class="identity-stamp">Cloud Engineer</span>
+          <span class="identity-stamp">Python Developer</span>
+          <span class="identity-stamp">AI Builder</span>
+          <span class="identity-stamp">Linux Enthusiast</span>
+          <span class="identity-stamp">Open Source Learner</span>
+          <span class="identity-stamp">Technology Explorer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ ACT III — CRAFT (SKILLS) ═══════════════════ -->
+<section id="craft" class="craft-section">
+  <div class="section-inner">
+    <div class="chapter-header reveal">
+      <span class="chapter-number">Chapter II</span>
+      <h2 class="chapter-title">Tools of <em>the Craft</em></h2>
+      <div class="chapter-underline"></div>
+    </div>
+    <p class="craft-intro reveal">Every artisan has their instruments. These are mine — worn by practice, refined by curiosity, and ready for the next project.</p>
+    <div class="library-cards-grid">
+
+      <div class="library-card reveal" style="--card-delay: 0.05s">
+        <div class="card-catalog-number">01</div>
+        <div class="card-stamp-icon">⟨/⟩</div>
+        <h3 class="card-title">Frontend Development</h3>
+        <p class="card-description">Semantic HTML, structured CSS, reusable UI components, and user-first layouts for professional web applications.</p>
+        <div class="card-tags">
+          <span class="passport-stamp">HTML5</span>
+          <span class="passport-stamp">CSS3</span>
+          <span class="passport-stamp">React.js</span>
+          <span class="passport-stamp">JavaScript</span>
+        </div>
+        <div class="card-date-stamp">CHECKED OUT · 2024</div>
+      </div>
+
+      <div class="library-card reveal" style="--card-delay: 0.1s">
+        <div class="card-catalog-number">02</div>
+        <div class="card-stamp-icon">◈</div>
+        <h3 class="card-title">CSS & Visual Design</h3>
+        <p class="card-description">Modern themes, spacing systems, gradients, hover states, and card-based UI for standout visual presentation.</p>
+        <div class="card-tags">
+          <span class="passport-stamp">Animations</span>
+          <span class="passport-stamp">Design Systems</span>
+          <span class="passport-stamp">Figma</span>
+        </div>
+        <div class="card-date-stamp">CHECKED OUT · 2024</div>
+      </div>
+
+      <div class="library-card reveal" style="--card-delay: 0.15s">
+        <div class="card-catalog-number">03</div>
+        <div class="card-stamp-icon">⚡</div>
+        <h3 class="card-title">JavaScript Interactions</h3>
+        <p class="card-description">Smooth scrolling, dynamic states, navigation behavior, reveal effects, and UX-enhancing JS interactions.</p>
+        <div class="card-tags">
+          <span class="passport-stamp">ES6+</span>
+          <span class="passport-stamp">DOM</span>
+          <span class="passport-stamp">APIs</span>
+        </div>
+        <div class="card-date-stamp">CHECKED OUT · 2025</div>
+      </div>
+
+      <div class="library-card reveal" style="--card-delay: 0.2s">
+        <div class="card-catalog-number">04</div>
+        <div class="card-stamp-icon">⬡</div>
+        <h3 class="card-title">Responsive Design</h3>
+        <p class="card-description">Layouts tuned for mobile, tablet, and desktop so every screen size feels intentional and polished.</p>
+        <div class="card-tags">
+          <span class="passport-stamp">Mobile First</span>
+          <span class="passport-stamp">Flexbox</span>
+          <span class="passport-stamp">Grid</span>
+        </div>
+        <div class="card-date-stamp">CHECKED OUT · 2024</div>
+      </div>
+
+      <div class="library-card reveal" style="--card-delay: 0.25s">
+        <div class="card-catalog-number">05</div>
+        <div class="card-stamp-icon">⎇</div>
+        <h3 class="card-title">Git & Deployment</h3>
+        <p class="card-description">Version control, CI/CD workflows, and comfortable shipping to Render, Vercel, and GitHub Pages.</p>
+        <div class="card-tags">
+          <span class="passport-stamp">Git</span>
+          <span class="passport-stamp">GitHub</span>
+          <span class="passport-stamp">Render</span>
+          <span class="passport-stamp">Vercel</span>
+        </div>
+        <div class="card-date-stamp">CHECKED OUT · 2025</div>
+      </div>
+
+      <div class="library-card reveal" style="--card-delay: 0.3s">
+        <div class="card-catalog-number">06</div>
+        <div class="card-stamp-icon">⬡</div>
+        <h3 class="card-title">Backend Basics</h3>
+        <p class="card-description">REST API integration, Node.js + Express fundamentals, Python scripting, MySQL and MongoDB basics.</p>
+        <div class="card-tags">
+          <span class="passport-stamp">Node.js</span>
+          <span class="passport-stamp">REST APIs</span>
+          <span class="passport-stamp">MySQL</span>
+          <span class="passport-stamp">Python</span>
+        </div>
+        <div class="card-date-stamp">CHECKED OUT · 2025</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ MARQUEE BAND ═══════════════════ -->
+<div class="vintage-marquee">
   <div class="marquee-track" id="marqueeTrack"></div>
 </div>
 
-<!-- About -->
-<section id="about">
-  <div class="about-grid">
-    <div class="about-img-wrap reveal-left">
-      <div class="about-photo-frame">
-        <img src="assets/gokul-profile.jpeg" alt="Gokul Priyan" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='<div class=\'profile-fallback\'>GP</div>'">
-      </div>
-      <div class="about-corner-ornament"></div>
-      <div class="about-corner-ornament-bl"></div>
-      <p class="about-photo-caption">Gokul Priyan · Madurai, TN</p>
+<!-- ═══════════════════ ACT IV — GALLERY (PROJECTS) ═══════════════════ -->
+<section id="gallery" class="gallery-section">
+  <div class="section-inner">
+    <div class="chapter-header reveal">
+      <span class="chapter-number">Chapter III</span>
+      <h2 class="chapter-title">The <em>Gallery</em> of Memories</h2>
+      <div class="chapter-underline"></div>
     </div>
-    <div class="about-text reveal-right">
-      <div class="section-label">About Me</div>
-      <h2 class="section-title">Frontend thinking with <em>real-world</em> delivery.</h2>
-      <p>I'm a self-driven Frontend Developer from Madurai, crafting interfaces that are modern, responsive, and genuinely useful. I blend clean HTML architecture, thoughtful CSS, and JavaScript interactions to build experiences that feel premium.</p>
-      <p>Currently pursuing Diploma in CSE at TNGPTC Madurai and working as a Frontend Developer at BuildHomeMart Techno Solution Pvt Ltd — with entrepreneurship training at TCE TBI under my belt.</p>
-      <p>I've shipped a live commercial client website solo, built AI-integrated platforms for agriculture, and keep exploring the intersection of design and code.</p>
-      <div class="about-chips">
-        <span class="chip">React.js</span><span class="chip">JavaScript ES6+</span>
-        <span class="chip">CSS3 / HTML5</span><span class="chip">Node.js</span>
-        <span class="chip">REST APIs</span><span class="chip">Figma</span>
-        <span class="chip">Git &amp; GitHub</span><span class="chip">MySQL</span>
+    <p class="gallery-intro reveal">Every project is a frame in the film of my career. Each one tells a story of a problem met, a solution crafted, and a lesson learned.</p>
+
+    <div class="polaroid-gallery">
+
+      <!-- Project 1 -->
+      <div class="memory-card reveal" data-memory="01">
+        <div class="memory-film-frame">
+          <div class="memory-visual">
+            <div class="memory-icon">FC</div>
+            <div class="memory-reel-number">REEL 01</div>
+            <div class="memory-badge">Live Client</div>
+          </div>
+          <div class="memory-exposure-strip"></div>
+        </div>
+        <div class="memory-story">
+          <div class="memory-date-stamp">Jan — Mar 2025</div>
+          <h3 class="memory-title">Fish Corporation Website</h3>
+          <p class="memory-scene-desc">Client needed a credible online presence across all devices.</p>
+          <p class="memory-narrative">Independently architected, developed, and deployed a fully responsive commercial website — managed complete SDLC from wireframe to production with zero supervision. Mobile-first layouts with 100% cross-device compatibility.</p>
+          <div class="memory-tech-strip">
+            <span>React.js</span><span>HTML5</span><span>CSS3</span><span>Node.js</span><span>Render</span>
+          </div>
+          <div class="memory-links">
+            <a href="https://fish-corporation-live.onrender.com" target="_blank" rel="noopener noreferrer" class="memory-link">Live Demo →</a>
+            <a href="https://github.com/gokultgb475-lgtm/fish-corporation-live" target="_blank" rel="noopener noreferrer" class="memory-link">GitHub →</a>
+          </div>
+        </div>
       </div>
+
+      <!-- Project 2 -->
+      <div class="memory-card reveal" data-memory="02">
+        <div class="memory-film-frame">
+          <div class="memory-visual">
+            <div class="memory-icon">UB</div>
+            <div class="memory-reel-number">REEL 02</div>
+            <div class="memory-badge">AI Platform</div>
+          </div>
+          <div class="memory-exposure-strip"></div>
+        </div>
+        <div class="memory-story">
+          <div class="memory-date-stamp">2025</div>
+          <h3 class="memory-title">Uzhavar Bridge</h3>
+          <p class="memory-scene-desc">Farmers needed direct digital connectivity — removing costly middlemen.</p>
+          <p class="memory-narrative">AI-powered farmer-to-buyer platform with crop recommendation, price prediction, and live weather data. Accessibility-first design for rural, low-literacy users via React frontend over Python + MySQL backend.</p>
+          <div class="memory-tech-strip">
+            <span>React.js</span><span>Python</span><span>REST APIs</span><span>MySQL</span><span>a11y</span>
+          </div>
+          <div class="memory-links">
+            <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="memory-link">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="memory-card reveal" data-memory="03">
+        <div class="memory-film-frame">
+          <div class="memory-visual">
+            <div class="memory-icon">LN</div>
+            <div class="memory-reel-number">REEL 03</div>
+            <div class="memory-badge">IoT Concept</div>
+          </div>
+          <div class="memory-exposure-strip"></div>
+        </div>
+        <div class="memory-story">
+          <div class="memory-date-stamp">2025 — 2026</div>
+          <h3 class="memory-title">LumiNet — Smart Urban Lighting</h3>
+          <p class="memory-scene-desc">Urban lighting needed smarter energy planning and a validated startup model.</p>
+          <p class="memory-narrative">Collaborated during Forge Innovation & Ventures TBI training to validate an IoT-based smart lighting concept, build a pitch narrative, and prepare market feasibility plus 3-year financial projections.</p>
+          <div class="memory-tech-strip">
+            <span>IoT</span><span>Business Model</span><span>Pitch Deck</span><span>Market Study</span>
+          </div>
+          <div class="memory-links">
+            <a href="#chapters" class="memory-link">Experience →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="memory-card reveal" data-memory="04">
+        <div class="memory-film-frame">
+          <div class="memory-visual">
+            <div class="memory-icon">SA</div>
+            <div class="memory-reel-number">REEL 04</div>
+            <div class="memory-badge">Academic Tool</div>
+          </div>
+          <div class="memory-exposure-strip"></div>
+        </div>
+        <div class="memory-story">
+          <div class="memory-date-stamp">2024</div>
+          <h3 class="memory-title">Student Attendance System</h3>
+          <p class="memory-scene-desc">Manual attendance tracking created inconsistency and wasted admin time.</p>
+          <p class="memory-narrative">Automated attendance tracking with structured database workflows, validation logic, and one-click report generation — reducing manual administrative effort by ~70%.</p>
+          <div class="memory-tech-strip">
+            <span>Python</span><span>MySQL</span><span>Shell Scripting</span>
+          </div>
+          <div class="memory-links">
+            <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="memory-link">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<div class="divider-wrap"><div class="divider"></div></div>
+<!-- ═══════════════════ ACT V — CHAPTERS (EXPERIENCE) ═══════════════════ -->
+<section id="chapters" class="chapters-section">
+  <div class="section-inner">
+    <div class="chapter-header reveal">
+      <span class="chapter-number">Chapter IV</span>
+      <h2 class="chapter-title">Where I've <em>Shipped</em> Real Work</h2>
+      <div class="chapter-underline"></div>
+    </div>
 
-<!-- Skills -->
-<div id="skills">
-<div class="inner">
-  <div class="section-label reveal">Skills</div>
-  <h2 class="section-title reveal">Tools of <em>the craft</em></h2>
-  <div class="skills-grid">
-    <div class="skill-card reveal delay-1">
-      <span class="skill-icon">⟨/⟩</span>
-      <div class="skill-name">Frontend Development</div>
-      <div class="skill-desc">Semantic HTML, structured CSS, reusable UI components, and user-first layouts for professional web applications.</div>
-      <div class="skill-tags"><span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">React.js</span><span class="skill-tag">JavaScript</span></div>
-    </div>
-    <div class="skill-card reveal delay-2">
-      <span class="skill-icon">◈</span>
-      <div class="skill-name">CSS &amp; Visual Design</div>
-      <div class="skill-desc">Modern themes, spacing systems, gradients, hover states, and card-based UI for standout visual presentation.</div>
-      <div class="skill-tags"><span class="skill-tag">Animations</span><span class="skill-tag">Design Systems</span><span class="skill-tag">Figma</span></div>
-    </div>
-    <div class="skill-card reveal delay-3">
-      <span class="skill-icon">⚡</span>
-      <div class="skill-name">JavaScript Interactions</div>
-      <div class="skill-desc">Smooth scrolling, dynamic states, navigation behavior, reveal effects, and UX-enhancing JS interactions.</div>
-      <div class="skill-tags"><span class="skill-tag">ES6+</span><span class="skill-tag">DOM</span><span class="skill-tag">APIs</span></div>
-    </div>
-    <div class="skill-card reveal delay-4">
-      <span class="skill-icon">⬡</span>
-      <div class="skill-name">Responsive Design</div>
-      <div class="skill-desc">Layouts tuned for mobile, tablet, and desktop so every screen size feels intentional and polished.</div>
-      <div class="skill-tags"><span class="skill-tag">Mobile First</span><span class="skill-tag">Flexbox</span><span class="skill-tag">Grid</span></div>
-    </div>
-    <div class="skill-card reveal delay-5">
-      <span class="skill-icon">⎇</span>
-      <div class="skill-name">Git &amp; Deployment</div>
-      <div class="skill-desc">Version control, CI/CD workflows, and comfortable shipping to Render, Vercel, and GitHub Pages.</div>
-      <div class="skill-tags"><span class="skill-tag">Git</span><span class="skill-tag">GitHub</span><span class="skill-tag">Render</span><span class="skill-tag">Vercel</span></div>
-    </div>
-    <div class="skill-card reveal delay-6">
-      <span class="skill-icon">⬡</span>
-      <div class="skill-name">Backend Basics</div>
-      <div class="skill-desc">REST API integration, Node.js + Express fundamentals, Python scripting, MySQL and MongoDB basics.</div>
-      <div class="skill-tags"><span class="skill-tag">Node.js</span><span class="skill-tag">REST APIs</span><span class="skill-tag">MySQL</span><span class="skill-tag">Python</span></div>
-    </div>
-  </div>
-</div>
-</div>
+    <div class="timeline-reel">
+      <div class="timeline-film-line"></div>
 
-<!-- Projects -->
-<section id="projects">
-  <div class="section-label reveal">Selected Work</div>
-  <h2 class="section-title reveal">Projects built around <em>real problems</em></h2>
-  <div class="projects-grid">
-
-    <div class="project-card reveal">
-      <div class="project-visual">
-        <div class="project-visual-inner">FC</div>
-        <span class="project-num">01</span>
-        <span class="project-type-badge">Live Client</span>
-      </div>
-      <div class="project-info">
-        <h3 class="project-title">Fish Corporation Website</h3>
-        <p class="project-problem">Client needed a credible online presence across all devices.</p>
-        <p class="project-desc">Independently architected, developed, and deployed a fully responsive commercial website — managed complete SDLC from wireframe to production with zero supervision. Mobile-first layouts with 100% cross-device compatibility.</p>
-        <div class="project-stack">
-          <span class="stack-tag">React.js</span><span class="stack-tag">HTML5</span><span class="stack-tag">CSS3</span><span class="stack-tag">Node.js</span><span class="stack-tag">Render</span>
+      <div class="timeline-entry reveal" data-year="2026">
+        <div class="timeline-marker">
+          <div class="marker-dot"></div>
+          <div class="marker-year">2026</div>
         </div>
-        <div class="project-links">
-          <a href="https://fish-corporation-live.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo →</a>
-          <a href="https://github.com/gokultgb475-lgtm/fish-corporation-live" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a>
+        <div class="timeline-card">
+          <div class="timeline-card-header">
+            <span class="timeline-period">2026 — Present</span>
+            <span class="timeline-badge">Current Role</span>
+          </div>
+          <h3 class="timeline-role">Frontend Developer</h3>
+          <p class="timeline-company">BuildHomeMart Techno Solution Pvt Ltd</p>
+          <ul class="timeline-details">
+            <li>Developing responsive UI using HTML, CSS, and JavaScript for better cross-device consistency.</li>
+            <li>Improving website usability and performance through layout refinement and cleaner interaction flow.</li>
+            <li>Contributing to a React + TypeScript + Vite + Tailwind real estate platform in production.</li>
+          </ul>
         </div>
       </div>
-    </div>
 
-    <div class="project-card reveal">
-      <div class="project-visual">
-        <div class="project-visual-inner">UB</div>
-        <span class="project-num">02</span>
-        <span class="project-type-badge">AI Platform</span>
-      </div>
-      <div class="project-info">
-        <h3 class="project-title">Uzhavar Bridge</h3>
-        <p class="project-problem">Farmers needed direct digital connectivity — removing costly middlemen.</p>
-        <p class="project-desc">AI-powered farmer-to-buyer platform with crop recommendation, price prediction, and live weather data. Accessibility-first design for rural, low-literacy users via React frontend over Python + MySQL backend.</p>
-        <div class="project-stack">
-          <span class="stack-tag">React.js</span><span class="stack-tag">Python</span><span class="stack-tag">REST APIs</span><span class="stack-tag">MySQL</span><span class="stack-tag">a11y</span>
+      <div class="timeline-entry reveal" data-year="2025">
+        <div class="timeline-marker">
+          <div class="marker-dot"></div>
+          <div class="marker-year">2025</div>
         </div>
-        <div class="project-links">
-          <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card reveal">
-      <div class="project-visual">
-        <div class="project-visual-inner">LN</div>
-        <span class="project-num">03</span>
-        <span class="project-type-badge">IoT Concept</span>
-      </div>
-      <div class="project-info">
-        <h3 class="project-title">LumiNet — Smart Urban Lighting</h3>
-        <p class="project-problem">Urban lighting needed smarter energy planning and a validated startup model.</p>
-        <p class="project-desc">Collaborated during Forge Innovation &amp; Ventures TBI training to validate an IoT-based smart lighting concept, build a pitch narrative, and prepare market feasibility plus 3-year financial projections.</p>
-        <div class="project-stack">
-          <span class="stack-tag">IoT</span><span class="stack-tag">Business Model</span><span class="stack-tag">Pitch Deck</span><span class="stack-tag">Market Study</span>
-        </div>
-        <div class="project-links">
-          <a href="#experience" class="project-link">Experience →</a>
+        <div class="timeline-card">
+          <div class="timeline-card-header">
+            <span class="timeline-period">2025 — 2026</span>
+            <span class="timeline-badge">Training</span>
+          </div>
+          <h3 class="timeline-role">EDP Trainee — Entrepreneurship</h3>
+          <p class="timeline-company">Forge Innovation & Ventures TBI (TCE TBI), Madurai</p>
+          <ul class="timeline-details">
+            <li>Collaborated cross-functionally to validate an IoT-based smart lighting concept (LumiNet).</li>
+            <li>Authored a 13-chapter business report covering market feasibility and 3-year financial projections.</li>
+            <li>Developed pitch presentation and startup validation skills in a premier incubator environment.</li>
+          </ul>
         </div>
       </div>
-    </div>
 
-    <div class="project-card reveal">
-      <div class="project-visual">
-        <div class="project-visual-inner">SA</div>
-        <span class="project-num">04</span>
-        <span class="project-type-badge">Academic Tool</span>
-      </div>
-      <div class="project-info">
-        <h3 class="project-title">Student Attendance System</h3>
-        <p class="project-problem">Manual attendance tracking created inconsistency and wasted admin time.</p>
-        <p class="project-desc">Automated attendance tracking with structured database workflows, validation logic, and one-click report generation — reducing manual administrative effort by ~70%.</p>
-        <div class="project-stack">
-          <span class="stack-tag">Python</span><span class="stack-tag">MySQL</span><span class="stack-tag">Shell Scripting</span>
+      <div class="timeline-entry reveal" data-year="2025-early">
+        <div class="timeline-marker">
+          <div class="marker-dot"></div>
+          <div class="marker-year">2025</div>
         </div>
-        <div class="project-links">
-          <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="project-link">GitHub →</a>
+        <div class="timeline-card">
+          <div class="timeline-card-header">
+            <span class="timeline-period">Jan — Mar 2025</span>
+            <span class="timeline-badge">Freelance</span>
+          </div>
+          <h3 class="timeline-role">Solo Frontend Developer — Client Project</h3>
+          <p class="timeline-company">Fish Corporation Website · Freelance</p>
+          <ul class="timeline-details">
+            <li>End-to-end solo delivery from wireframe to live production — zero supervision.</li>
+            <li>Shipped a fully responsive commercial site on deadline with full cross-device coverage.</li>
+            <li>Configured deployment pipeline on Render and handled post-launch maintenance.</li>
+          </ul>
         </div>
       </div>
-    </div>
 
-  </div>
-</section>
-
-<div class="divider-wrap"><div class="divider"></div></div>
-
-<!-- Experience -->
-<section id="experience">
-  <div class="section-label reveal">Experience</div>
-  <h2 class="section-title reveal">Where I've <em>shipped</em> real work</h2>
-  <div class="exp-timeline">
-    <div class="exp-item reveal">
-      <div class="exp-date">2026 — Present</div>
-      <div class="exp-role">Frontend Developer</div>
-      <div class="exp-company">BuildHomeMart Techno Solution Pvt Ltd</div>
-      <ul class="exp-bullets">
-        <li>Developing responsive UI using HTML, CSS, and JavaScript for better cross-device consistency.</li>
-        <li>Improving website usability and performance through layout refinement and cleaner interaction flow.</li>
-        <li>Contributing to a React + TypeScript + Vite + Tailwind real estate platform in production.</li>
-      </ul>
-    </div>
-    <div class="exp-item reveal">
-      <div class="exp-date">2025 — 2026</div>
-      <div class="exp-role">EDP Trainee — Entrepreneurship</div>
-      <div class="exp-company">Forge Innovation &amp; Ventures TBI (TCE TBI), Madurai</div>
-      <ul class="exp-bullets">
-        <li>Collaborated cross-functionally to validate an IoT-based smart lighting concept (LumiNet).</li>
-        <li>Authored a 13-chapter business report covering market feasibility and 3-year financial projections.</li>
-        <li>Developed pitch presentation and startup validation skills in a premier incubator environment.</li>
-      </ul>
-    </div>
-    <div class="exp-item reveal">
-      <div class="exp-date">Jan — Mar 2025</div>
-      <div class="exp-role">Solo Frontend Developer — Client Project</div>
-      <div class="exp-company">Fish Corporation Website · Freelance</div>
-      <ul class="exp-bullets">
-        <li>End-to-end solo delivery from wireframe to live production — zero supervision.</li>
-        <li>Shipped a fully responsive commercial site on deadline with full cross-device coverage.</li>
-        <li>Configured deployment pipeline on Render and handled post-launch maintenance.</li>
-      </ul>
     </div>
   </div>
 </section>
 
-<!-- Contact -->
-<div id="contact">
-<div class="inner">
-  <div class="section-label">Let's Connect</div>
-  <h2 class="section-title">Ready to build something <em>great</em>?</h2>
-  <p class="contact-desc">Open for frontend roles, internships, and freelance projects. Let's talk.</p>
-  <div class="contact-links">
-    <a href="mailto:gokultgb475@gmail.com" class="contact-link"><span>✉</span> gokultgb475@gmail.com</a>
-    <a href="tel:+919489392449" class="contact-link"><span>☎</span> +91&nbsp;94893&nbsp;92449</a>
-    <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="contact-link"><span>⌥</span> GitHub</a>
-    <a href="https://www.linkedin.com/in/gokulpriyan-p-a5b535394/" target="_blank" rel="noopener noreferrer" class="contact-link"><span>in</span> LinkedIn</a>
+<!-- ═══════════════════ ACT VI — LETTER (CONTACT) ═══════════════════ -->
+<section id="letter" class="letter-section">
+  <div class="letter-bg-texture"></div>
+  <div class="section-inner">
+    <div class="chapter-header reveal">
+      <span class="chapter-number">Epilogue</span>
+      <h2 class="chapter-title">A Letter to <em>You</em></h2>
+      <div class="chapter-underline light"></div>
+    </div>
+
+    <div class="letter-envelope reveal">
+      <div class="letter-paper">
+        <div class="letter-ruled-lines"></div>
+        <div class="letter-content">
+          <p class="letter-greeting">Dear Future Collaborator,</p>
+          <p class="letter-body">If you've made it this far into my story, I'd love for us to write the next chapter together. I'm open for frontend roles, internships, and freelance projects — anywhere my code can make a difference.</p>
+          <p class="letter-body">Whether you have a wild idea that needs building, a team that needs a dedicated craftsman, or simply want to say hello — my inbox is always open, and the coffee is always brewing.</p>
+          <p class="letter-closing">With warm regards from Madurai,</p>
+          <p class="letter-sign">Gokul Priyan</p>
+        </div>
+        <div class="letter-wax-seal">GP</div>
+      </div>
+    </div>
+
+    <div class="contact-cards reveal">
+      <a href="mailto:gokultgb475@gmail.com" class="contact-card" id="contact-email">
+        <span class="contact-icon">✉</span>
+        <span class="contact-text">gokultgb475@gmail.com</span>
+      </a>
+      <a href="tel:+919489392449" class="contact-card" id="contact-phone">
+        <span class="contact-icon">☎</span>
+        <span class="contact-text">+91 94893 92449</span>
+      </a>
+      <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-github">
+        <span class="contact-icon">⌥</span>
+        <span class="contact-text">GitHub</span>
+      </a>
+      <a href="https://www.linkedin.com/in/gokulpriyan-p-a5b535394/" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-linkedin">
+        <span class="contact-icon">in</span>
+        <span class="contact-text">LinkedIn</span>
+      </a>
+    </div>
+
+    <p class="letter-footer-note">Built with love in Madurai, Tamil Nadu ✦ 2026</p>
   </div>
-  <p class="contact-footer">Built with love in Madurai, Tamil Nadu ✦ 2026</p>
-</div>
-</div>
+</section>
 
-<div class="page-footer">
-  <p>Gokul Priyan · Frontend Developer · Madurai</p>
-</div>
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer class="page-footer">
+  <div class="footer-film-strip">
+    <div class="film-holes top"></div>
+    <p class="footer-text">Gokul Priyan · Cloud Engineer · Python Developer · AI Builder · Madurai</p>
+    <p class="footer-credits">A Cinematic Portfolio Experience — Directed by Ambition, Produced by Perseverance</p>
+    <div class="film-holes bottom"></div>
+  </div>
+</footer>
 
-<script>
-  // Loader
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      document.getElementById('loader').classList.add('hide');
-    }, 650);
-  });
-
-  // Vintage portrait tilt
-  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    document.querySelectorAll('[data-tilt]').forEach(card => {
-      card.addEventListener('mousemove', event => {
-        const rect = card.getBoundingClientRect();
-        const x = (event.clientX - rect.left) / rect.width - 0.5;
-        const y = (event.clientY - rect.top) / rect.height - 0.5;
-        card.style.setProperty('--tilt-x', (-y * 7).toFixed(2) + 'deg');
-        card.style.setProperty('--tilt-y', (x * 7).toFixed(2) + 'deg');
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.setProperty('--tilt-x', '0deg');
-        card.style.setProperty('--tilt-y', '0deg');
-      });
-    });
-  }
-
-  // Scroll Reveal
-  const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-  }, { threshold: 0.12 });
-  reveals.forEach(el => observer.observe(el));
-
-  // Marquee
-  const items = ['React.js ✦', 'JavaScript ES6+ ✦', 'HTML5 · CSS3 ✦', 'Node.js ✦', 'REST APIs ✦', 'Figma ✦', 'Git & GitHub ✦', 'MySQL ✦', 'Responsive Design ✦', 'Frontend Developer ✦', 'Madurai ✦', 'TNGPTC 2026 ✦'];
-  const track = document.getElementById('marqueeTrack');
-  const doubled = [...items, ...items];
-  doubled.forEach(txt => {
-    const span = document.createElement('span');
-    span.className = 'marquee-item';
-    span.textContent = txt;
-    track.appendChild(span);
-  });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
