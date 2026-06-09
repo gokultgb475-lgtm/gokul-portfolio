@@ -3,537 +3,350 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gokul Priyan — Cloud Engineer · Python Developer · AI Builder</title>
-<meta name="description" content="Portfolio of Gokul Priyan P — Cloud Engineer, Python Developer, AI Builder, Linux Enthusiast, and Open Source Learner from Madurai. A cinematic journey through technology and craftsmanship.">
+<title>Gokul Priyan — Fragments of a Digital Soul</title>
+<meta name="description" content="Portfolio of Gokul Priyan P — Cloud Engineer, Python Developer, AI Builder, Linux Enthusiast from Madurai. A cinematic journey through code, memories, and dreams.">
 <meta name="author" content="Gokul Priyan P">
-<meta name="theme-color" content="#1a1008">
+<meta name="theme-color" content="#1a150e">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Gokul Priyan — A Cinematic Portfolio">
-<meta property="og:description" content="Step into the vintage world of Gokul Priyan — Cloud Engineer, Python Developer, and AI Builder. A film-inspired journey through code and creativity.">
+<meta property="og:title" content="Gokul Priyan — Fragments of a Digital Soul">
+<meta property="og:description" content="A young developer documenting his journey one terminal command at a time. Cloud Engineer · Python Developer · AI Builder · Linux Enthusiast.">
 <meta property="og:image" content="assets/gokul-profile.jpeg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Caveat:wght@400;500;600;700&family=Special+Elite&family=IM+Fell+English:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Caveat:wght@400;500;600;700&family=Special+Elite&family=IM+Fell+English:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- ═══════════════════ CINEMATIC LOADER ═══════════════════ -->
-<div id="cinematic-loader">
-  <div class="loader-film-strip">
-    <div class="film-holes top"></div>
-    <div class="loader-content">
-      <div class="loader-reel">
-        <svg viewBox="0 0 100 100" class="reel-svg">
-          <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(201,169,106,0.3)" stroke-width="2"/>
-          <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(201,169,106,0.2)" stroke-width="1"/>
-          <circle cx="50" cy="50" r="8" fill="rgba(201,169,106,0.4)"/>
-          <circle cx="50" cy="15" r="5" fill="none" stroke="rgba(201,169,106,0.3)" stroke-width="1.5"/>
-          <circle cx="80" cy="30" r="5" fill="none" stroke="rgba(201,169,106,0.3)" stroke-width="1.5"/>
-          <circle cx="80" cy="70" r="5" fill="none" stroke="rgba(201,169,106,0.3)" stroke-width="1.5"/>
-          <circle cx="50" cy="85" r="5" fill="none" stroke="rgba(201,169,106,0.3)" stroke-width="1.5"/>
-          <circle cx="20" cy="70" r="5" fill="none" stroke="rgba(201,169,106,0.3)" stroke-width="1.5"/>
-          <circle cx="20" cy="30" r="5" fill="none" stroke="rgba(201,169,106,0.3)" stroke-width="1.5"/>
-        </svg>
-      </div>
-      <div class="loader-title-wrap">
-        <p class="loader-presents">A PERSONAL FILM PRESENTS</p>
-        <h1 class="loader-name">Gokul Priyan</h1>
-        <p class="loader-subtitle">— The Portfolio —</p>
-      </div>
-      <div class="loader-bar-track">
-        <div class="loader-bar-fill" id="loaderBar"></div>
-      </div>
-      <p class="loader-counter" id="loaderCounter">Loading reel...</p>
-    </div>
-    <div class="film-holes bottom"></div>
+<!-- ══════ CINEMATIC LOADER ══════ -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-reel"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="rgba(201,169,106,0.25)" stroke-width="1.5"/><circle cx="50" cy="50" r="30" fill="none" stroke="rgba(201,169,106,0.15)" stroke-width="1"/><circle cx="50" cy="50" r="6" fill="rgba(201,169,106,0.35)"/><circle cx="50" cy="14" r="4.5" fill="none" stroke="rgba(201,169,106,0.2)" stroke-width="1.2"/><circle cx="81" cy="30" r="4.5" fill="none" stroke="rgba(201,169,106,0.2)" stroke-width="1.2"/><circle cx="81" cy="70" r="4.5" fill="none" stroke="rgba(201,169,106,0.2)" stroke-width="1.2"/><circle cx="50" cy="86" r="4.5" fill="none" stroke="rgba(201,169,106,0.2)" stroke-width="1.2"/><circle cx="19" cy="70" r="4.5" fill="none" stroke="rgba(201,169,106,0.2)" stroke-width="1.2"/><circle cx="19" cy="30" r="4.5" fill="none" stroke="rgba(201,169,106,0.2)" stroke-width="1.2"/></svg></div>
+    <p class="loader-presents">A PERSONAL FILM PRESENTS</p>
+    <h1 class="loader-title">Gokul Priyan</h1>
+    <p class="loader-sub">— fragments of a digital soul —</p>
+    <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+    <p class="loader-status" id="loaderStatus">Developing film...</p>
   </div>
 </div>
 
-<!-- ═══════════════════ DUST & GRAIN OVERLAYS ═══════════════════ -->
-<div class="grain-overlay" aria-hidden="true"></div>
-<div class="dust-particles" id="dustCanvas" aria-hidden="true"></div>
-<div class="light-leak" aria-hidden="true"></div>
+<!-- ══════ ATMOSPHERIC OVERLAYS ══════ -->
+<div class="grain" aria-hidden="true"></div>
+<div class="dust" id="dust" aria-hidden="true"></div>
+<div class="leaks" aria-hidden="true"></div>
+<div class="vignette-global" aria-hidden="true"></div>
 
-<!-- ═══════════════════ NAVIGATION ═══════════════════ -->
-<nav id="mainNav" aria-label="Primary navigation">
-  <a href="#prologue" class="nav-brand">
-    <span class="nav-brand-icon">☽</span>
-    <span class="nav-brand-text">Gokul Priyan</span>
-  </a>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#prologue">Prologue</a></li>
+<!-- ══════ NAVIGATION ══════ -->
+<nav id="nav" aria-label="Primary">
+  <a href="#hero" class="nav-logo"><span class="logo-moon">☽</span> <span class="logo-text">Gokul Priyan</span></a>
+  <button class="nav-burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <ul class="nav-menu" id="menu">
+    <li><a href="#hero">Prologue</a></li>
     <li><a href="#story">My Story</a></li>
     <li><a href="#craft">Craft</a></li>
     <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#chapters">Chapters</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#wall">Memories</a></li>
+    <li><a href="#terminal">Terminal</a></li>
     <li><a href="#letter">Letter</a></li>
-    <li><a href="assets/gokulpriyanP-resume.pdf" target="_blank" rel="noopener noreferrer" download class="nav-resume-btn">⤓ Resume</a></li>
+    <li><a href="assets/gokulpriyanP-resume.pdf" target="_blank" rel="noopener noreferrer" download class="nav-resume">⤓ Resume</a></li>
   </ul>
 </nav>
 
-<!-- ═══════════════════ ACT I — PROLOGUE (HERO) ═══════════════════ -->
-<section id="prologue" class="hero-section">
+<!-- ══════ ACT I · PROLOGUE ══════ -->
+<section id="hero" class="hero">
   <div class="hero-vignette"></div>
-  <div class="hero-content">
-    <div class="hero-text-col">
-      <div class="film-date-stamp">REEL 01 · EST. MADURAI, 2026</div>
-      <h1 class="hero-headline">
-        <span class="hero-line hero-line-1">Gokul</span>
-        <span class="hero-line hero-line-2"><em>Priyan</em></span>
-      </h1>
-      <div class="hero-roles typewriter-container">
-        <span class="typewriter-text" id="typewriterText"></span>
-        <span class="typewriter-cursor">|</span>
+  <div class="hero-wrap">
+    <div class="hero-text">
+      <p class="hero-stamp">REEL 01 · EST. MADURAI, 2026</p>
+      <h1 class="hero-name"><span class="h-line h-1">Gokul</span><span class="h-line h-2"><em>Priyan</em></span></h1>
+      <p class="hero-quote">"I'm not collecting technologies.<br>I'm collecting stories written in code."</p>
+      <div class="hero-terminal">
+        <div class="term-bar"><span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span><span class="term-title">~ gokul@arch</span></div>
+        <div class="term-body">
+          <p><span class="term-prompt">$</span> whoami</p>
+          <div class="term-output" id="whoamiOutput"></div>
+        </div>
       </div>
-      <p class="hero-tagline">Building polished, responsive web experiences with real-world delivery mindset — from Madurai to the modern web.</p>
-      <div class="hero-actions">
-        <a href="#gallery" class="btn-film">View My Reels →</a>
-        <a href="assets/gokulpriyanP-resume.pdf" target="_blank" rel="noopener noreferrer" download class="btn-vintage">Download Resume</a>
+      <div class="hero-cta">
+        <a href="#gallery" class="btn-primary">View My Reels →</a>
+        <a href="assets/gokulpriyanP-resume.pdf" target="_blank" rel="noopener noreferrer" download class="btn-ghost">Download Resume</a>
       </div>
-      <div class="hero-stats-strip">
-        <div class="stat-frame">
-          <span class="stat-number">5+</span>
-          <span class="stat-label">Projects Delivered</span>
-        </div>
-        <div class="stat-divider">✦</div>
-        <div class="stat-frame">
-          <span class="stat-number">1</span>
-          <span class="stat-label">Live Client Site</span>
-        </div>
-        <div class="stat-divider">✦</div>
-        <div class="stat-frame">
-          <span class="stat-number">2026</span>
-          <span class="stat-label">Graduate</span>
-        </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-n">5+</span><span class="stat-l">Projects Delivered</span></div>
+        <span class="stat-sep">✦</span>
+        <div class="stat"><span class="stat-n">1</span><span class="stat-l">Live Client Site</span></div>
+        <span class="stat-sep">✦</span>
+        <div class="stat"><span class="stat-n">2026</span><span class="stat-l">Graduate</span></div>
       </div>
     </div>
-    <div class="hero-photo-col">
-      <div class="polaroid-hero" data-tilt>
-        <div class="polaroid-inner">
-          <div class="polaroid-image-wrap">
-            <img src="assets/gokul-profile.jpeg" alt="Portrait of Gokul Priyan" loading="eager" decoding="async">
-            <div class="polaroid-light-leak"></div>
-          </div>
-          <div class="polaroid-caption">
-            <span class="caption-handwritten">Gokul Priyan · Madurai</span>
-            <span class="caption-stamp">PORTFOLIO / 2026</span>
-          </div>
+    <div class="hero-photo">
+      <div class="polaroid" data-tilt>
+        <div class="pol-frame">
+          <img src="assets/gokul-profile.jpeg" alt="Portrait of Gokul Priyan" width="340" height="425" loading="eager" decoding="async">
+          <div class="pol-leak"></div>
         </div>
-        <div class="polaroid-tape"></div>
-        <div class="polaroid-shadow"></div>
+        <div class="pol-caption"><span class="pol-hand">Gokul Priyan · Madurai</span><span class="pol-stamp">2026</span></div>
+        <div class="pol-tape"></div>
       </div>
     </div>
   </div>
-  <div class="hero-scroll-hint">
-    <span>scroll down</span>
-    <div class="scroll-line"></div>
-  </div>
+  <div class="scroll-hint"><span>scroll</span><div class="scroll-line"></div></div>
 </section>
 
-<!-- ═══════════════════ FILM STRIP DIVIDER ═══════════════════ -->
-<div class="film-strip-divider">
-  <div class="film-strip-track" id="filmStrip1">
-    <div class="film-strip-content"></div>
-  </div>
-</div>
+<!-- ══════ FILM STRIP ══════ -->
+<div class="filmstrip"><div class="fs-track" id="fs1"></div></div>
 
-<!-- ═══════════════════ ACT II — MY STORY (ABOUT) ═══════════════════ -->
-<section id="story" class="story-section">
-  <div class="section-inner">
-    <div class="chapter-header reveal">
-      <span class="chapter-number">Chapter I</span>
-      <h2 class="chapter-title">The <em>Origin</em> Story</h2>
-      <div class="chapter-underline"></div>
-    </div>
-    <div class="story-layout">
-      <div class="story-photo-side reveal-left">
-        <div class="vintage-photo-frame">
+<!-- ══════ ACT II · MY STORY ══════ -->
+<section id="story" class="sec story-sec">
+  <div class="sec-inner">
+    <header class="ch-head reveal"><span class="ch-num">Chapter I</span><h2 class="ch-title">The <em>Origin</em> Story</h2><div class="ch-line"></div></header>
+    <div class="story-grid">
+      <div class="story-photo reveal-left">
+        <div class="vintage-frame">
           <img src="assets/gokul-profile.jpeg" alt="Gokul Priyan" loading="lazy" decoding="async">
-          <div class="photo-corner tl"></div>
-          <div class="photo-corner tr"></div>
-          <div class="photo-corner bl"></div>
-          <div class="photo-corner br"></div>
+          <div class="frame-corner tl"></div><div class="frame-corner tr"></div><div class="frame-corner bl"></div><div class="frame-corner br"></div>
         </div>
-        <p class="photo-annotation">Gokul Priyan · Madurai, Tamil Nadu</p>
-        <div class="scrapbook-sticker sticker-1">✦ Madurai</div>
-        <div class="scrapbook-sticker sticker-2">est. 2026</div>
+        <p class="frame-note">Gokul Priyan · Madurai, TN</p>
+        <div class="sticker s1">✦ Madurai</div>
+        <div class="sticker s2">est. 2026</div>
+        <div class="sticker s3">☕ Coffee & Code</div>
       </div>
-      <div class="story-text-side reveal-right">
-        <div class="journal-page">
-          <div class="journal-line-bg"></div>
-          <div class="journal-content">
-            <p class="journal-drop-cap">In the sun-drenched lanes of Madurai, where ancient temple towers meet modern ambitions, a self-driven developer began writing his story. I'm Gokul Priyan — crafting interfaces that are modern, responsive, and genuinely useful. I blend clean HTML architecture, thoughtful CSS, and JavaScript interactions to build experiences that feel premium.</p>
+      <div class="story-content reveal-right">
+        <div class="journal">
+          <div class="j-lines"></div>
+          <div class="j-margin"></div>
+          <div class="j-text">
+            <p class="j-dropcap">In the sun-drenched lanes of Madurai, where ancient temple towers meet modern ambitions, a self-driven developer began writing his story. I'm Gokul Priyan — crafting interfaces that are modern, responsive, and genuinely useful. I blend clean HTML architecture, thoughtful CSS, and JavaScript interactions to build experiences that feel premium.</p>
             <p>Currently pursuing Diploma in CSE at TNGPTC Madurai and working as a Frontend Developer at BuildHomeMart Techno Solution Pvt Ltd — with entrepreneurship training at TCE TBI under my belt.</p>
             <p>I've shipped a live commercial client website solo, built AI-integrated platforms for agriculture, and keep exploring the intersection of design and code.</p>
-            <div class="journal-signature">
-              <span class="signature-text">— Gokul Priyan</span>
-              <span class="signature-date">Madurai, 2026</span>
+            <div class="j-sticky">
+              <p class="sticky-text">Late nights. Terminal glowing.<br>Rain outside. Anime playing.<br>This is where the magic happens.</p>
             </div>
+            <div class="j-sign"><span class="sign-name">— Gokul Priyan</span><span class="sign-date">Madurai, 2026</span></div>
           </div>
         </div>
-        <div class="identity-stamps">
-          <span class="identity-stamp">Cloud Engineer</span>
-          <span class="identity-stamp">Python Developer</span>
-          <span class="identity-stamp">AI Builder</span>
-          <span class="identity-stamp">Linux Enthusiast</span>
-          <span class="identity-stamp">Open Source Learner</span>
-          <span class="identity-stamp">Technology Explorer</span>
+        <div class="stamps">
+          <span class="stamp">Cloud Engineer</span>
+          <span class="stamp">Python Developer</span>
+          <span class="stamp">AI Builder</span>
+          <span class="stamp">Linux Enthusiast</span>
+          <span class="stamp">Open Source Learner</span>
+          <span class="stamp">Technology Explorer</span>
+          <span class="stamp">React.js</span>
+          <span class="stamp">JavaScript ES6+</span>
+          <span class="stamp">CSS3 / HTML5</span>
+          <span class="stamp">Node.js</span>
+          <span class="stamp">REST APIs</span>
+          <span class="stamp">Figma</span>
+          <span class="stamp">Git &amp; GitHub</span>
+          <span class="stamp">MySQL</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════ ACT III — CRAFT (SKILLS) ═══════════════════ -->
-<section id="craft" class="craft-section">
-  <div class="section-inner">
-    <div class="chapter-header reveal">
-      <span class="chapter-number">Chapter II</span>
-      <h2 class="chapter-title">Tools of <em>the Craft</em></h2>
-      <div class="chapter-underline"></div>
-    </div>
-    <p class="craft-intro reveal">Every artisan has their instruments. These are mine — worn by practice, refined by curiosity, and ready for the next project.</p>
-    <div class="library-cards-grid">
-
-      <div class="library-card reveal" style="--card-delay: 0.05s">
-        <div class="card-catalog-number">01</div>
-        <div class="card-stamp-icon">⟨/⟩</div>
-        <h3 class="card-title">Frontend Development</h3>
-        <p class="card-description">Semantic HTML, structured CSS, reusable UI components, and user-first layouts for professional web applications.</p>
-        <div class="card-tags">
-          <span class="passport-stamp">HTML5</span>
-          <span class="passport-stamp">CSS3</span>
-          <span class="passport-stamp">React.js</span>
-          <span class="passport-stamp">JavaScript</span>
-        </div>
-        <div class="card-date-stamp">CHECKED OUT · 2024</div>
-      </div>
-
-      <div class="library-card reveal" style="--card-delay: 0.1s">
-        <div class="card-catalog-number">02</div>
-        <div class="card-stamp-icon">◈</div>
-        <h3 class="card-title">CSS & Visual Design</h3>
-        <p class="card-description">Modern themes, spacing systems, gradients, hover states, and card-based UI for standout visual presentation.</p>
-        <div class="card-tags">
-          <span class="passport-stamp">Animations</span>
-          <span class="passport-stamp">Design Systems</span>
-          <span class="passport-stamp">Figma</span>
-        </div>
-        <div class="card-date-stamp">CHECKED OUT · 2024</div>
-      </div>
-
-      <div class="library-card reveal" style="--card-delay: 0.15s">
-        <div class="card-catalog-number">03</div>
-        <div class="card-stamp-icon">⚡</div>
-        <h3 class="card-title">JavaScript Interactions</h3>
-        <p class="card-description">Smooth scrolling, dynamic states, navigation behavior, reveal effects, and UX-enhancing JS interactions.</p>
-        <div class="card-tags">
-          <span class="passport-stamp">ES6+</span>
-          <span class="passport-stamp">DOM</span>
-          <span class="passport-stamp">APIs</span>
-        </div>
-        <div class="card-date-stamp">CHECKED OUT · 2025</div>
-      </div>
-
-      <div class="library-card reveal" style="--card-delay: 0.2s">
-        <div class="card-catalog-number">04</div>
-        <div class="card-stamp-icon">⬡</div>
-        <h3 class="card-title">Responsive Design</h3>
-        <p class="card-description">Layouts tuned for mobile, tablet, and desktop so every screen size feels intentional and polished.</p>
-        <div class="card-tags">
-          <span class="passport-stamp">Mobile First</span>
-          <span class="passport-stamp">Flexbox</span>
-          <span class="passport-stamp">Grid</span>
-        </div>
-        <div class="card-date-stamp">CHECKED OUT · 2024</div>
-      </div>
-
-      <div class="library-card reveal" style="--card-delay: 0.25s">
-        <div class="card-catalog-number">05</div>
-        <div class="card-stamp-icon">⎇</div>
-        <h3 class="card-title">Git & Deployment</h3>
-        <p class="card-description">Version control, CI/CD workflows, and comfortable shipping to Render, Vercel, and GitHub Pages.</p>
-        <div class="card-tags">
-          <span class="passport-stamp">Git</span>
-          <span class="passport-stamp">GitHub</span>
-          <span class="passport-stamp">Render</span>
-          <span class="passport-stamp">Vercel</span>
-        </div>
-        <div class="card-date-stamp">CHECKED OUT · 2025</div>
-      </div>
-
-      <div class="library-card reveal" style="--card-delay: 0.3s">
-        <div class="card-catalog-number">06</div>
-        <div class="card-stamp-icon">⬡</div>
-        <h3 class="card-title">Backend Basics</h3>
-        <p class="card-description">REST API integration, Node.js + Express fundamentals, Python scripting, MySQL and MongoDB basics.</p>
-        <div class="card-tags">
-          <span class="passport-stamp">Node.js</span>
-          <span class="passport-stamp">REST APIs</span>
-          <span class="passport-stamp">MySQL</span>
-          <span class="passport-stamp">Python</span>
-        </div>
-        <div class="card-date-stamp">CHECKED OUT · 2025</div>
-      </div>
-
+<!-- ══════ ACT III · CRAFT ══════ -->
+<section id="craft" class="sec craft-sec">
+  <div class="sec-inner">
+    <header class="ch-head reveal"><span class="ch-num">Chapter II</span><h2 class="ch-title">Tools of <em>the Craft</em></h2><div class="ch-line"></div></header>
+    <p class="sec-intro reveal">Every artisan has their instruments. These are mine — worn by practice, refined by curiosity, and ready for the next project.</p>
+    <div class="cards-grid">
+      <div class="craft-card reveal" style="--d:.05s"><div class="cc-num">01</div><div class="cc-icon">⟨/⟩</div><h3 class="cc-name">Frontend Development</h3><p class="cc-desc">Semantic HTML, structured CSS, reusable UI components, and user-first layouts for professional web applications.</p><div class="cc-tags"><span>HTML5</span><span>CSS3</span><span>React.js</span><span>JavaScript</span></div><div class="cc-foot">COLLECTED · 2024</div></div>
+      <div class="craft-card reveal" style="--d:.1s"><div class="cc-num">02</div><div class="cc-icon">◈</div><h3 class="cc-name">CSS &amp; Visual Design</h3><p class="cc-desc">Modern themes, spacing systems, gradients, hover states, and card-based UI for standout visual presentation.</p><div class="cc-tags"><span>Animations</span><span>Design Systems</span><span>Figma</span></div><div class="cc-foot">COLLECTED · 2024</div></div>
+      <div class="craft-card reveal" style="--d:.15s"><div class="cc-num">03</div><div class="cc-icon">⚡</div><h3 class="cc-name">JavaScript Interactions</h3><p class="cc-desc">Smooth scrolling, dynamic states, navigation behavior, reveal effects, and UX-enhancing JS interactions.</p><div class="cc-tags"><span>ES6+</span><span>DOM</span><span>APIs</span></div><div class="cc-foot">COLLECTED · 2025</div></div>
+      <div class="craft-card reveal" style="--d:.2s"><div class="cc-num">04</div><div class="cc-icon">⬡</div><h3 class="cc-name">Responsive Design</h3><p class="cc-desc">Layouts tuned for mobile, tablet, and desktop so every screen size feels intentional and polished.</p><div class="cc-tags"><span>Mobile First</span><span>Flexbox</span><span>Grid</span></div><div class="cc-foot">COLLECTED · 2024</div></div>
+      <div class="craft-card reveal" style="--d:.25s"><div class="cc-num">05</div><div class="cc-icon">⎇</div><h3 class="cc-name">Git &amp; Deployment</h3><p class="cc-desc">Version control, CI/CD workflows, and comfortable shipping to Render, Vercel, and GitHub Pages.</p><div class="cc-tags"><span>Git</span><span>GitHub</span><span>Render</span><span>Vercel</span></div><div class="cc-foot">COLLECTED · 2025</div></div>
+      <div class="craft-card reveal" style="--d:.3s"><div class="cc-num">06</div><div class="cc-icon">⬡</div><h3 class="cc-name">Backend Basics</h3><p class="cc-desc">REST API integration, Node.js + Express fundamentals, Python scripting, MySQL and MongoDB basics.</p><div class="cc-tags"><span>Node.js</span><span>REST APIs</span><span>MySQL</span><span>Python</span></div><div class="cc-foot">COLLECTED · 2025</div></div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════ MARQUEE BAND ═══════════════════ -->
-<div class="vintage-marquee">
-  <div class="marquee-track" id="marqueeTrack"></div>
-</div>
+<!-- ══════ MARQUEE ══════ -->
+<div class="marquee"><div class="mq-track" id="mq"></div></div>
 
-<!-- ═══════════════════ ACT IV — GALLERY (PROJECTS) ═══════════════════ -->
-<section id="gallery" class="gallery-section">
-  <div class="section-inner">
-    <div class="chapter-header reveal">
-      <span class="chapter-number">Chapter III</span>
-      <h2 class="chapter-title">The <em>Gallery</em> of Memories</h2>
-      <div class="chapter-underline"></div>
-    </div>
-    <p class="gallery-intro reveal">Every project is a frame in the film of my career. Each one tells a story of a problem met, a solution crafted, and a lesson learned.</p>
-
-    <div class="polaroid-gallery">
-
-      <!-- Project 1 -->
-      <div class="memory-card reveal" data-memory="01">
-        <div class="memory-film-frame">
-          <div class="memory-visual">
-            <div class="memory-icon">FC</div>
-            <div class="memory-reel-number">REEL 01</div>
-            <div class="memory-badge">Live Client</div>
-          </div>
-          <div class="memory-exposure-strip"></div>
+<!-- ══════ ACT IV · GALLERY ══════ -->
+<section id="gallery" class="sec gallery-sec">
+  <div class="sec-inner">
+    <header class="ch-head reveal"><span class="ch-num">Chapter III</span><h2 class="ch-title">The <em>Gallery</em> of Memories</h2><div class="ch-line"></div></header>
+    <p class="sec-intro reveal">Every project is a frame in the film of my career. Each one tells a story of a problem met, a solution crafted, and a lesson learned.</p>
+    <div class="gallery-grid">
+      <article class="mem-card reveal" data-n="01">
+        <div class="mem-visual"><div class="mem-ico">FC</div><span class="mem-reel">REEL 01</span><span class="mem-badge">Live Client</span><div class="mem-strip"></div></div>
+        <div class="mem-info">
+          <span class="mem-date">Jan — Mar 2025</span>
+          <h3 class="mem-title">Fish Corporation Website</h3>
+          <p class="mem-problem">Client needed a credible online presence across all devices.</p>
+          <p class="mem-desc">Independently architected, developed, and deployed a fully responsive commercial website — managed complete SDLC from wireframe to production with zero supervision. Mobile-first layouts with 100% cross-device compatibility.</p>
+          <div class="mem-tech"><span>React.js</span><span>HTML5</span><span>CSS3</span><span>Node.js</span><span>Render</span></div>
+          <div class="mem-links"><a href="https://fish-corporation-live.onrender.com" target="_blank" rel="noopener noreferrer">Live Demo →</a><a href="https://github.com/gokultgb475-lgtm/fish-corporation-live" target="_blank" rel="noopener noreferrer">GitHub →</a></div>
         </div>
-        <div class="memory-story">
-          <div class="memory-date-stamp">Jan — Mar 2025</div>
-          <h3 class="memory-title">Fish Corporation Website</h3>
-          <p class="memory-scene-desc">Client needed a credible online presence across all devices.</p>
-          <p class="memory-narrative">Independently architected, developed, and deployed a fully responsive commercial website — managed complete SDLC from wireframe to production with zero supervision. Mobile-first layouts with 100% cross-device compatibility.</p>
-          <div class="memory-tech-strip">
-            <span>React.js</span><span>HTML5</span><span>CSS3</span><span>Node.js</span><span>Render</span>
-          </div>
-          <div class="memory-links">
-            <a href="https://fish-corporation-live.onrender.com" target="_blank" rel="noopener noreferrer" class="memory-link">Live Demo →</a>
-            <a href="https://github.com/gokultgb475-lgtm/fish-corporation-live" target="_blank" rel="noopener noreferrer" class="memory-link">GitHub →</a>
-          </div>
+      </article>
+      <article class="mem-card reveal" data-n="02">
+        <div class="mem-visual"><div class="mem-ico">UB</div><span class="mem-reel">REEL 02</span><span class="mem-badge">AI Platform</span><div class="mem-strip"></div></div>
+        <div class="mem-info">
+          <span class="mem-date">2025</span>
+          <h3 class="mem-title">Uzhavar Bridge</h3>
+          <p class="mem-problem">Farmers needed direct digital connectivity — removing costly middlemen.</p>
+          <p class="mem-desc">AI-powered farmer-to-buyer platform with crop recommendation, price prediction, and live weather data. Accessibility-first design for rural, low-literacy users via React frontend over Python + MySQL backend.</p>
+          <div class="mem-tech"><span>React.js</span><span>Python</span><span>REST APIs</span><span>MySQL</span><span>a11y</span></div>
+          <div class="mem-links"><a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer">GitHub →</a></div>
         </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="memory-card reveal" data-memory="02">
-        <div class="memory-film-frame">
-          <div class="memory-visual">
-            <div class="memory-icon">UB</div>
-            <div class="memory-reel-number">REEL 02</div>
-            <div class="memory-badge">AI Platform</div>
-          </div>
-          <div class="memory-exposure-strip"></div>
+      </article>
+      <article class="mem-card reveal" data-n="03">
+        <div class="mem-visual"><div class="mem-ico">LN</div><span class="mem-reel">REEL 03</span><span class="mem-badge">IoT Concept</span><div class="mem-strip"></div></div>
+        <div class="mem-info">
+          <span class="mem-date">2025 — 2026</span>
+          <h3 class="mem-title">LumiNet — Smart Urban Lighting</h3>
+          <p class="mem-problem">Urban lighting needed smarter energy planning and a validated startup model.</p>
+          <p class="mem-desc">Collaborated during Forge Innovation &amp; Ventures TBI training to validate an IoT-based smart lighting concept, build a pitch narrative, and prepare market feasibility plus 3-year financial projections.</p>
+          <div class="mem-tech"><span>IoT</span><span>Business Model</span><span>Pitch Deck</span><span>Market Study</span></div>
+          <div class="mem-links"><a href="#journey">Experience →</a></div>
         </div>
-        <div class="memory-story">
-          <div class="memory-date-stamp">2025</div>
-          <h3 class="memory-title">Uzhavar Bridge</h3>
-          <p class="memory-scene-desc">Farmers needed direct digital connectivity — removing costly middlemen.</p>
-          <p class="memory-narrative">AI-powered farmer-to-buyer platform with crop recommendation, price prediction, and live weather data. Accessibility-first design for rural, low-literacy users via React frontend over Python + MySQL backend.</p>
-          <div class="memory-tech-strip">
-            <span>React.js</span><span>Python</span><span>REST APIs</span><span>MySQL</span><span>a11y</span>
-          </div>
-          <div class="memory-links">
-            <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="memory-link">GitHub →</a>
-          </div>
+      </article>
+      <article class="mem-card reveal" data-n="04">
+        <div class="mem-visual"><div class="mem-ico">SA</div><span class="mem-reel">REEL 04</span><span class="mem-badge">Academic Tool</span><div class="mem-strip"></div></div>
+        <div class="mem-info">
+          <span class="mem-date">2024</span>
+          <h3 class="mem-title">Student Attendance System</h3>
+          <p class="mem-problem">Manual attendance tracking created inconsistency and wasted admin time.</p>
+          <p class="mem-desc">Automated attendance tracking with structured database workflows, validation logic, and one-click report generation — reducing manual administrative effort by ~70%.</p>
+          <div class="mem-tech"><span>Python</span><span>MySQL</span><span>Shell Scripting</span></div>
+          <div class="mem-links"><a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer">GitHub →</a></div>
         </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="memory-card reveal" data-memory="03">
-        <div class="memory-film-frame">
-          <div class="memory-visual">
-            <div class="memory-icon">LN</div>
-            <div class="memory-reel-number">REEL 03</div>
-            <div class="memory-badge">IoT Concept</div>
-          </div>
-          <div class="memory-exposure-strip"></div>
-        </div>
-        <div class="memory-story">
-          <div class="memory-date-stamp">2025 — 2026</div>
-          <h3 class="memory-title">LumiNet — Smart Urban Lighting</h3>
-          <p class="memory-scene-desc">Urban lighting needed smarter energy planning and a validated startup model.</p>
-          <p class="memory-narrative">Collaborated during Forge Innovation & Ventures TBI training to validate an IoT-based smart lighting concept, build a pitch narrative, and prepare market feasibility plus 3-year financial projections.</p>
-          <div class="memory-tech-strip">
-            <span>IoT</span><span>Business Model</span><span>Pitch Deck</span><span>Market Study</span>
-          </div>
-          <div class="memory-links">
-            <a href="#chapters" class="memory-link">Experience →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="memory-card reveal" data-memory="04">
-        <div class="memory-film-frame">
-          <div class="memory-visual">
-            <div class="memory-icon">SA</div>
-            <div class="memory-reel-number">REEL 04</div>
-            <div class="memory-badge">Academic Tool</div>
-          </div>
-          <div class="memory-exposure-strip"></div>
-        </div>
-        <div class="memory-story">
-          <div class="memory-date-stamp">2024</div>
-          <h3 class="memory-title">Student Attendance System</h3>
-          <p class="memory-scene-desc">Manual attendance tracking created inconsistency and wasted admin time.</p>
-          <p class="memory-narrative">Automated attendance tracking with structured database workflows, validation logic, and one-click report generation — reducing manual administrative effort by ~70%.</p>
-          <div class="memory-tech-strip">
-            <span>Python</span><span>MySQL</span><span>Shell Scripting</span>
-          </div>
-          <div class="memory-links">
-            <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="memory-link">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════ ACT V — CHAPTERS (EXPERIENCE) ═══════════════════ -->
-<section id="chapters" class="chapters-section">
-  <div class="section-inner">
-    <div class="chapter-header reveal">
-      <span class="chapter-number">Chapter IV</span>
-      <h2 class="chapter-title">Where I've <em>Shipped</em> Real Work</h2>
-      <div class="chapter-underline"></div>
-    </div>
-
-    <div class="timeline-reel">
-      <div class="timeline-film-line"></div>
-
-      <div class="timeline-entry reveal" data-year="2026">
-        <div class="timeline-marker">
-          <div class="marker-dot"></div>
-          <div class="marker-year">2026</div>
-        </div>
-        <div class="timeline-card">
-          <div class="timeline-card-header">
-            <span class="timeline-period">2026 — Present</span>
-            <span class="timeline-badge">Current Role</span>
-          </div>
-          <h3 class="timeline-role">Frontend Developer</h3>
-          <p class="timeline-company">BuildHomeMart Techno Solution Pvt Ltd</p>
-          <ul class="timeline-details">
+<!-- ══════ ACT V · JOURNEY ══════ -->
+<section id="journey" class="sec journey-sec">
+  <div class="sec-inner">
+    <header class="ch-head reveal"><span class="ch-num">Chapter IV</span><h2 class="ch-title">The <em>Journey</em></h2><div class="ch-line"></div></header>
+    <div class="timeline">
+      <div class="tl-line"></div>
+      <div class="tl-entry reveal" data-y="2026">
+        <div class="tl-marker"><div class="tl-dot"></div><span class="tl-year">2026</span></div>
+        <div class="tl-card postcard">
+          <div class="pc-header"><span class="pc-period">2026 — Present</span><span class="pc-badge">Current Role</span></div>
+          <h3 class="pc-role">Frontend Developer</h3>
+          <p class="pc-company">BuildHomeMart Techno Solution Pvt Ltd</p>
+          <ul class="pc-details">
             <li>Developing responsive UI using HTML, CSS, and JavaScript for better cross-device consistency.</li>
             <li>Improving website usability and performance through layout refinement and cleaner interaction flow.</li>
             <li>Contributing to a React + TypeScript + Vite + Tailwind real estate platform in production.</li>
           </ul>
+          <div class="pc-stamp-mark">VERIFIED</div>
         </div>
       </div>
-
-      <div class="timeline-entry reveal" data-year="2025">
-        <div class="timeline-marker">
-          <div class="marker-dot"></div>
-          <div class="marker-year">2025</div>
-        </div>
-        <div class="timeline-card">
-          <div class="timeline-card-header">
-            <span class="timeline-period">2025 — 2026</span>
-            <span class="timeline-badge">Training</span>
-          </div>
-          <h3 class="timeline-role">EDP Trainee — Entrepreneurship</h3>
-          <p class="timeline-company">Forge Innovation & Ventures TBI (TCE TBI), Madurai</p>
-          <ul class="timeline-details">
+      <div class="tl-entry reveal" data-y="2025b">
+        <div class="tl-marker"><div class="tl-dot"></div><span class="tl-year">2025</span></div>
+        <div class="tl-card postcard">
+          <div class="pc-header"><span class="pc-period">2025 — 2026</span><span class="pc-badge">Training</span></div>
+          <h3 class="pc-role">EDP Trainee — Entrepreneurship</h3>
+          <p class="pc-company">Forge Innovation &amp; Ventures TBI (TCE TBI), Madurai</p>
+          <ul class="pc-details">
             <li>Collaborated cross-functionally to validate an IoT-based smart lighting concept (LumiNet).</li>
             <li>Authored a 13-chapter business report covering market feasibility and 3-year financial projections.</li>
             <li>Developed pitch presentation and startup validation skills in a premier incubator environment.</li>
           </ul>
+          <div class="pc-stamp-mark">CERTIFIED</div>
         </div>
       </div>
-
-      <div class="timeline-entry reveal" data-year="2025-early">
-        <div class="timeline-marker">
-          <div class="marker-dot"></div>
-          <div class="marker-year">2025</div>
-        </div>
-        <div class="timeline-card">
-          <div class="timeline-card-header">
-            <span class="timeline-period">Jan — Mar 2025</span>
-            <span class="timeline-badge">Freelance</span>
-          </div>
-          <h3 class="timeline-role">Solo Frontend Developer — Client Project</h3>
-          <p class="timeline-company">Fish Corporation Website · Freelance</p>
-          <ul class="timeline-details">
+      <div class="tl-entry reveal" data-y="2025a">
+        <div class="tl-marker"><div class="tl-dot"></div><span class="tl-year">2025</span></div>
+        <div class="tl-card postcard">
+          <div class="pc-header"><span class="pc-period">Jan — Mar 2025</span><span class="pc-badge">Freelance</span></div>
+          <h3 class="pc-role">Solo Frontend Developer — Client Project</h3>
+          <p class="pc-company">Fish Corporation Website · Freelance</p>
+          <ul class="pc-details">
             <li>End-to-end solo delivery from wireframe to live production — zero supervision.</li>
             <li>Shipped a fully responsive commercial site on deadline with full cross-device coverage.</li>
             <li>Configured deployment pipeline on Render and handled post-launch maintenance.</li>
           </ul>
+          <div class="pc-stamp-mark">SHIPPED</div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════ ACT VI — LETTER (CONTACT) ═══════════════════ -->
-<section id="letter" class="letter-section">
-  <div class="letter-bg-texture"></div>
-  <div class="section-inner">
-    <div class="chapter-header reveal">
-      <span class="chapter-number">Epilogue</span>
-      <h2 class="chapter-title">A Letter to <em>You</em></h2>
-      <div class="chapter-underline light"></div>
+<!-- ══════ ACT VI · MEMORY WALL ══════ -->
+<section id="wall" class="sec wall-sec">
+  <div class="sec-inner">
+    <header class="ch-head reveal"><span class="ch-num">Chapter V</span><h2 class="ch-title">The <em>Memory</em> Wall</h2><div class="ch-line"></div></header>
+    <p class="sec-intro reveal">Pinned fragments. Collected moments. The things that shaped who I am.</p>
+    <div class="corkboard reveal">
+      <div class="pin-item note" style="--r:-3deg;--x:2%;--y:0"><div class="pin"></div><p class="note-text">First line of code:<br><code>print("Hello World")</code><br>— and everything changed.</p></div>
+      <div class="pin-item photo-pin" style="--r:2deg;--x:35%;--y:5%"><div class="pin"></div><div class="pin-photo"><img src="assets/gokul-profile.jpeg" alt="Gokul at work" loading="lazy"></div><p class="pin-label">Building the future, one commit at a time</p></div>
+      <div class="pin-item ticket" style="--r:-1deg;--x:65%;--y:2%"><div class="pin"></div><div class="ticket-inner"><span class="ticket-title">🎓 TNGPTC Madurai</span><span class="ticket-sub">Diploma in CSE</span><span class="ticket-date">Class of 2026</span></div></div>
+      <div class="pin-item achievement" style="--r:4deg;--x:5%;--y:45%"><div class="pin"></div><div class="ach-inner"><span class="ach-icon">🏆</span><span class="ach-text">Entrepreneurship Training<br>TCE TBI · Madurai</span></div></div>
+      <div class="pin-item note sticky-note" style="--r:-2deg;--x:38%;--y:42%"><div class="pin"></div><p class="note-text">"The best code is the one that makes someone's life easier."</p></div>
+      <div class="pin-item achievement" style="--r:-3deg;--x:68%;--y:40%"><div class="pin"></div><div class="ach-inner"><span class="ach-icon">🚀</span><span class="ach-text">First Client Website<br>Shipped Solo · 2025</span></div></div>
+      <div class="pin-item note code-note" style="--r:1deg;--x:8%;--y:78%"><div class="pin"></div><p class="note-text"><code>$ neofetch</code><br>OS: Arch Linux<br>Shell: zsh<br>Editor: VS Code<br>Theme: Catppuccin</p></div>
+      <div class="pin-item ticket" style="--r:3deg;--x:42%;--y:75%"><div class="pin"></div><div class="ticket-inner"><span class="ticket-title">🤖 AI Builder</span><span class="ticket-sub">Uzhavar Bridge</span><span class="ticket-date">Helping Farmers · 2025</span></div></div>
+      <div class="pin-item sticker-pin" style="--r:-4deg;--x:72%;--y:72%"><div class="pin"></div><span class="big-sticker">🐧 I use Linux btw</span></div>
     </div>
+  </div>
+</section>
 
-    <div class="letter-envelope reveal">
+<!-- ══════ ACT VII · TERMINAL ══════ -->
+<section id="terminal" class="sec term-sec">
+  <div class="sec-inner">
+    <header class="ch-head reveal"><span class="ch-num">Chapter VI</span><h2 class="ch-title">The <em>Terminal</em></h2><div class="ch-line"></div></header>
+    <p class="sec-intro reveal">Type a command. Discover a story.</p>
+    <div class="terminal-wrap reveal">
+      <div class="tw-bar"><span class="tw-dot r"></span><span class="tw-dot y"></span><span class="tw-dot g"></span><span class="tw-title">gokul@arch:~</span></div>
+      <div class="tw-screen" id="termScreen">
+        <div class="tw-history" id="termHistory">
+          <p class="tw-welcome">Welcome to Gokul's Terminal. Type <span class="tw-cmd">help</span> to get started.</p>
+        </div>
+        <div class="tw-input-row">
+          <span class="tw-prompt">gokul@arch:~$</span>
+          <input type="text" class="tw-input" id="termInput" autocomplete="off" spellcheck="false" aria-label="Terminal input">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ ACT VIII · LETTER ══════ -->
+<section id="letter" class="sec letter-sec">
+  <div class="letter-texture"></div>
+  <div class="sec-inner">
+    <header class="ch-head reveal"><span class="ch-num">Epilogue</span><h2 class="ch-title">A Letter to <em>You</em></h2><div class="ch-line light"></div></header>
+    <div class="envelope reveal">
       <div class="letter-paper">
-        <div class="letter-ruled-lines"></div>
-        <div class="letter-content">
-          <p class="letter-greeting">Dear Future Collaborator,</p>
-          <p class="letter-body">If you've made it this far into my story, I'd love for us to write the next chapter together. I'm open for frontend roles, internships, and freelance projects — anywhere my code can make a difference.</p>
-          <p class="letter-body">Whether you have a wild idea that needs building, a team that needs a dedicated craftsman, or simply want to say hello — my inbox is always open, and the coffee is always brewing.</p>
-          <p class="letter-closing">With warm regards from Madurai,</p>
-          <p class="letter-sign">Gokul Priyan</p>
+        <div class="lp-lines"></div>
+        <div class="lp-content">
+          <p class="lp-greeting">Dear Future Collaborator,</p>
+          <p class="lp-body">If you've made it this far into my story, I'd love for us to write the next chapter together. I'm open for frontend roles, internships, and freelance projects — anywhere my code can make a difference.</p>
+          <p class="lp-body">Whether you have a wild idea that needs building, a team that needs a dedicated craftsman, or simply want to say hello — my inbox is always open, and the coffee is always brewing.</p>
+          <p class="lp-closing">With warm regards from Madurai,</p>
+          <p class="lp-sign">Gokul Priyan</p>
         </div>
-        <div class="letter-wax-seal">GP</div>
+        <div class="wax-seal">GP</div>
       </div>
     </div>
-
-    <div class="contact-cards reveal">
-      <a href="mailto:gokultgb475@gmail.com" class="contact-card" id="contact-email">
-        <span class="contact-icon">✉</span>
-        <span class="contact-text">gokultgb475@gmail.com</span>
-      </a>
-      <a href="tel:+919489392449" class="contact-card" id="contact-phone">
-        <span class="contact-icon">☎</span>
-        <span class="contact-text">+91 94893 92449</span>
-      </a>
-      <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-github">
-        <span class="contact-icon">⌥</span>
-        <span class="contact-text">GitHub</span>
-      </a>
-      <a href="https://www.linkedin.com/in/gokulpriyan-p-a5b535394/" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-linkedin">
-        <span class="contact-icon">in</span>
-        <span class="contact-text">LinkedIn</span>
-      </a>
+    <div class="contact-row reveal">
+      <a href="mailto:gokultgb475@gmail.com" class="c-link" id="c-email"><span class="c-ico">✉</span><span>gokultgb475@gmail.com</span></a>
+      <a href="tel:+919489392449" class="c-link" id="c-phone"><span class="c-ico">☎</span><span>+91 94893 92449</span></a>
+      <a href="https://github.com/gokultgb475-lgtm" target="_blank" rel="noopener noreferrer" class="c-link" id="c-gh"><span class="c-ico">⌥</span><span>GitHub</span></a>
+      <a href="https://www.linkedin.com/in/gokulpriyan-p-a5b535394/" target="_blank" rel="noopener noreferrer" class="c-link" id="c-li"><span class="c-ico">in</span><span>LinkedIn</span></a>
     </div>
-
-    <p class="letter-footer-note">Built with love in Madurai, Tamil Nadu ✦ 2026</p>
+    <p class="footer-note">Built with love in Madurai, Tamil Nadu ✦ 2026</p>
   </div>
 </section>
 
-<!-- ═══════════════════ FOOTER ═══════════════════ -->
-<footer class="page-footer">
-  <div class="footer-film-strip">
-    <div class="film-holes top"></div>
-    <p class="footer-text">Gokul Priyan · Cloud Engineer · Python Developer · AI Builder · Madurai</p>
-    <p class="footer-credits">A Cinematic Portfolio Experience — Directed by Ambition, Produced by Perseverance</p>
-    <div class="film-holes bottom"></div>
-  </div>
+<!-- ══════ FOOTER ══════ -->
+<footer class="footer">
+  <div class="f-holes top"></div>
+  <p class="f-text">Gokul Priyan · Cloud Engineer · Python Developer · AI Builder · Madurai</p>
+  <p class="f-sub">A Cinematic Portfolio Experience — Directed by Ambition, Produced by Perseverance</p>
+  <div class="f-holes bot"></div>
 </footer>
 
 <script src="script.js"></script>
